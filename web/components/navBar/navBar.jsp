@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Chee
-  Date: 30/11/2018
-  Time: 9:37 PM
-  To change this template use File | Settings | File Templates.
---%>
 <link href="components/navBar/navBar.css" rel="stylesheet">
 <nav>
     <div class="nav-left">
