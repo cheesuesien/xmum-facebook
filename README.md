@@ -1,7 +1,7 @@
 # XMUM Facebook Website
 
 ## Follow the template
-1. Look for the index.jsp file in web/ folder
+1. Look for the index.jsp file in web/ folder. This is the template.
 
 2. The index.jsp file includes 4 things:
   * **header** =>includes/
