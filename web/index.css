@@ -1,0 +1,10 @@
+body {
+    margin: 0px;
+    background-color: #e3e4e5;
+    font-family: "Verdana", sans-serif;
+}
+
+#main-body {
+    float: left;
+    padding-left: 20px;
+}
