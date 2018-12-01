@@ -7,19 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb95e32-7815-4beb-962a-2e442921f7eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/pages/Template/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/body.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/landingPage/landingPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/landingPage/landingPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/accountPage/accountPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/components/navBar/navBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/components/navBar/navBar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/components/sideBar/sideBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/components/sideBar/sideBar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/components/navBar/navBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/components/navBar/navBar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/components/sideBar/sideBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/components/sideBar/sideBar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Template/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,15 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/components/sideBar/sideBar.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/includes/footer.jsp">
           <provider selected="true" editor-type-id="text-editor" />
@@ -74,17 +54,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/pages/Template/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/pages/landingPage/landingPage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="239">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -112,13 +92,22 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/pages/accountPage/accountPage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="CSS File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -152,6 +141,7 @@
         <option value="$PROJECT_DIR$/web/pages/Template/index.jsp" />
         <option value="$PROJECT_DIR$/web/pages/landingPage/landingPage.jsp" />
         <option value="$PROJECT_DIR$/web/pages/landingPage/landingPage.css" />
+        <option value="$PROJECT_DIR$/web/pages/accountPage/accountPage.jsp" />
       </list>
     </option>
   </component>
@@ -190,6 +180,13 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="Template" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -201,7 +198,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543646009797" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543647698212" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -321,13 +318,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16993000" />
+    <option name="totallyTimeSpent" value="17615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15100671" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15100671" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -337,7 +334,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -368,13 +365,6 @@
     <entry file="file://$PROJECT_DIR$/web/includes/header.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/components/navBar/navBar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/components/sideBar/sideBar.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -399,23 +389,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/body.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/Template/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/Template/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/landingPage/landingPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -425,8 +398,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/landingPage/landingPage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="239">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/Template/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/body.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/components/navBar/navBar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/Template/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/accountPage/accountPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
