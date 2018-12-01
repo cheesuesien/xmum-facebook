@@ -2,9 +2,9 @@
     float: left;
     display: flex;
     flex-direction: column;
-    background-color: red;
+    background-color: #383838;
     width: 150px;
-    min-height: calc(100% - 50px);
+    min-height: calc(100% - 30px);
 }
 
 #sideBar > div {
