@@ -1,7 +1,7 @@
-<link href="components/navBar/navBar.css" rel="stylesheet">
+<link href="../../components/navBar/navBar.css" rel="stylesheet">
 <nav>
     <div class="nav-left">
-        <img class="icon" src="components/icons/main.png" alt="main-icon"/>
+        <img class="icon" src="../../components/icons/main.png" alt="main-icon"/>
         <div>XMUM FACEBOOK</div>
     </div>
     <div class="nav-right">
