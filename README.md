@@ -1,7 +1,7 @@
 # XMUM Facebook Website
 
 ## Follow the template
-1. Look for the index.jsp file in web/ folder. This is the template.
+1. Look for the index.jsp file in web/pages/Template folder. This is the template.
 
 2. The index.jsp file includes 4 things:
   * **header** =>includes/
@@ -9,7 +9,9 @@
   * **sideBar** =>components/
   * **footer** =>includes/
 
-3. The header, navBar and footer must be included for **every** page.
+3. It also contains two <link> tags to two separate stylesheets. The **body.css** and **index.css**.
+
+3. The header, navBar and footer must be included for **every** page. The **body.css** must also be linked to every page.
 
 4. The **sideBar** should only be included in the Public Wall, My Account, Feedback and About Us page. Landing page, sign in, register and reset password page do not need the sideBar.
 
