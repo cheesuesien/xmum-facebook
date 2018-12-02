@@ -1,8 +1,9 @@
+<link rel="stylesheet" type="text/css" href="../body.css"/>
+<link rel="stylesheet" type="text/css" href="landingPage.css"/>
+
 <%@ include file="../../includes/header.jsp" %>
 <%@ include file="../../components/navBar/navBar.jsp" %>
 
-<link rel="stylesheet" type="text/css" href="../body.css"/>
-<link rel="stylesheet" type="text/css" href="landingPage.css"/>
 <div id="main-body">
     <%-- Code goes here--%>
     <div class="block" id="block1">
