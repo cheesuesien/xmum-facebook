@@ -1,0 +1,24 @@
+#main-body {
+    float: left;
+    padding-left: 20px;
+    width: 50%;
+}
+
+.title {
+    font-size: 2em;
+    height: 100px;
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.content > div > div {
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.profile {
+    height: 150px;
+    border-radius: 50%;
+}
