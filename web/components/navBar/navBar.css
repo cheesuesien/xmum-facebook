@@ -4,6 +4,7 @@ nav {
     height: 30px;
     background-color: #383838;
     padding: 5px;
+    position: sticky;
 }
 
 .nav-left, .nav-right {
