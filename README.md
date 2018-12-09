@@ -1,4 +1,4 @@
-askdhakjajdla yaaaaaaaaaaaaaaaaaa
+askdhakjajdla whooo yaaaaaaaaaaaaaaaaaa
 
 # XMUM Facebook Website
 
@@ -26,4 +26,4 @@ askdhakjajdla yaaaaaaaaaaaaaaaaaa
 1. Keep in mind that we are going to expand and add more functions later, so please write code that is **easily scalable**.
 
 2. Don't worry too much about formatting and design, those can be finished later. Just focus on getting the barebones JSP & HTML out first.
-hello
+hello beautiful
