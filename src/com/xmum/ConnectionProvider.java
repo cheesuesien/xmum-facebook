@@ -10,9 +10,7 @@ public class ConnectionProvider implements Provider {
         try{
             Class.forName("org.postgresql.Driver");
             con = DriverManager.getConnection(connURL, username, password);
-            System.out.println("connected succesfully");
         } catch (Exception e){
-            System.out.println("connection failed");
             System.out.println(e);
         }
         return con;

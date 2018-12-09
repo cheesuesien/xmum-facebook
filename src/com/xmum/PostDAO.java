@@ -5,9 +5,9 @@ import java.sql.PreparedStatement;
 
 public class PostDAO {
     static Connection conn;
-    static PreparedStatement pst;
+    private static PreparedStatement pst;
 
-    public static int insertPost(mainBean u){
+    public static int insertPost(PostBean u){
         int status = 0;
         try {
             conn = ConnectionProvider.getCon();

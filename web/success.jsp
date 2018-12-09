@@ -11,14 +11,16 @@
     <title>Title</title>
 </head>
 <body>
-<jsp:useBean id="obj" class="com.xmum.mainBean"/>
-<jsp:setProperty name="obj" property="*"/>
+<jsp:useBean id="user" class="com.xmum.UserBean"/>
+<jsp:setProperty name="user" property="id" value="swe1609661"/>
+<jsp:setProperty name="user" property="username" value="lihan"/>
+<jsp:setProperty name="user" property="intro" value="I am short and cute!"/>
 <%
-    int status = PostDAO.insertPost(obj);
+    int status = UserDAO.updateUser(user);
     if (status>0) {
-        out.println("Inserted successfully");
+        out.println("Updated successfully");
     } else {
-        out.println("Insertion failed...");
+        out.println("Update failed...");
     }
 %>
 </body>

@@ -1,6 +1,6 @@
 package com.xmum;
 
-public class mainBean {
+public class PostBean {
     private String author;
     private String message;
 
