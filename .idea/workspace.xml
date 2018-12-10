@@ -7,18 +7,574 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb95e32-7815-4beb-962a-2e442921f7eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SendEmail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/LandingPage_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/LandingPage_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/activation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mail.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LandingPage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LandingPage.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/includes/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/pages/accountPage/accountPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/pages/accountPage/accountPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/includes/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/About-Us/aboutUs.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/About-Us/aboutUs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/About-Us/aboutUs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/About-Us/aboutUs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/Feeback/feedBack.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Feeback/feedBack.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/Feeback/feedBack.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Feeback/feedBack.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/accountPage/accountPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/accountPage/accountPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/RELNOTES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/CompViewer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/DCHTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/DCHTest2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/DHURL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/FileView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/JAFApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/MCDump.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/MCTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/ODCHTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/PlainDCH.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/PrefTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/SimpleDCF.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/demo/TextInternalizer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/distributionREADME.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/JAF-1.1-changes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/JAF-1.1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/JAF-1.1.ps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/allclasses-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/allclasses-noframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-15.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-16.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/ActivationDataFlavor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/CommandInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/CommandMap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/CommandObject.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/DataContentHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/DataContentHandlerFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/DataHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/DataSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/FileDataSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/FileTypeMap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/MailcapCommandMap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/MimeType.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/MimeTypeParameterList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/MimeTypeParseException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/MimetypesFileTypeMap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/URLDataSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/UnsupportedDataTypeException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/ActivationDataFlavor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/CommandInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/CommandMap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/CommandObject.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/DataContentHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/DataContentHandlerFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/DataHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/DataSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/FileDataSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/FileTypeMap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/MailcapCommandMap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/MimeType.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/MimeTypeParameterList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/MimeTypeParseException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/MimetypesFileTypeMap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/URLDataSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/class-use/UnsupportedDataTypeException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/javax/activation/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/packages.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/resources/inherit.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaf-1_1_1/jaf-1.1.1/docs/javadocs/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/CHANGES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/COMPAT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/COPYRIGHT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/NOTES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/NTLMNOTES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/SSLNOTES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/CRLFOutputStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/NewlineOutputStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/client/ComponentFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/client/FolderModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/client/FolderTreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/client/FolderViewer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/client/MessageViewer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/client/MultipartViewer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/client/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/client/SimpleAuthenticator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/client/SimpleClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/client/StoreTreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/client/TextViewer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/client/simple.mailcap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/copier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/folderlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/logging/FileErrorManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/logging/MailHandlerDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/logging/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/logging/SummaryFormatter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/logging/SummaryNameFormatter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/logging/maildemo.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/monitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/mover.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/msgmultisendsample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/msgsend.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/msgsendsample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/msgshow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/namespace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/outlook/MSBodyPart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/outlook/MSMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/outlook/MSMultipartDataSource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/outlook/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/populate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/registry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/search.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/sendfile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/sendhtml.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/servlet/JavaMail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/servlet/JavaMailServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/servlet/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/smtpsend.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/transport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/uidmsgshow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/build.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/build.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/classes/demo/AttachmentServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/classes/demo/FilterServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/classes/demo/MailUserBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/docroot/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/docroot/compose.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/docroot/errordetails.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/docroot/errorpage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/docroot/folders.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/docroot/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/docroot/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/docroot/logout.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/docroot/messagecontent.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/docroot/messageheaders.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/docroot/send.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/taglib/META-INF/taglib.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/taglib/demo/AttachmentInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/taglib/demo/ListAttachmentsTEI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/taglib/demo/ListAttachmentsTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/taglib/demo/ListMessagesTEI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/taglib/demo/ListMessagesTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/taglib/demo/MessageInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/taglib/demo/MessageTEI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/taglib/demo/MessageTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/src/taglib/demo/SendTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/demo/webapp/webapp.README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/distributionREADME.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/JavaMail-1.1-changes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/JavaMail-1.2-changes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/JavaMail-1.3-changes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/JavaMail-1.4-changes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/allclasses-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/allclasses-noframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/DeliveryStatus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/DispositionNotification.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/MessageHeaders.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/MultipartReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/Report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/class-use/DeliveryStatus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/class-use/DispositionNotification.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/class-use/MessageHeaders.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/class-use/MultipartReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/class-use/Report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailFolder.FetchProfileItem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailFolder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailMsgIdTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailRawSearchTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailSSLStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailThrIdTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailFolder.FetchProfileItem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailFolder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailMsgIdTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailRawSearchTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailSSLStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailThrIdTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/ACL.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPFolder.FetchProfileItem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPFolder.ProtocolCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPFolder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPMessage.FetchProfileCondition.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPSSLStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/Rights.Right.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/Rights.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/SortTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/ACL.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPFolder.FetchProfileItem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPFolder.ProtocolCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPFolder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPMessage.FetchProfileCondition.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPSSLStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/Rights.Right.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/Rights.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/SortTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/POP3Folder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/POP3Message.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/POP3SSLStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/POP3Store.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/class-use/POP3Folder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/class-use/POP3Message.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/class-use/POP3SSLStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/class-use/POP3Store.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPAddressFailedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPAddressSucceededException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPSSLTransport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPSendFailedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPSenderFailedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPTransport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPAddressFailedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPAddressSucceededException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPSSLTransport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPSendFailedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPSenderFailedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPTransport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/MailSSLSocketFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/ReadableMime.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/class-use/MailSSLSocketFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/class-use/ReadableMime.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/logging/MailHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/logging/class-use/MailHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/logging/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/logging/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/logging/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/logging/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/com/sun/mail/util/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-15.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-16.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-17.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-18.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-19.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-20.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-21.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-22.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-23.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-24.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Address.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/AuthenticationFailedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Authenticator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/BodyPart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/FetchProfile.Item.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/FetchProfile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Flags.Flag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Flags.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Folder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/FolderClosedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/FolderNotFoundException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/IllegalWriteException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Message.RecipientType.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Message.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/MessageAware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/MessageContext.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/MessageRemovedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/MessagingException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/MethodNotSupportedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Multipart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/MultipartDataSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/NoSuchProviderException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Part.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/PasswordAuthentication.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Provider.Type.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Provider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Quota.Resource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Quota.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/QuotaAwareStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/ReadOnlyFolderException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/SendFailedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Session.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Store.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/StoreClosedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/Transport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/UIDFolder.FetchProfileItem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/UIDFolder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/URLName.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Address.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/AuthenticationFailedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Authenticator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/BodyPart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/FetchProfile.Item.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/FetchProfile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Flags.Flag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Flags.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Folder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/FolderClosedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/FolderNotFoundException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/IllegalWriteException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Message.RecipientType.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Message.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/MessageAware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/MessageContext.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/MessageRemovedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/MessagingException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/MethodNotSupportedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Multipart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/MultipartDataSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/NoSuchProviderException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Part.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/PasswordAuthentication.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Provider.Type.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Provider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Quota.Resource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Quota.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/QuotaAwareStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/ReadOnlyFolderException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/SendFailedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Session.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Store.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/StoreClosedException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Transport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/UIDFolder.FetchProfileItem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/UIDFolder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/class-use/URLName.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/ConnectionAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/ConnectionEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/ConnectionListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/FolderAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/FolderEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/FolderListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/MailEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/MessageChangedEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/MessageChangedListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/MessageCountAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/MessageCountEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/MessageCountListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/StoreEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/StoreListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/TransportAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/TransportEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/TransportListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/ConnectionAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/ConnectionEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/ConnectionListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/FolderAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/FolderEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/FolderListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/MailEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/MessageChangedEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/MessageChangedListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/MessageCountAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/MessageCountEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/MessageCountListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/StoreEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/StoreListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/TransportAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/TransportEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/TransportListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/event/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/AddressException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/ContentDisposition.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/ContentType.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/HeaderTokenizer.Token.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/HeaderTokenizer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/InternetAddress.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/InternetHeaders.InternetHeader.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/InternetHeaders.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/MailDateFormat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimeBodyPart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimeMessage.RecipientType.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimeMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimeMultipart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimePart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimePartDataSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimeUtility.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/NewsAddress.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/ParameterList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/ParseException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/PreencodedMimeBodyPart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/SharedInputStream.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/AddressException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/ContentDisposition.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/ContentType.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/HeaderTokenizer.Token.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/HeaderTokenizer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/InternetAddress.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/InternetHeaders.InternetHeader.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/InternetHeaders.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MailDateFormat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimeBodyPart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimeMessage.RecipientType.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimeMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimeMultipart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimePart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimePartDataSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimeUtility.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/NewsAddress.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/ParameterList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/ParseException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/PreencodedMimeBodyPart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/SharedInputStream.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/internet/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/AddressStringTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/AddressTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/AndTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/BodyTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/ComparisonTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/DateTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/FlagTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/FromStringTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/FromTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/HeaderTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/IntegerComparisonTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/MessageIDTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/MessageNumberTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/NotTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/OrTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/ReceivedDateTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/RecipientStringTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/RecipientTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/SearchException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/SearchTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/SentDateTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/SizeTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/StringTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/SubjectTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/AddressStringTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/AddressTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/AndTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/BodyTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/ComparisonTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/DateTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/FlagTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/FromStringTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/FromTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/HeaderTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/IntegerComparisonTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/MessageIDTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/MessageNumberTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/NotTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/OrTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/ReceivedDateTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/RecipientStringTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/RecipientTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/SearchException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/SearchTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/SentDateTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/SizeTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/StringTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/SubjectTerm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/search/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/util/ByteArrayDataSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/util/SharedByteArrayInputStream.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/util/SharedFileInputStream.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/util/class-use/ByteArrayDataSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/util/class-use/SharedByteArrayInputStream.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/util/class-use/SharedFileInputStream.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/util/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/util/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/util/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/javax/mail/util/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/overview-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/resources/background.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/resources/tab.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/resources/titlebar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/resources/titlebar_end.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/docs/javadocs/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/lib/dsn.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/lib/gimap.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/lib/imap.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/lib/mailapi.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/lib/pop3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javamail1_4_7/javamail-1.4.7/lib/smtp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/WEB-INF/classes/SendEmail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/WEB-INF/classes/SendEmail$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/WEB-INF/lib/activation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/WEB-INF/lib/mail.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SendEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xmum/SendEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/accountPage/feedback.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/activation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/error_message.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Feeback/error_message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/feedback_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Feeback/feedback_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/mail.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/send_mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Feeback/send_mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/thank_you.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Feeback/thank_you.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sentemail.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,116 +588,13 @@
       <FILTER>cucumber.api.cli.*</FILTER>
     </SUITE>
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1119232006">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.3" value="3" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="16" />
-          <entry key="html" value="2" />
-          <entry key="iml" value="1" />
-          <entry key="java" value="2" />
-          <entry key="jpg" value="5" />
-          <entry key="jsp" value="19" />
-          <entry key="png" value="2" />
-          <entry key="xml" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="16" />
-          <entry key="HTML" value="2" />
-          <entry key="IDEA_MODULE" value="1" />
-          <entry key="Image" value="7" />
-          <entry key="JAVA" value="2" />
-          <entry key="JSP" value="19" />
-          <entry key="XML" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="400" />
-          <entry key="html" value="9" />
-          <entry key="java" value="92" />
-          <entry key="jsp" value="1055" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="400" />
-          <entry key="HTML" value="9" />
-          <entry key="JAVA" value="92" />
-          <entry key="JSP" value="1055" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/About-Us/aboutUs.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/pages/About-Us/aboutUs.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/landingPage/landingPage.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/landingPage/landingPage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/accountPage/accountPage.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/Feeback/feedBack.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="67" column="42" lean-forward="true" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+            <state relative-caret-position="425">
+              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -190,7 +643,6 @@
         <option value="$PROJECT_DIR$/web/pages/Template/index.jsp" />
         <option value="$PROJECT_DIR$/web/includes/header.jsp" />
         <option value="$PROJECT_DIR$/web/pages/accountPage/accountPage.css" />
-        <option value="$PROJECT_DIR$/web/pages/accountPage/feedback.html" />
         <option value="$PROJECT_DIR$/web/sentemail.java" />
         <option value="$PROJECT_DIR$/src/SendEmail.java" />
         <option value="$PROJECT_DIR$/web/pages/Feeback/feedBack.jsp" />
@@ -198,14 +650,9 @@
         <option value="$PROJECT_DIR$/web/pages/landingPage/landingPage.css" />
         <option value="$PROJECT_DIR$/web/pages/About-Us/aboutUs.css" />
         <option value="$PROJECT_DIR$/web/pages/About-Us/aboutUs.jsp" />
+        <option value="$PROJECT_DIR$/web/pages/accountPage/feedback.html" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -214,10 +661,10 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-180" />
-    <option name="y" value="181" />
-    <option name="width" value="1808" />
+    <option name="y" value="180" />
+    <option name="width" value="1809" />
     <option name="height" value="1100" />
   </component>
   <component name="ProjectView">
@@ -225,6 +672,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -236,41 +684,24 @@
             <path>
               <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
               <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
-              <item name="jaf-1_1_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
-              <item name="javamail1_4_7" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
               <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="xmum" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
               <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
               <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="accountPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
@@ -281,56 +712,33 @@
             </path>
             <path>
               <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="landingPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="video" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
-            <path>
-              <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544290675225" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/pages/mail.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544426357170" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/mail.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Problems" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Web Contexts" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Chee\IdeaProjects\xmum-facebook\web\pages\Feeback" />
+      <recent name="C:\Users\Chee\IdeaProjects\xmum-facebook\src\com\xmum" />
       <recent name="C:\Users\cdtom\xmum-facebook\web" />
       <recent name="C:\Users\cdtom\xmum-facebook\web\pages\Feeback" />
       <recent name="C:\Users\cdtom\xmum-facebook\web\pages\accountPage" />
-      <recent name="C:\Users\Chee\IdeaProjects\xmum-facebook\web\img" />
-      <recent name="C:\Users\Chee\IdeaProjects\xmum-facebook\web\pages\template" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -345,9 +753,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SendEmail">
+  <component name="RunManager" selected="JavaScript Debug.feedBack.jsp">
     <configuration name="SendEmail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SendEmail" />
+      <option name="MAIN_CLASS_NAME" value="com.xmum.SendEmail" />
       <module name="LandingPage" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -403,8 +811,84 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="feedback.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/pages/accountPage/feedback.html">
+    <configuration name="aboutUs.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/LandingPage_war_exploded/pages/About-Us/aboutUs.jsp">
       <method v="2" />
+    </configuration>
+    <configuration name="feedBack.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/LandingPage_war_exploded/pages/Feeback/feedBack.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat 8.5.34" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.34" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/LandingPage_war_exploded/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="LandingPage:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/LandingPage_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_xmum-facebook" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49788" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="LandingPage:war exploded" />
+        </option>
+      </method>
     </configuration>
     <configuration name="Tomcat 9.0.12" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.12" ALTERNATIVE_JRE_ENABLED="false">
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
@@ -419,11 +903,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_34_LandingPage" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="59925" />
       </RunnerSettings>
@@ -479,61 +963,23 @@
         </option>
       </method>
     </configuration>
-    <configuration name="feedBack.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.12" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/pages/Feeback/feedBack.jsp" />
-      <deployment>
-        <artifact name="LandingPage:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="feedBack_jsp_xmum-facebook" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="LandingPage:war exploded" />
-        </option>
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.SendEmail" />
       <item itemvalue="Cucumber java.All Features in: xmum-facebook" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.12" />
       <item itemvalue="Cucumber java.All Features in: Feeback" />
       <item itemvalue="Cucumber java.All Features in: accountPage" />
-      <item itemvalue="JavaScript Debug.feedback.html" />
-      <item itemvalue="Tomcat Server.feedBack.jsp" />
-      <item itemvalue="Application.SendEmail" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.12" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.34" />
+      <item itemvalue="JavaScript Debug.feedBack.jsp" />
+      <item itemvalue="JavaScript Debug.aboutUs.jsp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.feedBack.jsp" />
+        <item itemvalue="JavaScript Debug.aboutUs.jsp" />
         <item itemvalue="Application.SendEmail" />
         <item itemvalue="Cucumber java.All Features in: accountPage" />
         <item itemvalue="Cucumber java.All Features in: Feeback" />
-        <item itemvalue="JavaScript Debug.feedback.html" />
-        <item itemvalue="Tomcat Server.feedBack.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -558,6 +1004,7 @@
       <workItem from="1544209072742" duration="139000" />
       <workItem from="1544251228692" duration="450000" />
       <workItem from="1544251723200" duration="18872000" />
+      <workItem from="1544421137829" duration="4045000" />
     </task>
     <task id="LOCAL-00001" summary="changing sidebar height">
       <created>1543650906124</created>
@@ -602,13 +1049,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60855000" />
+    <option name="totallyTimeSpent" value="64900000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-180" y="181" width="1808" height="1100" extended-state="1" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14130434" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13355705" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -617,8 +1064,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32882884" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.14093265" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40651557" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -646,9 +1093,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="changing sidebar height" />
@@ -685,9 +1129,6 @@
           <caret line="6" selection-start-line="6" selection-end-line="7" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LandingPage.iml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/components/sideBar/sideBar.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -748,16 +1189,6 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/accountPage/feedback.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/accountPage/accountPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -765,55 +1196,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/90038_81657_800_auto_jpg.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/img/90038_81657_800_auto_jpg.jpg" />
     <entry file="file://$PROJECT_DIR$/web/img/aboutus.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/img/Feedbackbm.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/sentemail.java">
+    <entry file="file://$PROJECT_DIR$/web/pages/About-Us/aboutUs.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="14" column="33" selection-end-line="51" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SendEmail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="60" lean-forward="true" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1382#1587#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/Feeback/feedBack.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#0;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/Feeback/feedBack.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="67" column="42" lean-forward="true" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+        <state relative-caret-position="918">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
@@ -824,17 +1217,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/About-Us/aboutUs.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/landingPage/landingPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -845,15 +1231,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/Feeback/feedBack.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="42" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/Feeback/feedback_form.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/Feeback/send_mail.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/Feeback/thank_you.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xmum/SendEmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xmum/sentemail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="38" column="40" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/Feeback/error_message.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/accountPage/feedback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LandingPage.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/Feeback/feedBack.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/About-Us/aboutUs.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="425">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -916,7 +1360,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
