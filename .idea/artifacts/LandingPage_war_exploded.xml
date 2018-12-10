@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="LandingPage" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="postgresql-9.4.1212.jre6" />
+        </element>
       </element>
     </root>
   </artifact>
