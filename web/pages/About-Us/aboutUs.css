@@ -1,8 +1,6 @@
 #main-body {
     align-content: center;
-    margin:30px auto;
-    padding-left: 20px;
-    width: 800px;
+    width:100%;
     border: 1px cornflowerblue;
 
 }
@@ -10,7 +8,6 @@
 .title {
 
     font-size: 2em;
-    height: 100px;
     font-weight: bold;
     display: table-cell;
     vertical-align: middle;
@@ -24,10 +21,7 @@
 .block {
     height: 90%;
     width: 100%;
-    flex: 0 1 auto;
     background-color: #d1cc6e;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -36,8 +30,7 @@
     font-size: 2em;
     text-align: center;
     height: 30%;
-    width: 70%;
-    flex: 0 1 auto;
+    width: 100%;
 }
 
 #block1 {

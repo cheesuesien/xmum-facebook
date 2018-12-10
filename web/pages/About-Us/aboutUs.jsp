@@ -6,10 +6,10 @@
 <%@ include file="../../components/navBar/navBar.jsp" %>
 
 <div id="main-body">
-    <div class="block" id="block1">
-    <div class="title" style="align-content: center;margin-left: 200px;">who we are</div>
+    <div class="block" id="block1" style="margin: 0px auto">
+    <div class="title" style="align-content: center;"> who we are</div>
     <div>
-        <video width="320" height="240" autoplay>
+        <video width="240" height="480" autoplay>
             <source src="../../video/aboutus.mp4" type="video/mp4">
             <source src="../../video/aboutus.ogg" type="video/ogg">
         </video>
