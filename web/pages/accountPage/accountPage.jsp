@@ -11,9 +11,11 @@
     <div class="content">
         <div>
             <div>Name: </div>
+            <div><%= session.getAttribute("username")%></div>
         </div>
         <div>
             <div>Introduction: </div>
+            <div><%= session.getAttribute("intro")%></div>
         </div>
     </div>
 </div>
