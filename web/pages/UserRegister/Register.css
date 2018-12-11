@@ -1,0 +1,45 @@
+#main-body {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 450px;
+    width: 1069px;
+    background-image: url('../../img/book.jpg');
+    background-size: 100%;
+}
+
+#RegisterBlock{
+    color: white;
+    padding: 10px;
+    text-align: center;
+    background-color: #383838;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+
+.line{
+    font-size: 1.2em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.InputBlock{
+    background-color: #565656;
+    height: 25px;
+    color: white;
+    border: 1px white solid;
+}
+
+.SubmitBlock{
+    width: 150px;
+    text-align: center;
+    background-color: #383838;
+    color: white;
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    cursor: pointer;
+    border: none;
+}

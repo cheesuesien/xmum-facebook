@@ -2,8 +2,8 @@
 <link rel="stylesheet" type="text/css" href="landingPage.css"/>
 
 <%@ include file="../../includes/header.jsp" %>
-<%@ include file="../../components/navBar/navBar.jsp" %>
-
+<%@ include file="../../components/LoginBar/LoginBar.jsp" %>
+<%@ include file="../UserRegister/Register.jsp" %>
 <div id="main-body">
     <%-- Code goes here--%>
     <div class="block" id="block1">
