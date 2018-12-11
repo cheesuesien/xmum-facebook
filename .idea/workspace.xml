@@ -7,13 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb95e32-7815-4beb-962a-2e442921f7eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LandingPage_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/LandingPage_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LandingPage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LandingPage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/WEB-INF/classes/Register/RegisterProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/WEB-INF/classes/Register/RegisterProcess.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/pages/landingPage/landingPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/pages/landingPage/landingPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/components/LoginBar/LoginBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/components/LoginBar/LoginBar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/pages/UserRegister/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LandingPage_war_exploded/pages/UserRegister/Register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LandingPage/Register/RegisterProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LandingPage/Register/RegisterProcess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Register/RegisterProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Register/RegisterProcess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/landingPage/landingPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/landingPage/landingPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/components/LoginBar/LoginBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/components/LoginBar/LoginBar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/UserRegister/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/UserRegister/Register.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,61 +42,13 @@
     <expand />
     <select />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1505051057">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="8" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.78" value="1" />
-          <entry key="project.open.time.83" value="1" />
-          <entry key="project.opened" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="jsp" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="27" />
-          <entry key="HTML" value="1" />
-          <entry key="JAVA" value="24" />
-          <entry key="JSP" value="26" />
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="XML" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="182" />
-          <entry key="JAVA" value="1271" />
-          <entry key="JSP" value="2734" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="XML" value="162" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/pages/UserRegister/Register.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#3;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -101,10 +56,40 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Register/RegisterProcess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="136">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/pages/landingPage/landingPage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/components/LoginBar/LoginBar.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#form#1;n#div#1;n#nav#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -162,7 +147,6 @@
         <option value="$PROJECT_DIR$/web/includes/ConnectionProvider.java" />
         <option value="$PROJECT_DIR$/web/includes/Provider.java" />
         <option value="$PROJECT_DIR$/web/pages/UserRegister/RegisterProcess.jsp" />
-        <option value="$PROJECT_DIR$/web/components/LoginBar/LoginBar.jsp" />
         <option value="$PROJECT_DIR$/web/pages/PasswordForget/PasswordForget.jsp" />
         <option value="$PROJECT_DIR$/web/includes/Login/LoginBean.java" />
         <option value="$PROJECT_DIR$/web/includes/Register/RegisterBean.java" />
@@ -172,22 +156,23 @@
         <option value="$PROJECT_DIR$/web/includes/Register/RegisterProcess.java" />
         <option value="$PROJECT_DIR$/src/ConnectionProvider.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/pages/landingPage/landingPage.jsp" />
         <option value="$PROJECT_DIR$/src/DatabaseConnection/ConnectionProvider.java" />
         <option value="$PROJECT_DIR$/src/Register/RegisterVerify.java" />
         <option value="$PROJECT_DIR$/src/Register/RegisterBean.java" />
-        <option value="$PROJECT_DIR$/src/Register/RegisterProcess.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/pages/UserRegister/Register.css" />
+        <option value="$PROJECT_DIR$/web/components/LoginBar/LoginBar.jsp" />
+        <option value="$PROJECT_DIR$/src/Register/RegisterController.java" />
         <option value="$PROJECT_DIR$/web/pages/UserRegister/Register.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/Register.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/landingPage.jsp" />
+        <option value="$PROJECT_DIR$/web/pages/landingPage/landingPage.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/Register/RegisterProcess.java" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
+  <component name="JavaeeView">
+    <option name="showModules" value="false" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -202,10 +187,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="210" />
-    <option name="width" value="980" />
-    <option name="height" value="1090" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="6" />
+    <option name="y" value="82" />
+    <option name="width" value="1638" />
+    <option name="height" value="938" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -217,6 +203,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,6 +231,12 @@
               <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
               <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -252,13 +245,6 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="landingPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xmum-facebook" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="PasswordForget" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xmum-facebook" type="b2602c69:ProjectViewProjectNode" />
@@ -281,18 +267,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544413787158" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544462412632" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment/calculator(servlet)/calculator(servlet)" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -307,10 +292,10 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Software Engineering\YEAR3\SEM1\Programming II\xmum-facebook\web\WEB-INF" />
       <recent name="C:\Software Engineering\YEAR3\SEM1\Programming II\xmum-facebook\src" />
       <recent name="C:\Software Engineering\YEAR3\SEM1\Programming II\xmum-facebook" />
       <recent name="C:\Software Engineering\YEAR3\SEM1\Programming II\xmum-facebook\web\includes\Register" />
-      <recent name="C:\Software Engineering\YEAR3\SEM1\Programming II\xmum-facebook\web\WEB-INF" />
       <recent name="C:\Software Engineering\YEAR3\SEM1\Programming II\xmum-facebook\web\pages\UserRegister" />
     </key>
   </component>
@@ -341,11 +326,11 @@
         <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_34_LandingPage" />
         <option name="HTTP_PORT" value="8081" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="59925" />
       </RunnerSettings>
@@ -425,7 +410,10 @@
       <workItem from="1544370888337" duration="740000" />
       <workItem from="1544407327560" duration="427000" />
       <workItem from="1544407806513" duration="627000" />
-      <workItem from="1544408871961" duration="3892000" />
+      <workItem from="1544408871961" duration="6460000" />
+      <workItem from="1544431992946" duration="67000" />
+      <workItem from="1544432483801" duration="6700000" />
+      <workItem from="1544528576433" duration="3055000" />
     </task>
     <task id="LOCAL-00001" summary="changing sidebar height">
       <created>1543650906124</created>
@@ -438,7 +426,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80045000" />
+    <option name="totallyTimeSpent" value="92435000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -450,32 +438,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
+    <frame x="5" y="66" width="1310" height="750" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.20536913" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.495" visible="true" weight="0.2392" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.50206614" side_tool="true" weight="0.16174497" />
+      <window_info id="Web" order="7" sideWeight="0.505" side_tool="true" weight="0.15452363" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32963988" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26869807" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32605043" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963988" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32963988" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32963988" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32918397" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32963988" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32918397" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32918397" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -490,9 +477,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="changing sidebar height" />
@@ -527,13 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/accountPage/accountPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -636,20 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/landingPage/landingPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/landingPage/landingPage.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -664,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/components/LoginBar/LoginBar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Register/RegisterBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -678,30 +634,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/accountPage/accountPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Register/RegisterTesting.java" />
+    <entry file="file://$PROJECT_DIR$/src/Register/RegisterController.java" />
+    <entry file="file://$PROJECT_DIR$/web/components/LoginBar/LoginBar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/components/LoginBar/LoginBar.jsp">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#form#1;n#div#1;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/landingPage/landingPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="62" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="62" />
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/UserRegister/Register.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Register/RegisterProcess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="136">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

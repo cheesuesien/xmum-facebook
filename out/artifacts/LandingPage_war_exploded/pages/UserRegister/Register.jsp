@@ -6,7 +6,7 @@
 
     <div id="main-body">
         <div style="margin: 250px auto; width: 390px; border: black solid 2px; height: 195px;">
-            <form name="RegisterVerify" method="get" action="../../../src/Register/Controller">
+            <form name="RegisterVerify" method="post" action="RegisterProcess">
                 <div id = "RegisterBlock">
                     Register
                 </div>

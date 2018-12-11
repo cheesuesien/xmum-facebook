@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="nav-right">
-        <form name="Register" action="../../pages/PasswordForget/PasswordForget.jsp">
+        <form name="ResetPassword" action="../../pages/PasswordForget/PasswordForget.jsp">
             <input style="display:inline-block; background-color: #383838; color: white; border: 0px; font-family: Verdana, san-serif;
             height: 30px; padding: 5px; font-weight: bold;" type = "submit" value="Forget password?"/>
         </form>
