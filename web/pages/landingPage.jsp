@@ -1,9 +1,9 @@
-<link rel="stylesheet" type="text/css" href="../body.css"/>
-<link rel="stylesheet" type="text/css" href="landingPage.css"/>
+<link rel="stylesheet" type="text/css" href="styles/body.css"/>
+<link rel="stylesheet" type="text/css" href="styles/landingPage.css"/>
 
-<%@ include file="../../includes/header.jsp" %>
-<%@ include file="../../components/navBar/navBar.jsp" %>
-
+<%@ include file="../includes/header.jsp" %>
+<%@ include file="../components/LoginBar.jsp" %>
+<%@ include file="../components/Register.jsp" %>
 <div id="main-body">
     <%-- Code goes here--%>
     <div class="block" id="block1">
@@ -19,4 +19,4 @@
     </div>
 
 </div>
-<%@ include file="../../includes/footer.jsp" %>
+<%@ include file="../includes/footer.jsp" %>

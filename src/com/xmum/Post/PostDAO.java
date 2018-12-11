@@ -1,4 +1,6 @@
-package com.xmum;
+package com.xmum.Post;
+
+import com.xmum.DatabaseConnection.ConnectionProvider;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

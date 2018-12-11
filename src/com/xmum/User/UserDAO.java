@@ -1,4 +1,6 @@
-package com.xmum;
+package com.xmum.User;
+
+import com.xmum.DatabaseConnection.ConnectionProvider;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -39,4 +41,5 @@ public class UserDAO {
         }
         return status;
     }
+
 }

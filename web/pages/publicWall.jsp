@@ -1,9 +1,9 @@
-<link rel="stylesheet" type="text/css" href="../body.css"/>
-<link rel="stylesheet" type="text/css" href="publicWall.css"/>
+<link rel="stylesheet" type="text/css" href="styles/body.css"/>
+<link rel="stylesheet" type="text/css" href="styles/publicWall.css"/>
 
-<%@ include file="../../includes/header.jsp" %>
-<%@ include file="../../components/sideBar/sideBar.jsp" %>
-<%@ include file="../../components/navBar/navBar.jsp" %>
+<%@ include file="../includes/header.jsp" %>
+<%@ include file="../components/sideBar.jsp" %>
+<%@ include file="../components/navBar.jsp" %>
 
 <html>
 <head>
@@ -23,7 +23,7 @@
             <table>
                 <tr>
                     <td rowspan="2" width="100px">
-                        <img src="../../components/icons/PFP.jpg" alt="Profile Picture"  class="pfp"/>
+                        <img src="../components/icons/PFP.jpg" alt="Profile Picture" class="pfp"/>
                     </td>
                     <td class="admin-username">
                         <b>User Name</b>
@@ -109,4 +109,4 @@
 </body>
 </html>
 
-<%@ include file="../../includes/footer.jsp" %>
+<%@ include file="../includes/footer.jsp" %>

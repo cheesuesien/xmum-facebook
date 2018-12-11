@@ -1,4 +1,4 @@
-package com.xmum;
+package com.xmum.User;
 
 public class UserBean {
     private String id;

@@ -1,9 +1,9 @@
-<link rel="stylesheet" type="text/css" href="../body.css"/>
-<link rel="stylesheet" type="text/css" href="feedBack.css"/>
+<link rel="stylesheet" type="text/css" href="styles/body.css"/>
+<link rel="stylesheet" type="text/css" href="styles/feedBack.css"/>
 
-        <%@ include file="../../includes/header.jsp" %>
-<%@ include file="../../components/sideBar/sideBar.jsp" %>
-<%@ include file="../../components/navBar/navBar.jsp" %>
+        <%@ include file="../includes/header.jsp" %>
+<%@ include file="../components/sideBar.jsp" %>
+<%@ include file="../components/navBar.jsp" %>
 
 
 
@@ -52,7 +52,7 @@
 </div>
 </div>
 
-<%@ include file="../../includes/footer.jsp" %>
+<%@ include file="../includes/footer.jsp" %>
 
 
 

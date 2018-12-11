@@ -1,4 +1,4 @@
-package com.xmum;
+package com.xmum.Post;
 
 public class PostBean {
     private String author;

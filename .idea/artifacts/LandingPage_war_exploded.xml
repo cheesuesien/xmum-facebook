@@ -9,7 +9,6 @@
         <element id="directory" name="lib">
           <element id="file-copy" path="$USER_HOME$/Desktop/activation.jar" />
           <element id="file-copy" path="$USER_HOME$/Desktop/mail.jar" />
-          <element id="library" level="project" name="postgresql-9.4.1212.jre6" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="LandingPage/web/Web" />

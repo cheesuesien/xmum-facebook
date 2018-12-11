@@ -1,4 +1,5 @@
-<%@ page import="com.xmum.*" %><%--
+<%@ page import="com.xmum.*" %>
+<%@ page import="com.xmum.User.UserDAO" %><%--
   Created by IntelliJ IDEA.
   User: Chee
   Date: 8/12/2018
@@ -11,7 +12,7 @@
     <title>Title</title>
 </head>
 <body>
-<jsp:useBean id="user" class="com.xmum.UserBean"/>
+<jsp:useBean id="user" class="com.xmum.User.UserBean"/>
 <jsp:setProperty name="user" property="id" value="swe1609661"/>
 <jsp:setProperty name="user" property="username" value="lihan"/>
 <jsp:setProperty name="user" property="intro" value="I am short and cute!"/>

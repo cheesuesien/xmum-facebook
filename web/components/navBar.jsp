@@ -1,4 +1,4 @@
-<link href="../../components/navBar/navBar.css" rel="stylesheet">
+<link href="../components/styles/navBar.css" rel="stylesheet">
 <nav>
     <div class="nav-left">
         <img class="icon" src="../../components/icons/main.png" alt="main-icon"/>
