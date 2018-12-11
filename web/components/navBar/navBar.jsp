@@ -5,7 +5,7 @@
         <div>XMUM FACEBOOK</div>
     </div>
     <div class="nav-right">
-        <div>Username</div>
+        <div><%= session.getAttribute("username")%></div>
         <div style="font-weight:bold;">Sign In</div>
     </div>
 </nav>
