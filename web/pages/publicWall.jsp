@@ -1,3 +1,6 @@
+<%@ page import="com.xmum.User.UserDAO" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="com.xmum.User.UserBean" %>
 <link rel="stylesheet" type="text/css" href="styles/body.css"/>
 <link rel="stylesheet" type="text/css" href="styles/publicWall.css"/>
 
@@ -10,10 +13,27 @@
     <title>XMUM Facebook</title>
 </head>
 <body>
+<jsp:useBean id="user" class="com.xmum.User.UserBean"/>
+<jsp:setProperty name="user" property="username" value="css"/>
+<%
+    ResultSet userResult = UserDAO.getUser(user);
+    try{
+        if (userResult.next()){
+            UserBean thisUser = new UserBean( userResult.getString("id"), userResult.getString("username"), userResult.getString("intro") );
+            session.setAttribute("user", thisUser);
+        } else {
+            System.out.println("no user selected from db");
+        }
+    } catch (Exception e){
+        System.out.println("get user failed");
+    }
+%>
     <!--Type user status here -->
     <div id="status-input">
-        <textarea placeholder=" What's on your mind?" style="width:80%;"></textarea>
-        <!--<div class="buttooon" onclick="document.getElementById('log').submit()">Post</div>-->
+        <form id="postForm" method="post" action="${pageContext.request.contextPath}/post">
+            <textarea name="postMessage" placeholder=" What's on your mind?" style="width:80%;"></textarea>
+            <div class="buttooon" onclick="document.getElementById('postForm').submit()">Post</div>
+        </form>
     </div>
 
     <!--Pinned post: Admin Posts and Official Announcements-->

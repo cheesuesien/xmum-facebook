@@ -1,14 +1,39 @@
 package com.xmum.Post;
 
-public class PostBean {
-    private String author;
-    private String message;
+import com.xmum.User.UserBean;
 
-    public String getAuthor() {
+import java.time.LocalDateTime;
+
+public class PostBean {
+    private UserBean author;
+    private String message;
+    private LocalDateTime timeStamp;
+    private boolean pinned;
+
+    public PostBean(){
+        author = null;
+        message = "";
+        timeStamp = LocalDateTime.now();
+        pinned = false;
+    }
+
+    public PostBean(UserBean author, String message, boolean pinned){
+        System.out.println("postbean constructor start");
+        this.author = author;
+        this.message = message;
+        this.timeStamp = LocalDateTime.now();
+        this.pinned = pinned;
+        System.out.println("postbean constructor end");
+    }
+
+    public String getAuthorId(){
+        return author.getId();
+    }
+    public UserBean getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(UserBean author) {
         this.author = author;
     }
 
@@ -16,7 +41,13 @@ public class PostBean {
         return message;
     }
 
-    public void setUsername(String message) {
+    public void setMessage(String message) {
         this.message = message;
     }
+
+    public LocalDateTime getTimeStamp() { return timeStamp; }
+
+    public boolean isPinned() { return pinned; }
+
+    public void setPinned(boolean pinned) { this.pinned = pinned; }
 }

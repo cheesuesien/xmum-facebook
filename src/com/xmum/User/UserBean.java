@@ -5,6 +5,17 @@ public class UserBean {
     private String username;
     private String intro;
 
+    public UserBean(){
+        this.id = "";
+        this.username = "";
+        this.intro = "";
+    }
+    public UserBean(String id, String username, String intro){
+        this.id = id;
+        this.username = username;
+        this.intro = intro;
+    }
+
     public String getId() {
         return id;
     }
