@@ -22,9 +22,26 @@ public class PostDAO {
             status = pst.executeUpdate();
             conn.close();
         } catch(Exception e) {
+            System.out.println("insertpost failed");
             System.out.println(e);
         }
         return status;
+    }
+
+    public static int getTotal(){
+        int total = 0;
+        try {
+            conn = ConnectionProvider.getCon();
+            pst = conn.prepareStatement("select count(*) from posts");
+            ResultSet rs = pst.executeQuery();
+            rs.next();
+            total = rs.getInt(1);
+            conn.close();
+        } catch(Exception e){
+            System.out.println("get total failed");
+            System.out.println(e);
+        }
+        return total;
     }
 
     public static ResultSet getPosts(){
@@ -33,6 +50,7 @@ public class PostDAO {
             conn = ConnectionProvider.getCon();
             pst = conn.prepareStatement("select * from posts");
             result = pst.executeQuery();
+            System.out.println("getting posts");
             conn.close();
         } catch(Exception e) {
             System.out.println("unsuccessful query");

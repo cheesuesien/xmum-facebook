@@ -17,13 +17,11 @@ public class PostBean {
         pinned = false;
     }
 
-    public PostBean(UserBean author, String message, boolean pinned){
-        System.out.println("postbean constructor start");
+    public PostBean(UserBean author, String message, LocalDateTime datetime, boolean pinned){
         this.author = author;
         this.message = message;
-        this.timeStamp = LocalDateTime.now();
+        this.timeStamp = datetime;
         this.pinned = pinned;
-        System.out.println("postbean constructor end");
     }
 
     public String getAuthorId(){
