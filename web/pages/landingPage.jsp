@@ -4,6 +4,24 @@
 <%@ include file="../includes/header.jsp" %>
 <%@ include file="../components/LoginBar.jsp" %>
 <%@ include file="../components/Register.jsp" %>
+
+<%
+    Cookie cookie =null;
+    // Get an array of Cookies associated with the this domain
+    Cookie[] cookies = request.getCookies();
+
+    if( cookies != null ) {
+        for (int i = 0; i < cookies.length; i++) {
+            cookie = cookies[i];
+            if((cookie.getName( )).compareTo("user") == 0 ) {
+                cookie.setMaxAge(0);
+                response.addCookie(cookie);
+            }
+        }
+    } else {
+    }
+%>
+
 <div id="main-body">
     <%-- Code goes here--%>
     <div class="block" id="block1">

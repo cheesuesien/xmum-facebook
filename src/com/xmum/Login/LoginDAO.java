@@ -2,27 +2,26 @@ package com.xmum.Login;
 
 import com.xmum.DatabaseConnection.ConnectionProvider;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.sql.*;
 
 public class LoginDAO {
 
     static Connection conn;
     static PreparedStatement pst;
 
-    public static int insertUser(LoginBean u){
-        int status = 0;
+    public static boolean validate(LoginBean bean){
+        boolean status=false;
         try{
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("insert into xmum_user values(?,?)");
-            System.out.println(u.getEmail());
-            pst.setString(1,u.getEmail());
-            pst.setString(2,u.getPassword());
-            status = pst.executeUpdate();
-            conn.close();
-        }catch(Exception ex){
+            pst = conn.prepareStatement("select * from student where username=? and password=?");
 
-        }
+            pst.setString(1,bean.getUsername());
+            pst.setString(2,bean.getPassword());
+
+            ResultSet rs=pst.executeQuery();
+            status=rs.next();
+
+        }catch(Exception ex){}
         return status;
     }
 }

@@ -1,30 +1,22 @@
 package com.xmum.Login;
 
 public class LoginBean {
-    String email, password, password2;
+    String username, password;
 
-
-    public LoginBean(String email, String password, String password2){
-        this.email = email;
+    public LoginBean(String username, String password){
+        this.username = username;
         this.password = password;
-        this.password2 = password2;
     }
-    public String getEmail(){
-        return email;
+    public String getUsername() {
+        return username;
     }
-    public void setEmail(String email){
-        this.email = email;
+    public void setUsername(String email) {
+        this.username = username;
     }
     public String getPassword() {
         return password;
     }
     public void setPassword(String password) {
         this.password = password;
-    }
-    public String getPassword2() {
-        return password2;
-    }
-    public void setPassword2(String password2) {
-        this.password2 = password2;
     }
 }

@@ -27,3 +27,15 @@ nav {
 .icon {
     width: 30px;
 }
+
+.LogoutButton{
+    display:inline-block;
+    background-color: #383838;
+    color: white;
+    border: 0px;
+    font-family: Verdana, san-serif;
+    height: 30px;
+    padding: 5px;
+    padding-right: 100px;
+    font-weight: bold;
+}

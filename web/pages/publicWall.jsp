@@ -5,11 +5,19 @@
 <%@ include file="../components/sideBar.jsp" %>
 <%@ include file="../components/navBar.jsp" %>
 
-<html>
-<head>
-    <title>XMUM Facebook</title>
-</head>
-<body>
+<%
+    String userName = null;
+    Cookie[] cookies = request.getCookies();
+    if(cookies !=null){
+        for(Cookie cookie : cookies){
+            if(cookie.getName().equals("user"))
+                userName = cookie.getValue();
+        }
+    }
+    if(userName == null)
+        response.sendRedirect("landingPage.jsp");
+%>
+
     <!--Type user status here -->
     <div id="status-input">
         <textarea placeholder=" What's on your mind?" style="width:80%;"></textarea>
@@ -106,7 +114,5 @@
         </div>
     </div>
     <div><br>  <br></div>
-</body>
-</html>
 
 <%@ include file="../includes/footer.jsp" %>
