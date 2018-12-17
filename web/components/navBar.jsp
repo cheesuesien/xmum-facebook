@@ -2,10 +2,10 @@
 <nav>
     <div class="nav-left">
         <img class="icon" src="../../components/icons/main.png" alt="main-icon"/>
-        <div>XMUM FACEBOOK</div>
+        <a href="../pages/publicWall.jsp" class="homeBtn" style="color: white;">XMUM FACEBOOK</a>
     </div>
     <div class="nav-right">
         <div><%= session.getAttribute("username")%></div>
-        <div style="font-weight:bold;">Sign In</div>
+        <a href="../pages/.jsp" class="homeBtn" style="color: white;">XMUM FACEBOOK</a>
     </div>
 </nav>
