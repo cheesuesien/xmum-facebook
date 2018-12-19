@@ -18,13 +18,12 @@ publicWall.jsp after the posts are done loading--%>
 <%--This is a temporary hardcoded function to set the session attribute "user" to get the logged in user.
 This function should be added to the loginservlet function when it is ready.--%>
 <jsp:useBean id="user" class="com.xmum.User.UserBean"/>
-<jsp:setProperty name="user" property="username" value="css"/>
 <jsp:setProperty name="user" property="id" value="swe1609507"/>
 <%
     ResultSet userResult = UserDAO.getUser(user);
     try{
         if (userResult.next()){
-            UserBean thisUser = new UserBean( userResult.getString("id"), userResult.getString("username"), userResult.getString("intro") );
+            UserBean thisUser = new UserBean( userResult.getString("id"), userResult.getString("username"), userResult.getString("intro"), userResult.getString("profilePic") );
             session.setAttribute("user", thisUser);
         } else {
             System.out.println("no user selected from db");
