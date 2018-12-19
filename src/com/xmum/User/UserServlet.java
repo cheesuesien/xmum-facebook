@@ -42,17 +42,19 @@ public class UserServlet extends HttpServlet {
         String picName = (String)request.getAttribute("picName");
         System.out.println("userServlet: got picName attrib");
         System.out.println(picName);
+        int status;
         if (picName != null){
             System.out.println("setting profilePic");
             user.setProfilePic(picName);
+            status = UserDAO.updateProfilePic(user);
         } else {
             System.out.println("setting username and intro");
 
             user.setNickname(request.getParameter("username"));
             System.out.println("userServlet: got username form param");
             System.out.println(request);
+            status = UserDAO.updateUser(user);
         }
-        int status = UserDAO.updateUser(user);
         if (status > 0){
             System.out.println("UserServlet: update user profilePic successful");
         } else {

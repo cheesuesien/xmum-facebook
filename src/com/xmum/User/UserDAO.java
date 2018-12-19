@@ -46,6 +46,21 @@ public class UserDAO {
         return status;
     }
 
+    public static int updateProfilePic(UserBean u){
+        int status = 0;
+        try {
+            conn = ConnectionProvider.getCon();
+            pst = conn.prepareStatement("update users set profilepic = ? where id = ?");
+            pst.setString(1, u.getProfilePic());
+            pst.setString(2, u.getId());
+            status = pst.executeUpdate();
+            conn.close();
+        } catch(Exception e) {
+            System.out.println("update profilePic unsuccessful");
+            System.out.println(e);
+        }
+        return status;
+    }
 
 
 }
