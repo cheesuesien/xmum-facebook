@@ -2,21 +2,20 @@ package com.xmum.User;
 
 public class UserBean {
     private String id;
-    private String username;
-    private String intro;
+    private String nickname;
+    private String level;
     private String profilePic;
 
     public UserBean(){
         this.id = "";
-        this.username = "";
-        this.intro = "";
+        this.nickname = "";
+        this.level = "";
         this.profilePic = "";
     }
-    public UserBean(String id, String username, String intro, String profilePic){
+    public UserBean(String id, String nickname, String level){
         this.id = id;
-        this.username = username;
-        this.intro = intro;
-        this.profilePic = profilePic;
+        this.nickname = nickname;
+        this.level = level;
     }
 
     public String getId() {
@@ -27,20 +26,20 @@ public class UserBean {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
-    public String getIntro() {
-        return intro;
+    public String getLevel() {
+        return level;
     }
 
-    public void setIntro(String intro) {
-        this.intro = intro;
+    public void setLevel(String level) {
+        this.level = level;
     }
 
     public String getProfilePic() {

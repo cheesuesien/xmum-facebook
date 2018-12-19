@@ -18,10 +18,9 @@ public class UserServlet extends HttpServlet {
         UserBean user = null;
         try {
             if(usersRs.next()){
-                String username = usersRs.getString("username");
-                String intro = usersRs.getString("intro");
-                String profilePic = usersRs.getString("profilePic");
-                user = new UserBean(id, username, intro, profilePic);
+                String nickname = usersRs.getString("nickname");
+                String level = usersRs.getString("level");
+                user = new UserBean(id, nickname, level);
             } else {
                 System.out.println("no user returned");
             }
@@ -39,7 +38,7 @@ public class UserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         System.out.println("userServlet doPut activated!");
         UserBean user = (UserBean)request.getSession().getAttribute("user");
-        System.out.println("userservlet: got session user");
+        System.out.println("userServlet: got session user");
         String picName = (String)request.getAttribute("picName");
         System.out.println("userServlet: got picName attrib");
         System.out.println(picName);
@@ -49,12 +48,9 @@ public class UserServlet extends HttpServlet {
         } else {
             System.out.println("setting username and intro");
 
-            user.setUsername(request.getParameter("username"));
+            user.setNickname(request.getParameter("username"));
             System.out.println("userServlet: got username form param");
             System.out.println(request);
-            user.setIntro(request.getParameter("intro"));
-            System.out.println("userServlet: got intro form param");
-            System.out.println(request.getParameter("intro"));
         }
         int status = UserDAO.updateUser(user);
         if (status > 0){

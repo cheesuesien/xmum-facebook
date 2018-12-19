@@ -23,7 +23,7 @@ public class PostServlet extends HttpServlet {
                 rs.next();
 
                 // setting id attribute
-                String id = rs.getString("studentid");
+                String id = rs.getString("authorid");
                 request.setAttribute("id", id);
 
                 //sends "id" given by request to userServlet to get "user" (author)
@@ -34,8 +34,7 @@ public class PostServlet extends HttpServlet {
                 // initialise postBean array
                 String message = rs.getString("message");
                 LocalDateTime datetime = rs.getTimestamp("timestamp").toLocalDateTime();
-                boolean pinned = rs.getBoolean("pinned");
-                postBeans[i] = new PostBean(author, message, datetime, pinned);
+                postBeans[i] = new PostBean(author, message, datetime);
 
             }catch(Exception e){
                 System.out.println("problem initialising postBean array");
@@ -48,7 +47,7 @@ public class PostServlet extends HttpServlet {
         request.getSession().setAttribute("posts", postBeans);
 
         //redirect back to publicWall.jsp
-        response.sendRedirect("/LandingPage_war_exploded/pages/publicWall.jsp");
+        response.sendRedirect(request.getContextPath() + "/pages/publicWall.jsp");
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -58,7 +57,7 @@ public class PostServlet extends HttpServlet {
         UserBean user = (UserBean)(request.getSession(false).getAttribute("user"));
         System.out.println(user);
         System.out.println("get user from session successful");
-        PostBean post = new PostBean(user, message, LocalDateTime.now(), false);
+        PostBean post = new PostBean(user, message, LocalDateTime.now());
         System.out.println("create postbean successful");
         int status = PostDAO.insertPost(post);
         if (status > 0){

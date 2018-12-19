@@ -10,7 +10,7 @@
     top: 0;
 }
 
-#sideBar > div {
+#sideBar > a {
     height: 30px;
     flex: 0 1 auto;
     color: #d1cc6e;
@@ -20,4 +20,8 @@
     border-color: #383838;
     background-color: #424242;
     font-size: 0.8em;
+}
+
+a {
+    text-decoration: none;
 }

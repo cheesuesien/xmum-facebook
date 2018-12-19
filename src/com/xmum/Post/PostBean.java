@@ -8,20 +8,17 @@ public class PostBean {
     private UserBean author;
     private String message;
     private LocalDateTime timeStamp;
-    private boolean pinned;
 
     public PostBean(){
         author = null;
         message = "";
         timeStamp = LocalDateTime.now();
-        pinned = false;
     }
 
-    public PostBean(UserBean author, String message, LocalDateTime datetime, boolean pinned){
+    public PostBean(UserBean author, String message, LocalDateTime datetime){
         this.author = author;
         this.message = message;
         this.timeStamp = datetime;
-        this.pinned = pinned;
     }
 
     public String getAuthorId(){
@@ -44,8 +41,4 @@ public class PostBean {
     }
 
     public LocalDateTime getTimeStamp() { return timeStamp; }
-
-    public boolean isPinned() { return pinned; }
-
-    public void setPinned(boolean pinned) { this.pinned = pinned; }
 }

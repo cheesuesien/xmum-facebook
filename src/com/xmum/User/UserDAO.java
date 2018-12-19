@@ -33,11 +33,10 @@ public class UserDAO {
         int status = 0;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("update users set username = ?, intro = ?, profilePic = ? where id = ?");
-            pst.setString(1, u.getUsername());
-            pst.setString(2, u.getIntro());
-            pst.setString(3, u.getProfilePic());
-            pst.setString(4, u.getId());
+            pst = conn.prepareStatement("update users set nickname = ?, level = ? where id = ?");
+            pst.setString(1, u.getNickname());
+            pst.setString(2, u.getLevel());
+            pst.setString(3, u.getId());
             status = pst.executeUpdate();
             conn.close();
         } catch(Exception e) {

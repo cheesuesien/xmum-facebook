@@ -27,3 +27,58 @@ nav {
 .icon {
     width: 30px;
 }
+
+.XMUM_Facebook{
+    display:inline-block;
+    background-color: #383838;
+    color: white;
+    border: 0px;
+    font-family: Verdana, san-serif;
+    height: 30px;
+    padding-bottom: 25px;
+    font-weight: bold;
+    font-size: 1.2em
+}
+
+.ForgetPassword{
+    display:inline-block;
+    background-color: #383838;
+    color: white;
+    border: 0px;
+    font-family: Verdana, san-serif;
+    height: 30px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.Text{
+    display:inline-block;
+    color:white;
+}
+
+.InputBlock{
+    display:inline-block;
+    background-color: #565656;
+    border: 1px white solid;
+}
+
+.LoginButton{
+    display:inline-block;
+    background-color: #383838;
+    color: white;
+    border: 0px;
+    font-family: Verdana, san-serif;
+    height: 30px;
+    padding: 5px;
+    padding-right: 0px;
+    font-weight: bold;
+}
+
+.submit-result{
+    display: inline-block;
+    color: red;
+    font-size: 0.7em;
+    padding: 5px;
+    padding-left: 0px;
+    width: 210px;
+}

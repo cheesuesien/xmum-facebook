@@ -17,12 +17,12 @@
         <form id="userDetailsForm" method="POST" action="${pageContext.request.contextPath}/user" onsubmit="console.log('submitting form');">
             <div>
                 <div>Name: </div>
-                <div class="userInfo">${user.getUsername()}</div>
+                <div class="userInfo">${user.getNickname()}</div>
                 <input style="display:none;" type="text" name="username" class="input" id="username"/>
             </div>
             <div>
                 <div>Introduction: </div>
-                <div class="userInfo">${user.getIntro()}</div>
+                <div class="userInfo"></div>
                 <input style="display:none;" type="text" name="intro" class="input" id="intro"/>
             </div>
             <input type="submit" style="display:none" id="submitButton"/>
