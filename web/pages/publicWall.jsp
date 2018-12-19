@@ -23,22 +23,6 @@ publicWall.jsp after the posts are done loading--%>
 
 <%--This is a temporary hardcoded function to set the session attribute "user" to get the logged in user.
 This function should be added to the loginservlet function when it is ready.--%>
-<jsp:useBean id="user" class="com.xmum.User.UserBean"/>
-<jsp:setProperty name="user" property="username" value="css"/>
-<jsp:setProperty name="user" property="id" value="swe1609507"/>
-<%
-    ResultSet userResult = UserDAO.getUser(user);
-    try{
-        if (userResult.next()){
-            UserBean thisUser = new UserBean( userResult.getString("id"), userResult.getString("username"), userResult.getString("intro") );
-            session.setAttribute("user", thisUser);
-        } else {
-            System.out.println("no user selected from db");
-        }
-    } catch (Exception e){
-        System.out.println("get user failed");
-    }
-%>
 
 <!--Type user status here -->
     <div id="status-input">
@@ -51,15 +35,8 @@ This function should be added to the loginservlet function when it is ready.--%>
     <!--Pinned post: Admin Posts and Official Announcements-->
     <%--get ${posts} from session attribute--%>
     <c:forEach items="${posts}" var="post">
-        <c:choose>
-            <c:when test="${post.isPinned() == true}">
-                <div class="main">
-                    <h2>THIS IS A PINNED MESSAGE</h2>
-            </c:when>
-            <c:otherwise>
+
                 <div class="normal">
-            </c:otherwise>
-        </c:choose>
 
 
             <table>
@@ -68,7 +45,8 @@ This function should be added to the loginservlet function when it is ready.--%>
                         <img src="../components/icons/PFP.jpg" alt="Profile Picture" class="pfp"/>
                     </td>
                     <td class="admin-username">
-                        <b>${post.getAuthor().getUsername()}</b>
+                        <script>console.log(${post.getAuthor().getNickname()})</script>
+                        <b>${post.getAuthor().getNickname()}</b>
                     </td>
                 </tr>
                 <tr>

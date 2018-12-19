@@ -18,9 +18,9 @@ public class UserServlet extends HttpServlet {
         UserBean user = null;
         try {
             if(usersRs.next()){
-                String username = usersRs.getString("username");
-                String intro = usersRs.getString("intro");
-                user = new UserBean(id, username, intro);
+                String nickname = usersRs.getString("nickname");
+                String level = usersRs.getString("level");
+                user = new UserBean(id, nickname, level);
             } else {
                 System.out.println("no user returned");
             }

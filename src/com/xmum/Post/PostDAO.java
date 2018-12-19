@@ -14,11 +14,10 @@ public class PostDAO {
         int status = 0;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("insert into posts values(?,?,?,?)");
+            pst = conn.prepareStatement("insert into normalposts(authorid, message, timestamp) values(?,?,?)");
             pst.setString(1, u.getAuthorId());
             pst.setString(2, u.getMessage());
             pst.setObject(3, LocalDateTime.now());
-            pst.setBoolean(4, u.isPinned());
             status = pst.executeUpdate();
             conn.close();
         } catch(Exception e) {
@@ -32,7 +31,7 @@ public class PostDAO {
         int total = 0;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("select count(*) from posts");
+            pst = conn.prepareStatement("select count(*) from normalposts");
             ResultSet rs = pst.executeQuery();
             rs.next();
             total = rs.getInt(1);
@@ -48,7 +47,7 @@ public class PostDAO {
         ResultSet result = null;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("select * from posts");
+            pst = conn.prepareStatement("select * from normalposts");
             result = pst.executeQuery();
             System.out.println("getting posts");
             conn.close();

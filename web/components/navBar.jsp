@@ -5,7 +5,7 @@
         <a href="../post" class="homeBtn" style="color: white;">XMUM FACEBOOK</a>
     </div>
     <div class="nav-right">
-        <div>${user.getUsername()}</div>
+        <div>${user.getNickname()}</div>
         <form name = "Logout" action="${pageContext.request.contextPath}/LogoutServlet">
             <input type="submit" class="LogoutButton" value = "Logout"/>
         </form>
