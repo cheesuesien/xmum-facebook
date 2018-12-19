@@ -47,7 +47,7 @@ public class PostServlet extends HttpServlet {
         request.getSession().setAttribute("posts", postBeans);
 
         //redirect back to publicWall.jsp
-        response.sendRedirect("/LandingPage_war_exploded/pages/publicWall.jsp");
+        response.sendRedirect(request.getContextPath() + "/pages/publicWall.jsp");
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
