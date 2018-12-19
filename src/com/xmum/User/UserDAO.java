@@ -11,11 +11,15 @@ public class UserDAO {
     private static PreparedStatement pst;
 
     public static ResultSet getUser(UserBean u){
+        return getUser(u.getId());
+    }
+
+    public static ResultSet getUser(String studentId){
         ResultSet result = null;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("select * from users where username = ?");
-            pst.setString(1, u.getUsername());
+            pst = conn.prepareStatement("select * from users where id = ?");
+            pst.setString(1, studentId);
             result = pst.executeQuery();
             conn.close();
         } catch(Exception e) {
