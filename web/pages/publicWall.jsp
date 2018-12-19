@@ -6,16 +6,9 @@
 <%@ include file="../components/navBar.jsp" %>
 
 <%
-    String userName = null;
-    Cookie[] cookies = request.getCookies();
-    if(cookies !=null){
-        for(Cookie cookie : cookies){
-            if(cookie.getName().equals("user"))
-                userName = cookie.getValue();
-        }
+    if (session.getAttribute("user") == null) {
+        response.sendRedirect(request.getContextPath() + "/pages/landingPage.jsp");
     }
-    if(userName == null)
-        response.sendRedirect("landingPage.jsp");
 %>
 
     <!--Type user status here -->

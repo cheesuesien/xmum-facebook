@@ -14,6 +14,7 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+
         String submit_result;
         RequestDispatcher rd = request.getRequestDispatcher("pages/landingPage.jsp");
 
@@ -21,11 +22,13 @@ public class LoginServlet extends HttpServlet {
         boolean status = LoginDAO.validate(obj);
 
         if(status) {
+            //request.getSession(true).setAttribute("username", username);
+            request.getSession(true).setAttribute("user", userobject);
             Cookie loginCookie = new Cookie("user", username);
             //setting cookie to expiry in 10 mins
             loginCookie.setMaxAge(10*60);
             response.addCookie(loginCookie);
-            response.sendRedirect("../../../LandingPage_war_exploded/pages/publicWall.jsp");
+            response.sendRedirect(request.getContextPath() + "/pages/publicWall.jsp");
         }
         else {
             submit_result = "Sorry, username or password error";

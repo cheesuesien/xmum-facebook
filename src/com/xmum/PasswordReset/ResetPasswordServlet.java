@@ -16,7 +16,7 @@ public class ResetPasswordServlet extends HttpServlet {
         String newpassword = request.getParameter("newpassword");
         String newpassword2 = request.getParameter("newpassword2");
         String reset_result;
-        RequestDispatcher rd = request.getRequestDispatcher("pages/landingPage.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("pages/PasswordReset.jsp");
 
         ResetBean obj =  new ResetBean(username, password, newpassword, newpassword2);
         boolean id = ResetDAO.validate(obj);

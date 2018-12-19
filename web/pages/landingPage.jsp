@@ -1,28 +1,28 @@
-<link rel="stylesheet" type="text/css" href="styles/body.css"/>
-<link rel="stylesheet" type="text/css" href="styles/landingPage.css"/>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/pages/styles/body.css"/>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/pages/styles/landingPage.css"/>
 
-<%@ include file="../includes/header.jsp" %>
-<%@ include file="../components/LoginBar.jsp" %>
-<%@ include file="../components/Register.jsp" %>
+<jsp:include page="../includes/header.jsp" />
+<jsp:include page="../components/LoginBar.jsp"/>
+<jsp:include page="../components/Register.jsp"/>
 
 <%
-    Cookie cookie =null;
-    // Get an array of Cookies associated with the this domain
+    String userName = null;
     Cookie[] cookies = request.getCookies();
-
-    if( cookies != null ) {
-        for (int i = 0; i < cookies.length; i++) {
-            cookie = cookies[i];
-            if((cookie.getName( )).compareTo("user") == 0 ) {
-                cookie.setMaxAge(0);
-                response.addCookie(cookie);
+    if(cookies !=null){
+        for(Cookie cookie : cookies){
+            if(cookie.getName().equals("user")) {
+                userName = cookie.getValue();
+                request.getSession(true).setAttribute("user", userName);
             }
         }
-    } else {
+    }
+
+    if (session.getAttribute("user") != null) {
+        response.sendRedirect(request.getContextPath() + "/pages/publicWall.jsp");
     }
 %>
 
-<div id="main-body">
+<div id="landing-main-body">
     <%-- Code goes here--%>
     <div class="block" id="block1">
         <div>Hi, welcome to XMUM FACEBOOK!</div>
@@ -35,6 +35,5 @@
         <div>Want to find buddies to play a game of basketball? Easily done!</div>
         <div>Want to know who is that cute girl in your physics course? No problem!</div>
     </div>
-
 </div>
-<%@ include file="../includes/footer.jsp" %>
+<jsp:include page="../includes/footer.jsp" />

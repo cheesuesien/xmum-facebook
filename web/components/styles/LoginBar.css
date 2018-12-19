@@ -70,6 +70,15 @@ nav {
     font-family: Verdana, san-serif;
     height: 30px;
     padding: 5px;
-    padding-right: 100px;
+    padding-right: 0px;
     font-weight: bold;
+}
+
+.submit-result{
+    display: inline-block;
+    color: red;
+    font-size: 0.7em;
+    padding: 5px;
+    padding-left: 0px;
+    width: 210px;
 }

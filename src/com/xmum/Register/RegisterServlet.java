@@ -15,7 +15,7 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("password");
         String password2 = request.getParameter("password2");
         String register_result;
-        RequestDispatcher rd = request.getRequestDispatcher("pages/landingPage.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/pages/landingPage.jsp");
 
         RegisterBean obj =  new RegisterBean(username, password, password2);
         boolean id = RegisterDAO.validate(obj);
@@ -32,5 +32,7 @@ public class RegisterServlet extends HttpServlet {
 
         request.setAttribute("register_result", register_result);
         rd.forward(request,response);
+
     }
+
 }

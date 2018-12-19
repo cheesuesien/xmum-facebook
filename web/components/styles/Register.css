@@ -1,27 +1,20 @@
-#main-body {
+#register-main-body{
     float: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 450px;
-    width: 1069px;
-    background-image: url('../../img/book.jpg');
+    height: 90%;
+    width: 100%;
     background-size: 100%;
 }
 
-.transbox{
-    margin: 300px;
-    position: relative;
-    background-color: #ffffff;
-    border: 1px solid black;
-    opacity: 0.6;
-    filter: alpha(opacity=60);
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-clip: border-box;
-    -webkit-background-clip: border-box;
+.register-body{
+    flex: 1 1 auto;
+    margin: 250px auto;
+    width: 390px;
+    border: black solid 2px;
+    height: 195px;
 }
 
 #RegisterBlock{

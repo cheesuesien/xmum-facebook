@@ -20,7 +20,8 @@ public class ResetDAO {
             ResultSet rs=pst.executeQuery();
             id=rs.next();
             String username = rs.getString("username");
-            if(username != null)
+            String password = rs.getString("password");
+            if(username != null && password != null)
                 id = true;
             else
                 id = false;
