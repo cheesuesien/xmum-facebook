@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
             System.out.println("loginServlet: got user from db");
             try{
                 if (userResult.next()){
-                    UserBean thisUser = new UserBean( userResult.getString("id"), userResult.getString("nickname"), userResult.getString("level") );
+                    UserBean thisUser = new UserBean( userResult.getString("id"), userResult.getString("nickname"), userResult.getString("level"), userResult.getString("profilepic") );
                     request.getSession(true).setAttribute("user", thisUser);
                     System.out.println("LoginServlet: set session user attribute");
                 } else {

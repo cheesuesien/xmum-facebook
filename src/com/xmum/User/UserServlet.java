@@ -20,7 +20,8 @@ public class UserServlet extends HttpServlet {
             if(usersRs.next()){
                 String nickname = usersRs.getString("nickname");
                 String level = usersRs.getString("level");
-                user = new UserBean(id, nickname, level);
+                String profilePic = usersRs.getString("profilepic");
+                user = new UserBean(id, nickname, level, profilePic);
             } else {
                 System.out.println("no user returned");
             }

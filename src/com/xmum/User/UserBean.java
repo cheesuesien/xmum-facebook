@@ -18,6 +18,13 @@ public class UserBean {
         this.level = level;
     }
 
+    public UserBean(String id, String nickname, String level, String profilePic){
+        this.id = id;
+        this.nickname = nickname;
+        this.level = level;
+        this.profilePic = profilePic;
+    }
+
     public String getId() {
         return id;
     }
