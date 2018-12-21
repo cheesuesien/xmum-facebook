@@ -15,7 +15,8 @@ import java.time.LocalDateTime;
 @WebServlet("/post")
 public class PostServlet extends HttpServlet {
     // no request parameters needed
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        System.out.println("PostServlet: doGet activated!");
         ResultSet rs = PostDAO.getPosts();
         int pinned_count = PostDAO.getPinnedTotal();
         ResultSet ps = PostDAO.getPinnedPost(pinned_count);
@@ -58,29 +59,18 @@ public class PostServlet extends HttpServlet {
                     datetime = rs.getTimestamp("timestamp").toLocalDateTime();
                     System.out.println("Date: OK");
                     //postid = rs.getInt("postid");
-
+                    postBeans[i] = new PostBean(author, message, datetime, userlevel);
 
                 }else{
                     //PINNED POST WHEN INDEX == 0
                     ps.next();
-                    id = ps.getString("adminid");
-                    request.setAttribute("id", id);
-                    System.out.println("Pinpost ID: OK");
-
-                    RequestDispatcher rd = request.getRequestDispatcher("/user");
-                    rd.include(request,response);
-                    author = (UserBean)(request.getAttribute("user"));
-                    System.out.println("Pinpost Author: OK");
-                    userlevel = author.getLevel();
-                    System.out.println(userlevel);
-                    System.out.println("Pinpost Level: OK");
-                    //postid = ps.getInt("postid");
+                    datetime = ps.getTimestamp("timestamp").toLocalDateTime();
                     message = ps.getString("message");
                     System.out.println("Pinpost Message: OK");
-                    datetime = ps.getTimestamp("timestamp").toLocalDateTime();
                     System.out.println("Pinpost date: OK");
+                    postBeans[i] = new PostBean(message, datetime, "admin");
                 }
-                postBeans[i] = new PostBean(author, message, datetime, userlevel);
+
 
             }catch(Exception e){
 //                System.out.println("PostServlet: problem initialising postBean array");
@@ -113,6 +103,8 @@ public class PostServlet extends HttpServlet {
         } else {
             System.out.println("PostServlet: insert post failed");
         }
-        doGet(request, response);
+        //doGet(request, response);
+
+        response.sendRedirect(request.getContextPath() + "/post");
     }
 }

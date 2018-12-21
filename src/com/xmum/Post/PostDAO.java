@@ -18,7 +18,6 @@ public class PostDAO {
 
         try {
             conn = ConnectionProvider.getCon();
-
             String userlevel = u.getUserlevel();
             if(userlevel.equals("admin")){
                 //ADMIN POSTS ARE ALWAYS PINNED POSTS
@@ -83,7 +82,7 @@ public class PostDAO {
         ResultSet result = null;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("select * from pinned_posts where postid = ?");
+            pst = conn.prepareStatement("select * from pinnedposts where postid = ?");
             pst.setInt(1, count);
             result = pst.executeQuery();
             System.out.println("PostDAO: getting pinned post");

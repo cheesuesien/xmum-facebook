@@ -15,7 +15,6 @@
         response.sendRedirect(request.getContextPath() + "/pages/landingPage.jsp");
     }
 %>
-
 <%--This jsp page should be called from the servlet, not directly called from another jsp.
 That means that the navigation button to the publicWall should point to /post (the PostServlet) and not pages/publicWall.jsp
 When testing, just type the url http://localhost:8080/LandingPage_war_exploded/post and you will be directed to the
@@ -43,7 +42,8 @@ This function should be added to the loginservlet function when it is ready.--%>
             <c:otherwise>
 
                 <div class="normal">
-
+            </c:otherwise>
+        </c:choose>
 
             <table>
                 <tr>
@@ -51,7 +51,6 @@ This function should be added to the loginservlet function when it is ready.--%>
                         <img src="../components/icons/PFP.jpg" alt="Profile Picture" class="pfp"/>
                     </td>
                     <td class="admin-username">
-                        <script>console.log(${post.getAuthor().getNickname()})</script>
                         <b>${post.getAuthor().getNickname()}</b>
                     </td>
                 </tr>

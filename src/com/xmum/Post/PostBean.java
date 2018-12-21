@@ -36,10 +36,10 @@ public class PostBean {
         this.postid = postid;
     }
 
-    public PostBean(UserBean author, String message, LocalDateTime datetime){
-        this.author = author;
+    public PostBean(String message, LocalDateTime datetime, String userlevel){
         this.message = message;
         this.timeStamp = datetime;
+        this.userlevel = userlevel;
     }
 
     public String getAuthorId(){

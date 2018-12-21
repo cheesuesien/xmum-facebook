@@ -29,8 +29,8 @@ public class ConnectionProvider {
    /* public static Connection getCon() throws URISyntaxException, SQLException, ClassNotFoundException {
 
             String USERNAME = "postgres";
-            String PASSWORD = "makisa123";
-            String CONNECTION_URL = "jdbc:postgresql://localhost:5432/xmum-facebook-db";
+            String PASSWORD = "swe1609661";
+            String CONNECTION_URL = "jdbc:postgresql://localhost:5432/postgres";
         Class.forName("org.postgresql.Driver");
         Connection conn = DriverManager.getConnection(CONNECTION_URL, USERNAME, PASSWORD);
         return conn;

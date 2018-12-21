@@ -37,8 +37,6 @@ public class UserDAO {
             pst.setString(1, u.getNickname());
             pst.setString(2, u.getLevel());
             pst.setString(3, u.getId());
-            pst.setString(4, u.getPfp());
-            pst.setString(5,u.getLevel());
             status = pst.executeUpdate();
             conn.close();
         } catch(Exception e) {
