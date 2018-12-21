@@ -18,12 +18,12 @@ public class UserDAO {
         ResultSet result = null;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("select * from users where id = ?");
+            pst = conn.prepareStatement("select * from users2 where id = ?");
             pst.setString(1, studentId);
             result = pst.executeQuery();
             conn.close();
         } catch(Exception e) {
-            System.out.println("unsuccessful query");
+            System.out.println("UserDAO: unsuccessful query");
             System.out.println(e);
         }
         return result;
@@ -33,10 +33,12 @@ public class UserDAO {
         int status = 0;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("update users set username = ?, intro = ? where id = ?");
+            pst = conn.prepareStatement("update users2 set username = ?, intro = ? where id = ?");
             pst.setString(1, u.getUsername());
             pst.setString(2, u.getIntro());
             pst.setString(3, u.getId());
+            pst.setString(4, u.getPfp());
+            pst.setString(5,u.getLevel());
             status = pst.executeUpdate();
             conn.close();
         } catch(Exception e) {

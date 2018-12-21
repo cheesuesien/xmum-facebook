@@ -5,23 +5,35 @@ import com.xmum.User.UserBean;
 import java.time.LocalDateTime;
 
 public class PostBean {
+
+    //NOTE: POST ID IS NEEDED TO STORE DATA FETCHED FROM DATABASE. POST ID IS AUTO INCREMENTED IN DATABASE.
     private UserBean author;
     private String message;
     private LocalDateTime timeStamp;
-    private boolean pinned;
+    private String userlevel;
+    private int postid;
 
     public PostBean(){
         author = null;
         message = "";
         timeStamp = LocalDateTime.now();
-        pinned = false;
+        userlevel = "";
+        postid = 0;
     }
 
-    public PostBean(UserBean author, String message, LocalDateTime datetime, boolean pinned){
+    public PostBean(UserBean author, String message, LocalDateTime datetime, String userlevel){
         this.author = author;
         this.message = message;
         this.timeStamp = datetime;
-        this.pinned = pinned;
+        this.userlevel = userlevel;
+    }
+
+    public PostBean(UserBean author, String message, LocalDateTime datetime, String userlevel, int postid){
+        this.author = author;
+        this.message = message;
+        this.timeStamp = datetime;
+        this.userlevel = userlevel;
+        this.postid = postid;
     }
 
     public String getAuthorId(){
@@ -45,7 +57,14 @@ public class PostBean {
 
     public LocalDateTime getTimeStamp() { return timeStamp; }
 
-    public boolean isPinned() { return pinned; }
+    public int postid() { return postid; }
 
-    public void setPinned(boolean pinned) { this.pinned = pinned; }
+    public String getUserlevel() {
+        return userlevel;
+    }
+
+    public void setUserlevel(String userlevel) {
+        this.userlevel = userlevel;
+    }
+//public void setPinned(boolean pinned) { this.pinned = pinned; }
 }

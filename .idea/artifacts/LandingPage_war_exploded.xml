@@ -9,6 +9,7 @@
         <element id="directory" name="lib">
           <element id="file-copy" path="$PROJECT_DIR$/libs/jstl-1.2.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/libs/postgresql-42.2.5.jar" />
+          <element id="library" level="project" name="postgresql-42.2.5" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="LandingPage/web/Web" />

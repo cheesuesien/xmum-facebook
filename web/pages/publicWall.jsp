@@ -20,17 +20,18 @@ This function should be added to the loginservlet function when it is ready.--%>
 <jsp:useBean id="user" class="com.xmum.User.UserBean"/>
 <jsp:setProperty name="user" property="username" value="css"/>
 <jsp:setProperty name="user" property="id" value="swe1609507"/>
+<jsp:setProperty name="user" property="level" value="normal"/>
 <%
     ResultSet userResult = UserDAO.getUser(user);
     try{
         if (userResult.next()){
-            UserBean thisUser = new UserBean( userResult.getString("id"), userResult.getString("username"), userResult.getString("intro") );
+            UserBean thisUser = new UserBean( userResult.getString("id"), userResult.getString("username"), userResult.getString("intro") , userResult.getString("pfp"), userResult.getString("level"));
             session.setAttribute("user", thisUser);
         } else {
-            System.out.println("no user selected from db");
+            System.out.println("PublicWall: no user selected from db");
         }
     } catch (Exception e){
-        System.out.println("get user failed");
+        System.out.println("PublicWall: get user failed");
     }
 %>
 
@@ -44,16 +45,16 @@ This function should be added to the loginservlet function when it is ready.--%>
 
     <!--Pinned post: Admin Posts and Official Announcements-->
     <%--get ${posts} from session attribute--%>
-    <c:forEach items="${posts}" var="post">
+    <c:forEach items="${posts}" var="post" varStatus="loop">
         <c:choose>
-            <c:when test="${post.isPinned() == true}">
+            <c:when test="${loop.index == 0}">
                 <div class="main">
                     <h2>THIS IS A PINNED MESSAGE</h2>
             </c:when>
             <c:otherwise>
                 <div class="normal">
-            </c:otherwise>
-        </c:choose>
+                        </c:otherwise>
+            </c:choose>
 
 
             <table>
