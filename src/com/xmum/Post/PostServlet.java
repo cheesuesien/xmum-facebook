@@ -52,8 +52,14 @@ public class PostServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String message = request.getParameter("postMessage");
+
+        if (request.getParameter("imageUpload") != null){
+            RequestDispatcher rd = request.getRequestDispatcher("/uploadImage");
+            rd.include(request, response);
+        }
         System.out.println("dopost in postservlet activated");
         System.out.println(message);
+        System.out.println(request.getParameter("imageUpload"));
         UserBean user = (UserBean)(request.getSession(false).getAttribute("user"));
         System.out.println(user);
         System.out.println("get user from session successful");
@@ -65,6 +71,9 @@ public class PostServlet extends HttpServlet {
         } else {
             System.out.println("insert post failed");
         }
-        doGet(request, response);
+
+        //goes back to the publicWall page, but does not display the newest message
+        response.sendRedirect(request.getContextPath() + "/pages/publicWall.jsp");
+        //doGet(request, response);
     }
 }

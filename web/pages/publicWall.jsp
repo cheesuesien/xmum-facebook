@@ -26,26 +26,32 @@ This function should be added to the loginservlet function when it is ready.--%>
 
 <!--Type user status here -->
     <div id="status-input">
-        <form id="postForm" method="post" action="${pageContext.request.contextPath}/post">
+        <form id="postImageForm" method="post" action="${pageContext.request.contextPath}/uploadImage" enctype="multipart/form-data">
+            <input type="file" name="imageUpload" id="imageInput" multiple/>
+        </form>
+        <form id="postForm" method="post" >
             <textarea name="postMessage" placeholder=" What's on your mind?" style="width:80%;"></textarea>
-            <div class="buttooon" onclick="document.getElementById('postForm').submit()">Post</div>
+
+            <div class="buttooon" onclick="submitForms()">Post</div>
         </form>
     </div>
+    <script>
+        function submitForms(){
+            document.getElementById('postImageForm').submit();
+        }
+    </script>
 
     <!--Pinned post: Admin Posts and Official Announcements-->
     <%--get ${posts} from session attribute--%>
     <c:forEach items="${posts}" var="post">
 
-                <div class="normal">
-
-
+        <div class="normal">
             <table>
                 <tr>
                     <td rowspan="2" width="100px">
                         <img src="../components/icons/PFP.jpg" alt="Profile Picture" class="pfp"/>
                     </td>
                     <td class="admin-username">
-                        <script>console.log(${post.getAuthor().getNickname()})</script>
                         <b>${post.getAuthor().getNickname()}</b>
                     </td>
                 </tr>
@@ -66,6 +72,7 @@ This function should be added to the loginservlet function when it is ready.--%>
             </table>
         </div>
     </c:forEach>
+
     <div class="main">
         <div class="pin-post">
             <h2>THIS IS A PINNED MESSAGE</h2>

@@ -73,19 +73,26 @@ public class UploadImageServlet extends HttpServlet {
                 if (!item.isFormField()) {
                     System.out.println("in if branch");
                     String fileName = new File(item.getName()).getName();
-                    String filePath = uploadFolder + File.separator + fileName;
-                    File uploadedFile = new File(filePath);
-                    System.out.println(fileName);
-                    // saves the file to upload directory
-                    item.write(uploadedFile);
-                    request.setAttribute("picName", fileName);
-                    RequestDispatcher rd = request.getRequestDispatcher("/user");
-                    rd.forward(request,response);
+                    String filePath;
+                    if (request.getParameter("imageUpload") != null){
+                        filePath = uploadFolder + File.separator + "postimags" + File.separator + fileName;
+                        File uploadedFile = new File(filePath);
+                        System.out.println(fileName);
+                        // saves the file to upload directory
+                        item.write(uploadedFile);
+                    }
+                    else {
+                        filePath = uploadFolder + File.separator + fileName;
+                        File uploadedFile = new File(filePath);
+                        System.out.println(fileName);
+                        // saves the file to upload directory
+                        item.write(uploadedFile);
+                        request.setAttribute("picName", fileName);
+                        RequestDispatcher rd = request.getRequestDispatcher("/user");
+                        rd.forward(request, response);
+                    }
                 }
             }
-
-            return;
-
         } catch (FileUploadException ex) {
             System.out.println(ex);
             throw new ServletException(ex);
