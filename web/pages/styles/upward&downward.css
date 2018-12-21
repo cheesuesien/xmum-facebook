@@ -1,0 +1,19 @@
+/*.btn {
+    height: 37px;
+    width: 37px;
+    background-image:url('../../img/like.png');
+    background-size: 37px;
+    background-repeat:no-repeat;
+}*/
+
+.btn{
+    padding: 5px;
+    margin: 2px;
+}
+.like-meter{
+    height: 5px;
+    width: 200px;
+    background-color: rgba(204, 204, 204, 0.47);
+    margin-top: 5px;
+    border-radius: 2px;
+}

@@ -1,5 +1,8 @@
 package com.xmum.Login;
 
+import com.xmum.User.UserBean;
+import com.xmum.User.UserDAO;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.ResultSet;
 
 @WebServlet("/LoginController")
 public class LoginServlet extends HttpServlet {
@@ -22,8 +26,11 @@ public class LoginServlet extends HttpServlet {
         boolean status = LoginDAO.validate(obj);
 
         if(status) {
-            //request.getSession(true).setAttribute("username", username);
-            request.getSession(true).setAttribute("user", userobject);
+            request.getSession(true).setAttribute("username", username);
+            //ResultSet userResult = UserDAO.getUser(user);
+            //UserBean thisUser = new UserBean( userResult.getString("id"), userResult.getString("username"), userResult.getString("intro") );
+            //request.getSession(true).setAttribute("user", thisUser);
+            request.getSession(true).setAttribute("user", username);
             Cookie loginCookie = new Cookie("user", username);
             //setting cookie to expiry in 10 mins
             loginCookie.setMaxAge(10*60);
