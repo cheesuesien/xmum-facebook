@@ -53,8 +53,8 @@ This function should be added to the loginservlet function when it is ready.--%>
             </c:when>
             <c:otherwise>
                 <div class="normal">
-                        </c:otherwise>
-            </c:choose>
+            </c:otherwise>
+        </c:choose>
 
 
             <table>
