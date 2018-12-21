@@ -36,6 +36,12 @@ public class PostBean {
         this.postid = postid;
     }
 
+    public PostBean(UserBean author, String message, LocalDateTime datetime){
+        this.author = author;
+        this.message = message;
+        this.timeStamp = datetime;
+    }
+
     public String getAuthorId(){
         return author.getId();
     }
@@ -67,4 +73,5 @@ public class PostBean {
         this.userlevel = userlevel;
     }
 //public void setPinned(boolean pinned) { this.pinned = pinned; }
+
 }

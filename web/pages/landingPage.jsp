@@ -1,10 +1,17 @@
-<link rel="stylesheet" type="text/css" href="styles/body.css"/>
-<link rel="stylesheet" type="text/css" href="styles/landingPage.css"/>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/pages/styles/body.css"/>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/pages/styles/landingPage.css"/>
 
-<%@ include file="../includes/header.jsp" %>
-<%@ include file="../components/LoginBar.jsp" %>
-<%@ include file="../components/Register.jsp" %>
-<div id="main-body">
+<jsp:include page="../includes/header.jsp" />
+<jsp:include page="../components/LoginBar.jsp"/>
+<jsp:include page="../components/Register.jsp"/>
+
+<%
+    if (session.getAttribute("user") != null) {
+        response.sendRedirect(request.getContextPath() + "/pages/publicWall.jsp");
+    }
+%>
+
+<div id="landing-main-body">
     <%-- Code goes here--%>
     <div class="block" id="block1">
         <div>Hi, welcome to XMUM FACEBOOK!</div>
@@ -17,6 +24,5 @@
         <div>Want to find buddies to play a game of basketball? Easily done!</div>
         <div>Want to know who is that cute girl in your physics course? No problem!</div>
     </div>
-
 </div>
-<%@ include file="../includes/footer.jsp" %>
+<jsp:include page="../includes/footer.jsp" />

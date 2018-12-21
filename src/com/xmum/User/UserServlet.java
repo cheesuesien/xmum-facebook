@@ -19,11 +19,10 @@ public class UserServlet extends HttpServlet {
         UserBean user = null;
         try {
             if(usersRs.next()){
-                String username = usersRs.getString("username");
-                String intro = usersRs.getString("intro");
-                String pfp = usersRs.getString("pfp");
+                String nickname = usersRs.getString("nickname");
                 String level = usersRs.getString("level");
-                user = new UserBean(id, username, intro, pfp, level);
+                String profilePic = usersRs.getString("profilepic");
+                user = new UserBean(id, nickname, level, profilePic);
             } else {
                 System.out.println("UserServlet: no user returned");
             }
@@ -41,5 +40,33 @@ public class UserServlet extends HttpServlet {
             System.out.println("User is null.");
         request.setAttribute("user", user);
 
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        System.out.println("userServlet doPut activated!");
+        UserBean user = (UserBean)request.getSession().getAttribute("user");
+        System.out.println("userServlet: got session user");
+        String picName = (String)request.getAttribute("picName");
+        System.out.println("userServlet: got picName attrib");
+        System.out.println(picName);
+        int status;
+        if (picName != null){
+            System.out.println("setting profilePic");
+            user.setProfilePic(picName);
+            status = UserDAO.updateProfilePic(user);
+        } else {
+            System.out.println("setting username and intro");
+
+            user.setNickname(request.getParameter("username"));
+            System.out.println("userServlet: got username form param");
+            System.out.println(request);
+            status = UserDAO.updateUser(user);
+        }
+        if (status > 0){
+            System.out.println("UserServlet: update user profilePic successful");
+        } else {
+            System.out.println("UserServlet: update user profilePic failed");
+        }
+        response.sendRedirect("/LandingPage_war_exploded/pages/accountPage.jsp");
     }
 }

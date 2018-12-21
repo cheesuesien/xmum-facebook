@@ -33,9 +33,9 @@ public class UserDAO {
         int status = 0;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("update users set username = ?, intro = ? where id = ?");
-            pst.setString(1, u.getUsername());
-            pst.setString(2, u.getIntro());
+            pst = conn.prepareStatement("update users set nickname = ?, level = ? where id = ?");
+            pst.setString(1, u.getNickname());
+            pst.setString(2, u.getLevel());
             pst.setString(3, u.getId());
             pst.setString(4, u.getPfp());
             pst.setString(5,u.getLevel());
@@ -47,5 +47,22 @@ public class UserDAO {
         }
         return status;
     }
+
+    public static int updateProfilePic(UserBean u){
+        int status = 0;
+        try {
+            conn = ConnectionProvider.getCon();
+            pst = conn.prepareStatement("update users set profilepic = ? where id = ?");
+            pst.setString(1, u.getProfilePic());
+            pst.setString(2, u.getId());
+            status = pst.executeUpdate();
+            conn.close();
+        } catch(Exception e) {
+            System.out.println("update profilePic unsuccessful");
+            System.out.println(e);
+        }
+        return status;
+    }
+
 
 }

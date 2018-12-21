@@ -26,7 +26,6 @@ public class PostServlet extends HttpServlet {
         PostBean[] postBeans = new PostBean[PostDAO.getTotal()+1];
         for(int i = postBeans.length-1; i >= 0; i--){
             try{
-
                 String id;
                 UserBean author;
                 String userlevel;
@@ -38,7 +37,7 @@ public class PostServlet extends HttpServlet {
                     rs.next();
 
                     // setting id attribute
-                    id = rs.getString("studentid");
+                    id = rs.getString("authorid");
                     request.setAttribute("id", id);
                     System.out.println("ID: ok");
 
@@ -52,7 +51,6 @@ public class PostServlet extends HttpServlet {
                     userlevel = author.getLevel();
                     System.out.println(userlevel);
                     System.out.println("Level:OK");
-
 
                     // initialise postBean array
                     message = rs.getString("message");
@@ -84,7 +82,6 @@ public class PostServlet extends HttpServlet {
                 }
                 postBeans[i] = new PostBean(author, message, datetime, userlevel);
 
-
             }catch(Exception e){
 //                System.out.println("PostServlet: problem initialising postBean array");
 //                System.out.println(e);
@@ -98,7 +95,7 @@ public class PostServlet extends HttpServlet {
         request.getSession().setAttribute("posts", postBeans);
 
         //redirect back to publicWall.jsp
-        response.sendRedirect("/LandingPage_war_exploded/pages/publicWall.jsp");
+        response.sendRedirect(request.getContextPath() + "/pages/publicWall.jsp");
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

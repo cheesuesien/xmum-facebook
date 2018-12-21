@@ -22,18 +22,18 @@ public class PostDAO {
             String userlevel = u.getUserlevel();
             if(userlevel.equals("admin")){
                 //ADMIN POSTS ARE ALWAYS PINNED POSTS
-                pst = conn.prepareStatement("insert into pinned_posts (adminid,message,timestamp) values(?,?,?)");
-                pst.setString(1, u.getAuthorId());
-                pst.setString(2, u.getMessage());
-                pst.setObject(3, LocalDateTime.now());
+                pst = conn.prepareStatement("insert into pinnedposts (message,timestamp) values(?,?)");
+                pst.setString(1, u.getMessage());
+                pst.setObject(2, LocalDateTime.now());
                 //pst.setInt(4, u.postid());
             }else{
-                pst = conn.prepareStatement("insert into normal_posts (studentid,message,timestamp) values(?,?,?)");
+                pst = conn.prepareStatement("insert into normalposts (authorid,message,timestamp) values(?,?,?)");
                 pst.setString(1, u.getAuthorId());
                 pst.setString(2, u.getMessage());
                 pst.setObject(3, LocalDateTime.now());
                 //pst.setInt(4, u.postid());
             }
+
             status = pst.executeUpdate();
             conn.close();
         } catch(Exception e) {
@@ -48,7 +48,7 @@ public class PostDAO {
         int total = 0;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("select count(*) from normal_posts");
+            pst = conn.prepareStatement("select count(*) from normalposts");
             ResultSet rs = pst.executeQuery();
             rs.next();
             total = rs.getInt(1);
@@ -65,7 +65,8 @@ public class PostDAO {
         int total = 0;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("select count(*) from pinned_posts");
+            pst = conn.prepareStatement("select count(*) from pinnedposts");
+
             ResultSet rs = pst.executeQuery();
             rs.next();
             total = rs.getInt(1);
@@ -99,7 +100,8 @@ public class PostDAO {
         ResultSet result = null;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("select * from normal_posts");
+
+            pst = conn.prepareStatement("select * from normalposts");
             result = pst.executeQuery();
             System.out.println("PostDAO: getting posts");
             conn.close();

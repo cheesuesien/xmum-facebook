@@ -10,6 +10,12 @@
 <%@ include file="../components/sideBar.jsp" %>
 <%@ include file="../components/navBar.jsp" %>
 
+<%
+    if (session.getAttribute("user") == null) {
+        response.sendRedirect(request.getContextPath() + "/pages/landingPage.jsp");
+    }
+%>
+
 <%--This jsp page should be called from the servlet, not directly called from another jsp.
 That means that the navigation button to the publicWall should point to /post (the PostServlet) and not pages/publicWall.jsp
 When testing, just type the url http://localhost:8080/LandingPage_war_exploded/post and you will be directed to the
@@ -17,23 +23,6 @@ publicWall.jsp after the posts are done loading--%>
 
 <%--This is a temporary hardcoded function to set the session attribute "user" to get the logged in user.
 This function should be added to the loginservlet function when it is ready.--%>
-<jsp:useBean id="user" class="com.xmum.User.UserBean"/>
-<jsp:setProperty name="user" property="username" value="css"/>
-<jsp:setProperty name="user" property="id" value="swe1609507"/>
-<jsp:setProperty name="user" property="level" value="normal"/>
-<%
-    ResultSet userResult = UserDAO.getUser(user);
-    try{
-        if (userResult.next()){
-            UserBean thisUser = new UserBean( userResult.getString("id"), userResult.getString("username"), userResult.getString("intro") , userResult.getString("pfp"), userResult.getString("level"));
-            session.setAttribute("user", thisUser);
-        } else {
-            System.out.println("PublicWall: no user selected from db");
-        }
-    } catch (Exception e){
-        System.out.println("PublicWall: get user failed");
-    }
-%>
 
 <!--Type user status here -->
     <div id="status-input">
@@ -52,9 +41,8 @@ This function should be added to the loginservlet function when it is ready.--%>
                     <h2>THIS IS A PINNED MESSAGE</h2>
             </c:when>
             <c:otherwise>
+
                 <div class="normal">
-            </c:otherwise>
-        </c:choose>
 
 
             <table>
@@ -63,7 +51,8 @@ This function should be added to the loginservlet function when it is ready.--%>
                         <img src="../components/icons/PFP.jpg" alt="Profile Picture" class="pfp"/>
                     </td>
                     <td class="admin-username">
-                        <b>${post.getAuthor().getUsername()}</b>
+                        <script>console.log(${post.getAuthor().getNickname()})</script>
+                        <b>${post.getAuthor().getNickname()}</b>
                     </td>
                 </tr>
                 <tr>
@@ -173,6 +162,5 @@ This function should be added to the loginservlet function when it is ready.--%>
         </div>
     </div>
     <div><br>  <br></div>
-
 
 <%@ include file="../includes/footer.jsp" %>
