@@ -57,5 +57,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="postgresql-42.2.5" level="project" />
   </component>
 </module>

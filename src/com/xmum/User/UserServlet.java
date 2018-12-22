@@ -14,6 +14,7 @@ public class UserServlet extends HttpServlet {
     //expects request attribute "id", sets "user" attribute in request.
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = (String)(request.getAttribute("id"));
+        System.out.println(id);
         ResultSet usersRs = UserDAO.getUser(id);
         UserBean user = null;
         try {
@@ -23,15 +24,20 @@ public class UserServlet extends HttpServlet {
                 String profilePic = usersRs.getString("profilepic");
                 user = new UserBean(id, nickname, level, profilePic);
             } else {
-                System.out.println("no user returned");
+                System.out.println("UserServlet: no user returned");
             }
 
+            System.out.println("/user inside try block.");
 
         } catch (Exception e){
-            System.out.println("userServlet failed");
+            System.out.println("UserServlet: failed");
             System.out.println(e);
         }
 
+        if (user != null)
+            System.out.println("User is fine.");
+        else
+            System.out.println("User is null.");
         request.setAttribute("user", user);
 
     }

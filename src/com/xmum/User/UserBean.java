@@ -56,4 +56,6 @@ public class UserBean {
     public void setProfilePic(String profilePic) {
         this.profilePic = profilePic;
     }
+
+
 }

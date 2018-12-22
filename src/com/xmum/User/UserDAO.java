@@ -23,7 +23,7 @@ public class UserDAO {
             result = pst.executeQuery();
             conn.close();
         } catch(Exception e) {
-            System.out.println("unsuccessful query");
+            System.out.println("UserDAO: unsuccessful query");
             System.out.println(e);
         }
         return result;
