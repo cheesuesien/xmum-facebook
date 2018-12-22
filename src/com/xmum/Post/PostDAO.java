@@ -2,9 +2,7 @@ package com.xmum.Post;
 
 import com.xmum.DatabaseConnection.ConnectionProvider;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.time.LocalDateTime;
 
 
@@ -26,10 +24,17 @@ public class PostDAO {
                 pst.setObject(2, LocalDateTime.now());
                 //pst.setInt(4, u.postid());
             }else{
-                pst = conn.prepareStatement("insert into normalposts (authorid,message,timestamp) values(?,?,?)");
+                pst = conn.prepareStatement("insert into normalposts (authorid,message,images,timestamp) values(?,?,?,?)");
                 pst.setString(1, u.getAuthorId());
                 pst.setString(2, u.getMessage());
-                pst.setObject(3, LocalDateTime.now());
+                if(u.getImages() != null){
+                    Array sqlArray = conn.createArrayOf("VARCHAR", u.getImages());
+                    pst.setArray(3, sqlArray);
+                } else {
+                    pst.setArray(3, null);
+                }
+
+                pst.setObject(4, LocalDateTime.now());
                 //pst.setInt(4, u.postid());
             }
 
@@ -102,12 +107,38 @@ public class PostDAO {
 
             pst = conn.prepareStatement("select * from normalposts");
             result = pst.executeQuery();
+
             System.out.println("PostDAO: getting posts");
-            conn.close();
         } catch(Exception e) {
             System.out.println("PostDAO: unsuccessful query");
             System.out.println(e);
         }
         return result;
+    }
+
+    public static void closeConn() throws SQLException {
+        System.out.println("closed connection");
+        conn.close();
+    }
+    public static void cursorHoldabilitySupport(Connection conn)
+            throws SQLException {
+
+        DatabaseMetaData dbMetaData = conn.getMetaData();
+        System.out.println("ResultSet.HOLD_CURSORS_OVER_COMMIT = " +
+                ResultSet.HOLD_CURSORS_OVER_COMMIT);
+
+        System.out.println("ResultSet.CLOSE_CURSORS_AT_COMMIT = " +
+                ResultSet.CLOSE_CURSORS_AT_COMMIT);
+
+        System.out.println("Default cursor holdability: " +
+                dbMetaData.getResultSetHoldability());
+
+        System.out.println("Supports HOLD_CURSORS_OVER_COMMIT? " +
+                dbMetaData.supportsResultSetHoldability(
+                        ResultSet.HOLD_CURSORS_OVER_COMMIT));
+
+        System.out.println("Supports CLOSE_CURSORS_AT_COMMIT? " +
+                dbMetaData.supportsResultSetHoldability(
+                        ResultSet.CLOSE_CURSORS_AT_COMMIT));
     }
 }

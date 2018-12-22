@@ -25,18 +25,28 @@ This function should be added to the loginservlet function when it is ready.--%>
 
 <!--Type user status here -->
     <div id="status-input">
-        <form id="postImageForm" method="post" action="${pageContext.request.contextPath}/uploadImage" enctype="multipart/form-data">
-            <input type="file" name="imageUpload" id="imageInput" multiple/>
-        </form>
-        <form id="postForm" method="post" >
+        <form id="postForm" method="post" action="${pageContext.request.contextPath}/post" enctype="multipart/form-data">
+            <input id="uploadType" type="hidden" name="uploadType" />
+            <input id="imageUpload" type="file" name="imageUpload" id="imageInput" multiple/>
             <textarea name="postMessage" placeholder=" What's on your mind?" style="width:80%;"></textarea>
-
             <div class="buttooon" onclick="submitForms()">Post</div>
         </form>
     </div>
     <script>
+        const imageInput = document.getElementById('imageUpload');
+        imageInput.addEventListener("change", printValue, false);
+
+        function printValue(){
+            console.log(imageInput.value);
+            if(imageInput.value != null){
+                document.getElementById("uploadType").value = "postPic";
+            } else{
+                document.getElementById("uploadType").value = null;
+            }
+        }
+
         function submitForms(){
-            document.getElementById('postImageForm').submit();
+            document.getElementById('postForm').submit();
         }
     </script>
 
@@ -65,6 +75,15 @@ This function should be added to the loginservlet function when it is ready.--%>
                 <tr>
                     <td class="date-posted">
                         ${post.getTimeStamp()}
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" width="100px">
+                        <script>console.log("${post.getImages()}")</script>
+                        <c:forEach items="${post.getImages()}" var="image" varStatus="loop">
+                            <script>console.log("${pageContext.request.contextPath}/img/postimgs/${image}")</script>
+                            <img src="${pageContext.request.contextPath}/img/postimgs/${image}" alt="Post Picture" style="height:100px"/>
+                        </c:forEach>
                     </td>
                 </tr>
                 <tr>

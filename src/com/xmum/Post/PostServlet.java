@@ -4,15 +4,22 @@ import com.xmum.User.UserBean;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Array;
 import java.sql.ResultSet;
 import java.time.LocalDateTime;
 
 @WebServlet("/post")
+@MultipartConfig(
+        fileSizeThreshold=1024*1024*10, 	// 10 MB
+        maxFileSize=1024*1024*50,      	// 50 MB
+        maxRequestSize=1024*1024*100
+)
 public class PostServlet extends HttpServlet {
     // no request parameters needed
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -32,6 +39,7 @@ public class PostServlet extends HttpServlet {
                 String userlevel;
                 String message;
                 LocalDateTime datetime;
+                String[] images;
                 int postid;
 
                 if(i != 0){
@@ -56,10 +64,23 @@ public class PostServlet extends HttpServlet {
                     // initialise postBean array
                     message = rs.getString("message");
                     System.out.println("Message: OK");
+
+                    Array a = rs.getArray("images");
+                    System.out.println("got SQL array");
+                    System.out.println(a);
+
+                    images = (String[])a.getArray();
+                    System.out.println("got JAVA object array");
+
+
+                    System.out.println("images: OK");
+
+
                     datetime = rs.getTimestamp("timestamp").toLocalDateTime();
                     System.out.println("Date: OK");
+                    PostDAO.closeConn();
                     //postid = rs.getInt("postid");
-                    postBeans[i] = new PostBean(author, message, datetime, userlevel);
+                    postBeans[i] = new PostBean(author, message, images, datetime, userlevel);
 
                 }else{
                     //PINNED POST WHEN INDEX == 0
@@ -89,21 +110,30 @@ public class PostServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String message = request.getParameter("postMessage");
 
-        if (request.getParameter("imageUpload") != null){
-            RequestDispatcher rd = request.getRequestDispatcher("/uploadImage");
-            rd.include(request, response);
-        }
         System.out.println("dopost in postservlet activated");
 
+        String message = request.getParameter("postMessage");
         System.out.println(message);
-        System.out.println(request.getParameter("imageUpload"));
+
         UserBean user = (UserBean)(request.getSession(false).getAttribute("user"));
         System.out.println(user);
         String userlevel = user.getLevel();
         PostBean post = new PostBean(user, message, LocalDateTime.now(), userlevel);
-        System.out.println("PostServlet: create postbean successful");
+
+        System.out.println("PostServlet: create postBean successful");
+
+        System.out.println(request.getParameter("uploadType"));
+
+
+        // post contains images
+        if (request.getParameter("uploadType") != null){
+            request.getRequestDispatcher("/uploadImage").include(request,response);
+            String[] picNames = (String[])request.getAttribute("picName");
+            post.setImages(picNames);
+        }
+
+
         int status = PostDAO.insertPost(post);
         if (status > 0){
             System.out.println("PostServlet: insert post successful");
