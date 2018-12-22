@@ -68,6 +68,15 @@ This function should be added to the loginservlet function when it is ready.--%>
                         </p>
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="2">
+                        <p class="content">
+                                ${post.getUserLevel()}
+                            <br><br>
+                            <a href="#" class="tiny-words">Read more</a>
+                        </p>
+                    </td>
+                </tr>
             </table>
         </div>
     </c:forEach>
