@@ -11,15 +11,19 @@ public class UserDAO {
     private static PreparedStatement pst;
 
     public static ResultSet getUser(UserBean u){
+        return getUser(u.getId());
+    }
+
+    public static ResultSet getUser(String studentId){
         ResultSet result = null;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("select * from users where username = ?");
-            pst.setString(1, u.getUsername());
+            pst = conn.prepareStatement("select * from users where id = ?");
+            pst.setString(1, studentId);
             result = pst.executeQuery();
             conn.close();
         } catch(Exception e) {
-            System.out.println("unsuccessful query");
+            System.out.println("UserDAO: unsuccessful query");
             System.out.println(e);
         }
         return result;
@@ -29,9 +33,9 @@ public class UserDAO {
         int status = 0;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("update users set username = ?, intro = ? where id = ?");
-            pst.setString(1, u.getUsername());
-            pst.setString(2, u.getIntro());
+            pst = conn.prepareStatement("update users set nickname = ?, level = ? where id = ?");
+            pst.setString(1, u.getNickname());
+            pst.setString(2, u.getLevel());
             pst.setString(3, u.getId());
             status = pst.executeUpdate();
             conn.close();
@@ -41,5 +45,22 @@ public class UserDAO {
         }
         return status;
     }
+
+    public static int updateProfilePic(UserBean u){
+        int status = 0;
+        try {
+            conn = ConnectionProvider.getCon();
+            pst = conn.prepareStatement("update users set profilepic = ? where id = ?");
+            pst.setString(1, u.getProfilePic());
+            pst.setString(2, u.getId());
+            status = pst.executeUpdate();
+            conn.close();
+        } catch(Exception e) {
+            System.out.println("update profilePic unsuccessful");
+            System.out.println(e);
+        }
+        return status;
+    }
+
 
 }

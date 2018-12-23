@@ -22,7 +22,7 @@
             out.println("Inserted successfully");
             System.out.println(thisUser);
             try {
-                session.setAttribute("username", thisUser.getString("username"));
+                session.setAttribute("username");
                 session.setAttribute("intro", thisUser.getString("intro"));
                 System.out.println("set session attribute successful");
             } catch (Exception e) {

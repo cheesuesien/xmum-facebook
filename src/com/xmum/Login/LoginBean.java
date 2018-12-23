@@ -1,17 +1,17 @@
 package com.xmum.Login;
 
 public class LoginBean {
-    String username, password;
+    String id, password;
 
-    public LoginBean(String username, String password){
-        this.username = username;
+    public LoginBean(String id, String password){
+        this.id = id;
         this.password = password;
     }
-    public String getUsername() {
-        return username;
+    public String getId() {
+        return id;
     }
-    public void setUsername(String email) {
-        this.username = username;
+    public void setId(String email) {
+        this.id = id;
     }
     public String getPassword() {
         return password;

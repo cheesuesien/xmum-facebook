@@ -13,15 +13,18 @@ public class LoginDAO {
         boolean status=false;
         try{
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("select * from student where username=? and password=?");
+            pst = conn.prepareStatement("select * from login where id=? and password=?");
 
-            pst.setString(1,bean.getUsername());
+            pst.setString(1,bean.getId());
             pst.setString(2,bean.getPassword());
 
             ResultSet rs=pst.executeQuery();
             status=rs.next();
 
-        }catch(Exception ex){}
+        }catch(Exception ex){
+            System.out.println("LoginDAO: validate failed");
+            System.out.println(ex);
+        }
         return status;
     }
 }

@@ -6,5 +6,7 @@
 
 <button class="btn" id="like-btn"><i class="fa fa-thumbs-o-up fa-lg"></i></button>
 <button class="btn" id="unlike-btn"><i class="fa fa-thumbs-o-down fa-lg"></i></button>
+<span id="likes" + ${post.postid()}></span>
+<span id="unlikes" + ${post.postid()}></span>
 
 <jsp:include page="../includes/footer.jsp" />
