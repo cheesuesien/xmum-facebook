@@ -36,8 +36,8 @@ public class UploadImageServlet extends HttpServlet {
             case "profilePic":
             {
                 String[] fileNames = uploadImage(request, "img");
-                request.setAttribute("picName", fileNames);
-                request.getRequestDispatcher("/user").forward(request, response);
+                request.setAttribute("picName", fileNames[0]);
+                //request.getRequestDispatcher("/user").forward(request, response);
                 break;
             }
             case "postPic":

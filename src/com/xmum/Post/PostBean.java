@@ -3,6 +3,7 @@ package com.xmum.Post;
 import com.xmum.User.UserBean;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class PostBean {
 
@@ -54,6 +55,12 @@ public class PostBean {
         this.message = message;
         this.timeStamp = datetime;
         this.userlevel = userlevel;
+    }
+
+    public String getFormattedDate() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("E dd MMM yyyy HH:mm");
+        String formatDateTime = this.timeStamp.format(formatter);
+        return formatDateTime;
     }
 
     public String getAuthorId(){

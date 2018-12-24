@@ -66,7 +66,7 @@ This function should be added to the loginservlet function when it is ready.--%>
             <table>
                 <tr>
                     <td rowspan="2" width="100px">
-                        <img src="../components/icons/PFP.jpg" alt="Profile Picture" class="pfp"/>
+                        <img src="${pageContext.request.contextPath}/img/${user.getProfilePic()}" alt="Profile Picture" class="pfp"/>
                     </td>
                     <td class="admin-username">
                         <b>${post.getAuthor().getNickname()}</b>
@@ -74,14 +74,12 @@ This function should be added to the loginservlet function when it is ready.--%>
                 </tr>
                 <tr>
                     <td class="date-posted">
-                        ${post.getTimeStamp()}
+                        ${post.getFormattedDate()}
                     </td>
                 </tr>
                 <tr>
-                    <td rowspan="2" width="100px">
-                        <script>console.log("${post.getImages()}")</script>
+                    <td colspan="2">
                         <c:forEach items="${post.getImages()}" var="image" varStatus="loop">
-                            <script>console.log("${pageContext.request.contextPath}/img/postimgs/${image}")</script>
                             <img src="${pageContext.request.contextPath}/img/postimgs/${image}" alt="Post Picture" style="height:100px"/>
                         </c:forEach>
                     </td>
