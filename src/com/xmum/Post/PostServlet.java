@@ -1,6 +1,7 @@
 package com.xmum.Post;
 
 import com.xmum.User.UserBean;
+import com.xmum.upvotedownvote.UpvoteDownvoteGetDataDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,6 +21,8 @@ public class PostServlet extends HttpServlet {
         ResultSet rs = PostDAO.getPosts();
         int pinned_count = PostDAO.getPinnedTotal();
         ResultSet ps = PostDAO.getPinnedPost(pinned_count);
+
+
 
         //SET POSTBEAN ARRAY CAPACITY TO THE NUMBER OF NORMAL POSTS + 1 (pinned post) AND INSERT POSTS FROM LAST INDEX
         //POST IN INDEX 0 IS PINNED POST
@@ -53,13 +56,17 @@ public class PostServlet extends HttpServlet {
                     System.out.println(userlevel);
                     System.out.println("Level:OK");
 
+                    postid = rs.getInt("postid");
+                    int likes = UpvoteDownvoteGetDataDAO.getlikedata(postid, userlevel);
+                    int dislikes = UpvoteDownvoteGetDataDAO.getunlikedata(postid, userlevel);
+
                     // initialise postBean array
                     message = rs.getString("message");
                     System.out.println("Message: OK");
                     datetime = rs.getTimestamp("timestamp").toLocalDateTime();
                     System.out.println("Date: OK");
                     //postid = rs.getInt("postid");
-                    postBeans[i] = new PostBean(author, message, datetime, userlevel);
+                    postBeans[i] = new PostBean(author, message, datetime, userlevel, likes, dislikes, postid);
 
                 }else{
                     //PINNED POST WHEN INDEX == 0
@@ -68,7 +75,12 @@ public class PostServlet extends HttpServlet {
                     message = ps.getString("message");
                     System.out.println("Pinpost Message: OK");
                     System.out.println("Pinpost date: OK");
-                    postBeans[i] = new PostBean(message, datetime, "admin");
+
+                    postid = rs.getInt("postid");
+
+                    int likes = UpvoteDownvoteGetDataDAO.getlikedata(postid, "admin");
+                    int dislikes = UpvoteDownvoteGetDataDAO.getunlikedata(postid, "admin");
+                    postBeans[i] = new PostBean(message, datetime, "admin", likes, dislikes, postid);
                 }
 
 
