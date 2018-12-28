@@ -1,10 +1,13 @@
 package com.xmum.User;
 
+import com.xmum.Profile.ProfileBean;
+
 public class UserBean {
     private String id;
     private String nickname;
     private String level;
     private String profilePic;
+    private ProfileBean profile;
 
     public UserBean(){
         this.id = "";
@@ -57,5 +60,11 @@ public class UserBean {
         this.profilePic = profilePic;
     }
 
+    public ProfileBean getProfile() {
+        return profile;
+    }
 
+    public void setProfile(ProfileBean profile) {
+        this.profile = profile;
+    }
 }

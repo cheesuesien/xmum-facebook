@@ -12,19 +12,50 @@
 <div id="main-body">
     <div class="title">My Account</div>
     <img class="profile" src="../img/${user.getProfilePic()}" alt="Avatar">
-        <input type="file" name="myFile" id="profilePicInput"/>
+        <form id="profilePicForm" method="POST" action="${pageContext.request.contextPath}/user" enctype="multipart/form-data">
+            <input type="hidden" name="uploadType" value="profilePic" />
+            <input type="file" name="myFile" id="profilePicInput"/>
+        </form>
+
     <div class="content">
         <form id="userDetailsForm" method="POST" action="${pageContext.request.contextPath}/user" onsubmit="console.log('submitting form');">
+            <input type="hidden" name="uploadType" value="profileDetails" />
             <div>
-                <div>Name: </div>
+                <div>Nickname: </div>
                 <div class="userInfo">${user.getNickname()}</div>
-                <input style="display:none;" type="text" name="username" class="input" id="username"/>
+                <input style="display:none;" type="text" name="username" class="input" id="username" value="${user.getNickname()}"/>
             </div>
             <div>
-                <div>Introduction: </div>
-                <div class="userInfo"></div>
-                <input style="display:none;" type="text" name="intro" class="input" id="intro"/>
+                <div>Gender: </div>
+                <div class="userInfo">${user.getProfile().getGender()}</div>
+                <input style="display:none;" type="text" name="gender" class="input" id="gender" value="${user.getProfile().getGender()}"/>
             </div>
+            <div>
+                <div>Phone number: </div>
+                <div class="userInfo">${user.getProfile().getPhonenum()}</div>
+                <input style="display:none;" type="text" name="phonenum" class="input" id="phonenum" value="${user.getProfile().getPhonenum()}"/>
+            </div>
+            <div>
+                <div>Email: </div>
+                <div class="userInfo">${user.getProfile().getEmail()}</div>
+                <input style="display:none;" type="text" name="email" class="input" id="email" value="${user.getProfile().getEmail()}"/>
+            </div>
+            <div>
+                <div>Intro: </div>
+                <div class="userInfo">${user.getProfile().getIntro()}</div>
+                <input style="display:none;" type="text" name="intro" class="input" id="intro" value="${user.getProfile().getIntro()}"/>
+            </div>
+            <div>
+                <div>Birthdate: </div>
+                <div class="userInfo">${user.getProfile().getBirthdate()}</div>
+                <input style="display:none;" type="date" name="birthdate" class="input" id="birthdate" value="${user.getProfile().getBirthdate()}"/>
+            </div>
+            <div>
+                <div>Star Sign: </div>
+                <div class="userInfo">${user.getProfile().getStarsign()}</div>
+                <input style="display:none;" type="text" name="starsign" class="input" id="starsign" value="${user.getProfile().getStarsign()}"/>
+            </div>
+
             <input type="submit" style="display:none" id="submitButton"/>
         </form>
         <button id="changeInputButton" onclick="changeToInput()">Edit</button>
@@ -33,24 +64,14 @@
 
 <script>
 
-     const profileInput = document.getElementById('profilePicInput');
-     profileInput.addEventListener("change", handleFiles, false);
+    const profileInput = document.getElementById('profilePicInput');
+    profileInput.addEventListener("change", submitForm, false);
 
-    function handleFiles(){
-
-        let formData = new FormData();
-        formData.append("fileToUpload", profileInput.files[0]);
-
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', '../uploadImage');
-        xhr.onload = () => {
-            console.log("profile updated");
-            location.reload(true);
-        };
-        xhr.send(formData);
+    function submitForm(){
+        document.getElementById("profilePicForm").submit();
     }
 
-    function changeToInput(elementId){
+    function changeToInput(){
         const inputs = document.getElementsByClassName("input");
         const userInfo = document.getElementsByClassName("userInfo");
         for(i = 0; i< inputs.length; i++){
@@ -59,38 +80,6 @@
         }
         document.getElementById("submitButton").style.display = '';
         document.getElementById("changeInputButton").style.display = 'none';
-        // const divElement = document.getElementById(elementId);
-        // const inputElement = document.getElementById(elementId + "Input");
-        // const buttonElement = document.getElementById(elementId + "Button");
-        // divElement.style.display = 'none';
-        // inputElement.style.display = '';
-        // buttonElement.style.display = '';
-    }
-
-    function sendData(){
-
-        let formData = new FormData(document.querySelector('form'));
-        console.log(formData);
-
-        // const username = document.getElementById("username").value;
-        // const intro = document.getElementById("intro").value;
-        //
-        // console.log(username, intro);
-        //
-        // let formData = new FormData();
-        // formData.append('username', username);
-        // formData.append('intro', intro);
-        //
-        // console.log(formData);
-
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', '../user');
-        xhr.onload = () => {
-            console.log("profile updated");
-            //location.reload(true);
-        };
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.send(formData);
     }
 </script>
 
