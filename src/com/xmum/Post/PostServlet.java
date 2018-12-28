@@ -1,8 +1,8 @@
 package com.xmum.Post;
 
 import com.xmum.User.UserBean;
+import com.xmum.User.UserDAO;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -51,9 +51,13 @@ public class PostServlet extends HttpServlet {
                     System.out.println("ID: ok");
 
                     //sends "id" given by request to userServlet to get "user" (author)
-                    RequestDispatcher rd = request.getRequestDispatcher("/user");
-                    rd.include(request,response);
-                    author = (UserBean)(request.getAttribute("user"));
+                    ResultSet userRs = UserDAO.getUserMinimum(id);
+                    userRs.next();
+                    author = new UserBean(userRs.getString("id"), userRs.getString("nickname"), userRs.getString("profilepic"));
+
+//                    RequestDispatcher rd = request.getRequestDispatcher("/user");
+//                    rd.include(request,response);
+//                    author = (UserBean)(request.getAttribute("user"));
                     if (author == null)
                         System.out.println("Author is null.");
                     System.out.println("Author: OK");

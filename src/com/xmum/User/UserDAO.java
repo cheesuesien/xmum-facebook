@@ -15,7 +15,7 @@ public class UserDAO {
         return getUser(u.getId());
     }
 
-    public static ResultSet getUser(String studentId){
+    public static ResultSet getUserOnly(String studentId){
         ResultSet result = null;
         try {
             conn = ConnectionProvider.getCon();
@@ -25,6 +25,38 @@ public class UserDAO {
             conn.close();
         } catch(Exception e) {
             System.out.println("UserDAO: unsuccessful query");
+            System.out.println(e);
+        }
+        return result;
+    }
+
+    public static ResultSet getUserMinimum(String studentId){
+        ResultSet result = null;
+        try {
+            conn = ConnectionProvider.getCon();
+            pst = conn.prepareStatement("select id, nickname, profilepic from users where id = ?");
+            pst.setString(1, studentId);
+            result = pst.executeQuery();
+            conn.close();
+        } catch(Exception e) {
+            System.out.println("UserDAO: unsuccessful query");
+            System.out.println(e);
+        }
+        return result;
+    }
+
+    public static ResultSet getUser(String studentId){
+        ResultSet result = null;
+        try {
+            conn = ConnectionProvider.getCon();
+            pst = conn.prepareStatement("select users.id as id, nickname, level, profilepic, gender, phonenum, email, intro, birthdate, starsign\n" +
+                    "from users, profile\n" +
+                    "where users.id = profile.id and users.id = ?;");
+            pst.setString(1, studentId);
+            result = pst.executeQuery();
+            conn.close();
+        } catch(Exception e) {
+            System.out.println("UserDAO: can't get user and profile");
             System.out.println(e);
         }
         return result;

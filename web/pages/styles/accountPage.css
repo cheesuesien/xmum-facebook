@@ -24,10 +24,19 @@
     border-radius: 50%;
 }
 
-.userInfo {
-    display: inline-block;
+tr {
+    vertical-align: top;
 }
 
-.userInfo + input {
-    width: 300px;
+.label {
+    width: 200px;
+    height: 50px;
+}
+
+.label + td {
+    width: 600px;
+}
+
+.input {
+    width: 100%;
 }

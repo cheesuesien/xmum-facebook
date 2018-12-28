@@ -15,10 +15,11 @@ public class UserBean {
         this.level = "";
         this.profilePic = "";
     }
-    public UserBean(String id, String nickname, String level){
+
+    public UserBean(String id, String nickname, String profilePic){
         this.id = id;
         this.nickname = nickname;
-        this.level = level;
+        this.profilePic = profilePic;
     }
 
     public UserBean(String id, String nickname, String level, String profilePic){

@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.ResultSet;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -22,7 +21,7 @@ public class UserServlet extends HttpServlet {
 
     //expects request attribute "id", sets "user" attribute in request.
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String id = (String)(request.getAttribute("id"));
+        /*String id = (String)(request.getAttribute("id"));
         System.out.println(id);
         ResultSet usersRs = UserDAO.getUser(id);
         UserBean user = null;
@@ -32,6 +31,10 @@ public class UserServlet extends HttpServlet {
                 String level = usersRs.getString("level");
                 String profilePic = usersRs.getString("profilepic");
                 user = new UserBean(id, nickname, level, profilePic);
+                ProfileBean userProfile = new ProfileBean(id, usersRs.getString("gender"), usersRs.getString("phonenum"),
+                        usersRs.getString("email"), usersRs.getString("intro"),
+                        (LocalDate)usersRs.getObject("birthdate"), usersRs.getString("starsign"));
+                user.setProfile(userProfile);
             } else {
                 System.out.println("UserServlet: no user returned");
             }
@@ -47,7 +50,7 @@ public class UserServlet extends HttpServlet {
             System.out.println("User is fine.");
         else
             System.out.println("User is null.");
-        request.setAttribute("user", user);
+        request.setAttribute("user", user);*/
 
     }
 
