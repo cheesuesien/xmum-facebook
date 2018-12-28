@@ -23,3 +23,11 @@
     height: 150px;
     border-radius: 50%;
 }
+
+.userInfo {
+    display: inline-block;
+}
+
+.userInfo + input {
+    width: 300px;
+}
