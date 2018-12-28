@@ -1,5 +1,6 @@
 package com.xmum.Login;
 
+import com.xmum.Profile.ProfileBean;
 import com.xmum.User.UserBean;
 import com.xmum.User.UserDAO;
 
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.ResultSet;
+import java.time.LocalDate;
 
 @WebServlet("/LoginController")
 public class LoginServlet extends HttpServlet {
@@ -32,6 +34,10 @@ public class LoginServlet extends HttpServlet {
             try{
                 if (userResult.next()){
                     UserBean thisUser = new UserBean( userResult.getString("id"), userResult.getString("nickname"), userResult.getString("level"), userResult.getString("profilepic") );
+                    ProfileBean userProfile = new ProfileBean(id, userResult.getString("gender"), userResult.getString("phonenum"),
+                            userResult.getString("email"), userResult.getString("intro"),
+                            userResult.getObject("birthdate", LocalDate.class), userResult.getString("starsign"));
+                    thisUser.setProfile(userProfile);
                     request.getSession(true).setAttribute("user", thisUser);
                     System.out.println("LoginServlet: set session user attribute");
                 } else {
@@ -41,8 +47,7 @@ public class LoginServlet extends HttpServlet {
                 System.out.println("get user failed");
                 System.out.println(e);
             }
-            //request.getSession(false).setAttribute("user", username);
-            //request.getSession(true).setAttribute("user", username);
+
             Cookie loginCookie = new Cookie("user", id);
             //setting cookie to expiry in 10 mins
             loginCookie.setMaxAge(10*60);
