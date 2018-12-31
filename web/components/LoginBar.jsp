@@ -14,8 +14,8 @@
             <input class="ForgetPassword" type = "submit" value="Reset password?"/>
         </form>
         <form name ="Login" method="post" action = "${pageContext.request.contextPath}/LoginController">
-            <div class="Text">Username: </div>
-            <input class="InputBlock" type = "text" name = "username"/>
+            <div class="Text">Student/Staff ID: </div>
+            <input class="InputBlock" type = "text" name = "id"/>
             <div class="Text">Password: </div>
             <input class="InputBlock" type = "password" name = "password"/>
             <input class="LoginButton" type = "submit" value = "Login"/>

@@ -23,3 +23,20 @@
     height: 150px;
     border-radius: 50%;
 }
+
+tr {
+    vertical-align: top;
+}
+
+.label {
+    width: 200px;
+    height: 50px;
+}
+
+.label + td {
+    width: 600px;
+}
+
+.input {
+    width: 100%;
+}

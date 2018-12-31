@@ -2,9 +2,10 @@
 <nav>
     <div class="nav-left">
         <img class="icon" src="${pageContext.request.contextPath}/components/icons/main.png" alt="main-icon"/>
-        <div>XMUM FACEBOOK</div>
+        <a href="../post" class="homeBtn" style="color: white;">XMUM FACEBOOK</a>
     </div>
     <div class="nav-right">
+        <div>${user.getNickname()}</div>
         <form name = "Logout" action="${pageContext.request.contextPath}/LogoutServlet">
             <input type="submit" class="LogoutButton" value = "Logout"/>
         </form>

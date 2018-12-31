@@ -6,17 +6,6 @@
 <jsp:include page="../components/Register.jsp"/>
 
 <%
-    String userName = null;
-    Cookie[] cookies = request.getCookies();
-    if(cookies !=null){
-        for(Cookie cookie : cookies){
-            if(cookie.getName().equals("user")) {
-                userName = cookie.getValue();
-                request.getSession(true).setAttribute("user", userName);
-            }
-        }
-    }
-
     if (session.getAttribute("user") != null) {
         response.sendRedirect(request.getContextPath() + "/pages/publicWall.jsp");
     }

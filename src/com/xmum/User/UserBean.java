@@ -1,9 +1,33 @@
 package com.xmum.User;
 
+import com.xmum.Profile.ProfileBean;
+
 public class UserBean {
     private String id;
-    private String username;
-    private String intro;
+    private String nickname;
+    private String level;
+    private String profilePic;
+    private ProfileBean profile;
+
+    public UserBean(){
+        this.id = "";
+        this.nickname = "";
+        this.level = "";
+        this.profilePic = "";
+    }
+
+    public UserBean(String id, String nickname, String profilePic){
+        this.id = id;
+        this.nickname = nickname;
+        this.profilePic = profilePic;
+    }
+
+    public UserBean(String id, String nickname, String level, String profilePic){
+        this.id = id;
+        this.nickname = nickname;
+        this.level = level;
+        this.profilePic = profilePic;
+    }
 
     public String getId() {
         return id;
@@ -13,19 +37,35 @@ public class UserBean {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
-    public String getIntro() {
-        return intro;
+    public String getLevel() {
+        return level;
     }
 
-    public void setIntro(String intro) {
-        this.intro = intro;
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public String getProfilePic() {
+        return profilePic;
+    }
+
+    public void setProfilePic(String profilePic) {
+        this.profilePic = profilePic;
+    }
+
+    public ProfileBean getProfile() {
+        return profile;
+    }
+
+    public void setProfile(ProfileBean profile) {
+        this.profile = profile;
     }
 }
