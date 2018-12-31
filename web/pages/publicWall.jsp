@@ -26,11 +26,30 @@ This function should be added to the loginservlet function when it is ready.--%>
 
 <!--Type user status here -->
     <div id="status-input">
-        <form id="postForm" method="post" action="${pageContext.request.contextPath}/post">
+        <form id="postForm" method="post" action="${pageContext.request.contextPath}/post" enctype="multipart/form-data">
+            <input id="uploadType" type="hidden" name="uploadType" value="postNoPic"/>
+            <input id="imageUpload" type="file" name="imageUpload" id="imageInput" multiple/>
             <textarea name="postMessage" placeholder=" What's on your mind?" style="width:80%;"></textarea>
-            <div class="buttooon" onclick="document.getElementById('postForm').submit()">Post</div>
+            <div class="buttooon" onclick="submitForms()">Post</div>
         </form>
     </div>
+    <script>
+        const imageInput = document.getElementById('imageUpload');
+        imageInput.addEventListener("change", printValue, false);
+
+        function printValue(){
+            console.log(imageInput.value);
+            if(imageInput.value){
+                document.getElementById("uploadType").value = "postPic";
+            } else{
+                document.getElementById("uploadType").value = "postNoPic";
+            }
+        }
+
+        function submitForms(){
+            document.getElementById('postForm').submit();
+        }
+    </script>
 
     <!--Pinned post: Admin Posts and Official Announcements-->
     <%--get ${posts} from session attribute--%>
@@ -41,7 +60,6 @@ This function should be added to the loginservlet function when it is ready.--%>
                     <h2>THIS IS A PINNED MESSAGE</h2>
             </c:when>
             <c:otherwise>
-
                 <div class="normal">
             </c:otherwise>
         </c:choose>
@@ -49,7 +67,7 @@ This function should be added to the loginservlet function when it is ready.--%>
             <table>
                 <tr>
                     <td rowspan="2" width="100px">
-                        <img src="../components/icons/PFP.jpg" alt="Profile Picture" class="pfp"/>
+                        <img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" alt="Profile Picture" class="pfp"/>
                     </td>
                     <td class="user-username">
                         <a href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}" style="color:#d1cc6e;"><b>${post.getAuthor().getNickname()}</b></a>
@@ -57,7 +75,14 @@ This function should be added to the loginservlet function when it is ready.--%>
                 </tr>
                 <tr>
                     <td class="date-posted">
-                        ${post.getTimeStamp()}
+                        ${post.getFormattedDate()}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <c:forEach items="${post.getImages()}" var="image" varStatus="loop">
+                            <img src="${pageContext.request.contextPath}/img/postimgs/${image}" alt="Post Picture" style="height:100px"/>
+                        </c:forEach>
                     </td>
                 </tr>
                 <tr>
@@ -69,9 +94,11 @@ This function should be added to the loginservlet function when it is ready.--%>
                         </p>
                     </td>
                 </tr>
+
             </table>
         </div>
     </c:forEach>
+
     <div class="main">
         <div class="pin-post">
             <h2>THIS IS A PINNED MESSAGE</h2>

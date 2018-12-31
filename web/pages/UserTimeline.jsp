@@ -15,7 +15,7 @@
         <table>
             <tr>
                 <td rowspan="2" width="100px">
-                    <img src="../components/icons/PFP.jpg" alt="Profile Picture" class="pfp"/>
+                    <img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" alt="Profile Picture" class="pfp"/>
                 </td>
                 <td class="normal-username">
                     <a href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}" style="color:#d1cc6e;"><b>${post.getAuthor().getNickname()}</b></a>
@@ -23,7 +23,14 @@
             </tr>
             <tr>
                 <td class="date-posted">
-                        ${post.getTimeStamp()}
+                        ${post.getFormattedDate()}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <c:forEach items="${post.getImages()}" var="image" varStatus="loop">
+                        <img src="${pageContext.request.contextPath}/img/postimgs/${image}" alt="Post Picture" style="height:100px"/>
+                    </c:forEach>
                 </td>
             </tr>
             <tr>

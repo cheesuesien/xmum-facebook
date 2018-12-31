@@ -2,10 +2,7 @@ package com.xmum.Post;
 
 import com.xmum.DatabaseConnection.ConnectionProvider;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDateTime;
 
 
@@ -27,10 +24,17 @@ public class PostDAO {
                 pst.setObject(2, LocalDateTime.now());
                 //pst.setInt(4, u.postid());
             }else{
-                pst = conn.prepareStatement("insert into normalposts (authorid,message,timestamp) values(?,?,?)");
+                pst = conn.prepareStatement("insert into normalposts (authorid,message,images,timestamp) values(?,?,?,?)");
                 pst.setString(1, u.getAuthorId());
                 pst.setString(2, u.getMessage());
-                pst.setObject(3, LocalDateTime.now());
+                if(u.getImages() != null){
+                    Array sqlArray = conn.createArrayOf("VARCHAR", u.getImages());
+                    pst.setArray(3, sqlArray);
+                } else {
+                    pst.setArray(3, null);
+                }
+
+                pst.setObject(4, LocalDateTime.now());
                 //pst.setInt(4, u.postid());
             }
 
@@ -102,8 +106,8 @@ public class PostDAO {
             conn = ConnectionProvider.getCon();
             pst = conn.prepareStatement("select * from normalposts");
             result = pst.executeQuery();
+
             System.out.println("PostDAO: getting posts");
-            conn.close();
         } catch(Exception e) {
             System.out.println("PostDAO: unsuccessful query");
             System.out.println(e);
@@ -130,19 +134,23 @@ public class PostDAO {
     }
 
     //TO RETRIEVE POSTS FROM ONE USER ONLY
-    public static ResultSet getUserPost(String userid){
+    public static ResultSet getUserPost(String userid) {
         ResultSet result = null;
         try {
             conn = ConnectionProvider.getCon();
             pst = conn.prepareStatement("select * from normalposts where authorid = ?");
-            pst.setString(1,userid);
+            pst.setString(1, userid);
             result = pst.executeQuery();
-            System.out.println("PostDAO: getting posts written by "+userid);
-            conn.close();
+            System.out.println("PostDAO: getting posts written by " + userid);
         } catch (Exception e) {
-            System.out.println("PostDAO: getUserPost unsuccessful");;
+            System.out.println("PostDAO: getUserPost unsuccessful");
             System.out.println(e);
         }
         return result;
+    }
+
+    public static void closeConn() throws SQLException {
+        System.out.println("closed connection");
+        conn.close();
     }
 }
