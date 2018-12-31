@@ -16,6 +16,8 @@ public class PostBean {
     private static final int MAX_IMAGES = 20;
     private String userlevel;
     private int postid;
+    private int likes;
+    private int dislikes;
 
     public PostBean(){
         author = null;
@@ -35,11 +37,37 @@ public class PostBean {
         this.userlevel = userlevel;
     }
 
-    public PostBean(UserBean author, String message, LocalDateTime datetime, String userlevel){
+    // to get admin posts
+    public PostBean(UserBean author, String message, LocalDateTime datetime, String userlevel, int likes, int dislikes, int postid){
         this.author = author;
         this.message = message;
         this.timeStamp = datetime;
         this.userlevel = userlevel;
+        this.likes = likes;
+        this.dislikes = dislikes;
+        this.postid = postid;
+    }
+
+    // post posts
+    public PostBean(UserBean author, String message, LocalDateTime datetime, String userlevel, int likes, int dislikes){
+        this.author = author;
+        this.message = message;
+        this.timeStamp = datetime;
+        this.userlevel = userlevel;
+        this.likes = likes;
+        this.dislikes = dislikes;
+    }
+
+    // to get normal posts
+    public PostBean(UserBean author, String message, String[] images, LocalDateTime datetime, String userlevel, int likes, int dislikes, int postid) {
+        this.author = author;
+        this.message = message;this.images = images;
+
+        this.timeStamp = datetime;
+        this.userlevel = userlevel;
+        this.likes = likes;
+        this.dislikes = dislikes;
+        this.postid = postid;
     }
 
     public PostBean(UserBean author, String message, String[] images, LocalDateTime datetime, String userlevel, int postid){
@@ -55,6 +83,30 @@ public class PostBean {
         this.message = message;
         this.timeStamp = datetime;
         this.userlevel = userlevel;
+    }
+    public PostBean(String message, LocalDateTime datetime, String userlevel, int likes,int dislikes, int postid){
+        this.message = message;
+        this.timeStamp = datetime;
+        this.userlevel = userlevel;
+        this.likes = likes;
+        this.dislikes = dislikes;
+        this.postid = postid;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
+    public int getDislikes() {
+        return dislikes;
+    }
+
+    public void setDislikes(int dislikes) {
+        this.dislikes = dislikes;
     }
 
     public String getFormattedDate() {
@@ -105,6 +157,8 @@ public class PostBean {
         }
     }
     public int postid() { return postid; }
+
+    public int getPostid() { return postid; }
 
     public String getUserlevel() {
         return userlevel;

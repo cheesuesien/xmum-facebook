@@ -1,6 +1,5 @@
 package com.xmum.DatabaseConnection;
 
-import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -17,7 +16,7 @@ public class ConnectionProvider {
         return conn;
     }*/
 
-    public static Connection getCon() throws URISyntaxException, SQLException, ClassNotFoundException {
+    public static Connection getCon() throws SQLException, ClassNotFoundException {
         String USERNAME = "postgres";
         String PASSWORD = "makisa123";
         String CONNECTION_URL = "jdbc:postgresql://localhost:5432/xmum-facebook-db";

@@ -34,7 +34,7 @@ public class UserDAO {
         ResultSet result = null;
         try {
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("select id, nickname, profilepic from users where id = ?");
+            pst = conn.prepareStatement("select id, nickname, profilepic, level from users where id = ?");
             pst.setString(1, studentId);
             result = pst.executeQuery();
             conn.close();
