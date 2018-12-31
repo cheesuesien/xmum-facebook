@@ -26,7 +26,7 @@ This function should be added to the loginservlet function when it is ready.--%>
 <!--Type user status here -->
     <div id="status-input">
         <form id="postForm" method="post" action="${pageContext.request.contextPath}/post" enctype="multipart/form-data">
-            <input id="uploadType" type="hidden" name="uploadType" />
+            <input id="uploadType" type="hidden" name="uploadType" value="postNoPic"/>
             <input id="imageUpload" type="file" name="imageUpload" id="imageInput" multiple/>
             <textarea name="postMessage" placeholder=" What's on your mind?" style="width:80%;"></textarea>
             <div class="buttooon" onclick="submitForms()">Post</div>
@@ -38,10 +38,10 @@ This function should be added to the loginservlet function when it is ready.--%>
 
         function printValue(){
             console.log(imageInput.value);
-            if(imageInput.value != null){
+            if(imageInput.value){
                 document.getElementById("uploadType").value = "postPic";
             } else{
-                document.getElementById("uploadType").value = null;
+                document.getElementById("uploadType").value = "postNoPic";
             }
         }
 
@@ -66,7 +66,7 @@ This function should be added to the loginservlet function when it is ready.--%>
             <table>
                 <tr>
                     <td rowspan="2" width="100px">
-                        <img src="${pageContext.request.contextPath}/img/${user.getProfilePic()}" alt="Profile Picture" class="pfp"/>
+                        <img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" alt="Profile Picture" class="pfp"/>
                     </td>
                     <td class="admin-username">
                         <b>${post.getAuthor().getNickname()}</b>

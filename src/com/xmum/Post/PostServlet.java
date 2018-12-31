@@ -73,11 +73,15 @@ public class PostServlet extends HttpServlet {
                     System.out.println("got SQL array");
                     System.out.println(a);
 
-                    images = (String[])a.getArray();
-                    System.out.println("got JAVA object array");
+                    if (a != null){
+                        images = (String[])a.getArray();
+                        System.out.println("got JAVA object array");
+                        System.out.println("images: OK");
+                    }
+                    else {
+                        images = null;
+                    }
 
-
-                    System.out.println("images: OK");
 
 
                     datetime = rs.getTimestamp("timestamp").toLocalDateTime();
@@ -93,7 +97,10 @@ public class PostServlet extends HttpServlet {
                     message = ps.getString("message");
                     System.out.println("Pinpost Message: OK");
                     System.out.println("Pinpost date: OK");
-                    postBeans[i] = new PostBean(message, datetime, "admin");
+                    ResultSet adminRs = UserDAO.getUser("admin");
+                    adminRs.next();
+                    author = new UserBean(adminRs.getString("id"), adminRs.getString("nickname"), adminRs.getString("profilepic"));
+                    postBeans[i] = new PostBean(author, message, datetime, "admin");
                 }
 
 
@@ -131,7 +138,8 @@ public class PostServlet extends HttpServlet {
 
 
         // post contains images
-        if (request.getParameter("uploadType") != null){
+        if (request.getParameter("uploadType").equals("postPic")){
+            System.out.println("got pics");
             request.getRequestDispatcher("/uploadImage").include(request,response);
             String[] picNames = (String[])request.getAttribute("picName");
             post.setImages(picNames);
