@@ -2,6 +2,7 @@ package com.xmum.Post;
 
 import com.xmum.User.UserBean;
 import com.xmum.User.UserDAO;
+import com.xmum.upvotedownvote.UpvoteDownvoteGetDataDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -28,6 +29,8 @@ public class PostServlet extends HttpServlet {
         int pinned_count = PostDAO.getPinnedTotal();
         ResultSet ps = PostDAO.getPinnedPost(pinned_count);
 
+
+
         //SET POSTBEAN ARRAY CAPACITY TO THE NUMBER OF NORMAL POSTS + 1 (pinned post) AND INSERT POSTS FROM LAST INDEX
         //POST IN INDEX 0 IS PINNED POST
         //WHEN PRINTING POSTS, LOOP FROM INDEX 0 THUS PINNED POST WILL BE PRINTED FIRST
@@ -53,7 +56,7 @@ public class PostServlet extends HttpServlet {
                     //sends "id" given by request to userServlet to get "user" (author)
                     ResultSet userRs = UserDAO.getUserMinimum(id);
                     userRs.next();
-                    author = new UserBean(userRs.getString("id"), userRs.getString("nickname"), userRs.getString("profilepic"));
+                    author = new UserBean(userRs.getString("id"), userRs.getString("nickname"),  userRs.getString("level"), userRs.getString("profilepic"));
 
 //                    RequestDispatcher rd = request.getRequestDispatcher("/user");
 //                    rd.include(request,response);
@@ -64,6 +67,10 @@ public class PostServlet extends HttpServlet {
                     userlevel = author.getLevel();
                     System.out.println(userlevel);
                     System.out.println("Level:OK");
+
+                    postid = rs.getInt("postid");
+                    int likes = UpvoteDownvoteGetDataDAO.getlikedata(postid, userlevel);
+                    int dislikes = UpvoteDownvoteGetDataDAO.getunlikedata(postid, userlevel);
 
                     // initialise postBean array
                     message = rs.getString("message");
@@ -88,7 +95,8 @@ public class PostServlet extends HttpServlet {
                     System.out.println("Date: OK");
                     PostDAO.closeConn();
                     //postid = rs.getInt("postid");
-                    postBeans[i] = new PostBean(author, message, images, datetime, userlevel);
+
+                    postBeans[i] = new PostBean(author, message, images, datetime, userlevel, likes, dislikes, postid);
 
                 }else{
                     //PINNED POST WHEN INDEX == 0
@@ -100,7 +108,12 @@ public class PostServlet extends HttpServlet {
                     ResultSet adminRs = UserDAO.getUser("admin");
                     adminRs.next();
                     author = new UserBean(adminRs.getString("id"), adminRs.getString("nickname"), adminRs.getString("profilepic"));
-                    postBeans[i] = new PostBean(author, message, datetime, "admin");
+
+                    postid = rs.getInt("postid");
+
+                    int likes = UpvoteDownvoteGetDataDAO.getlikedata(postid, "admin");
+                    int dislikes = UpvoteDownvoteGetDataDAO.getunlikedata(postid, "admin");
+                    postBeans[i] = new PostBean(author, message, datetime, "admin", likes, dislikes, postid);
                 }
 
 
@@ -130,7 +143,7 @@ public class PostServlet extends HttpServlet {
         UserBean user = (UserBean)(request.getSession(false).getAttribute("user"));
         System.out.println(user);
         String userlevel = user.getLevel();
-        PostBean post = new PostBean(user, message, LocalDateTime.now(), userlevel);
+        PostBean post = new PostBean(user, message, LocalDateTime.now(), userlevel, 0,0);
 
         System.out.println("PostServlet: create postBean successful");
 
