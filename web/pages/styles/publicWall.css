@@ -33,10 +33,6 @@ textarea{
     color: aliceblue;
 }
 
-.user-username{
-    color: #d1cc6e;
-}
-
 .date-posted{
     color: #e3e4e5;
     font-size: small;
@@ -61,6 +57,7 @@ textarea{
     text-align: center;
     background-color: #383838;
     margin-bottom: 50px;
+    color: #d1cc6e;
 }
 
 .content{

@@ -2,6 +2,7 @@
 <%@ page import="com.xmum.User.UserDAO" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <link rel="stylesheet" type="text/css" href="styles/body.css"/>
 <link rel="stylesheet" type="text/css" href="styles/publicWall.css"/>
@@ -50,8 +51,8 @@ This function should be added to the loginservlet function when it is ready.--%>
                     <td rowspan="2" width="100px">
                         <img src="../components/icons/PFP.jpg" alt="Profile Picture" class="pfp"/>
                     </td>
-                    <td class="admin-username">
-                        <b>${post.getAuthor().getNickname()}</b>
+                    <td class="user-username">
+                        <a href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}" style="color:#d1cc6e;"><b>${post.getAuthor().getNickname()}</b></a>
                     </td>
                 </tr>
                 <tr>
@@ -79,7 +80,7 @@ This function should be added to the loginservlet function when it is ready.--%>
                     <td rowspan="2" width="100px">
                         <img src="../components/icons/PFP.jpg" alt="Profile Picture" class="pfp"/>
                     </td>
-                    <td class="admin-username">
+                    <td class="user-username">
                         <b>User Name</b>
                     </td>
                 </tr>

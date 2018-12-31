@@ -17,6 +17,7 @@ public class ConnectionProvider {
         return conn;
     }*/
 
+    /*
     public static Connection getCon() throws URISyntaxException, SQLException, ClassNotFoundException {
         String USERNAME = "postgres";
         String PASSWORD = "makisa123";
@@ -24,9 +25,9 @@ public class ConnectionProvider {
         Class.forName("org.postgresql.Driver");
         Connection conn = DriverManager.getConnection(CONNECTION_URL,USERNAME,PASSWORD);
         return conn;
-    }
+    }*/
 
-   /* public static Connection getCon() throws URISyntaxException, SQLException, ClassNotFoundException {
+    public static Connection getCon() throws URISyntaxException, SQLException, ClassNotFoundException {
 
             String USERNAME = "postgres";
             String PASSWORD = "swe1609661";
@@ -34,5 +35,5 @@ public class ConnectionProvider {
         Class.forName("org.postgresql.Driver");
         Connection conn = DriverManager.getConnection(CONNECTION_URL, USERNAME, PASSWORD);
         return conn;
-    }*/
+    }
 }

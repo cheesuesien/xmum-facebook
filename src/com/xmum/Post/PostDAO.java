@@ -5,6 +5,7 @@ import com.xmum.DatabaseConnection.ConnectionProvider;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 
 
@@ -77,7 +78,7 @@ public class PostDAO {
         return total;
     }
 
-    //ONLY FOR PINNED POSTS - ONLY GETTING THE LATEST POST
+    //ONLY FOR PINNED POSTS : ONLY GETTING THE LATEST POST
     public static ResultSet getPinnedPost(int count){
         ResultSet result = null;
         try {
@@ -99,13 +100,47 @@ public class PostDAO {
         ResultSet result = null;
         try {
             conn = ConnectionProvider.getCon();
-
             pst = conn.prepareStatement("select * from normalposts");
             result = pst.executeQuery();
             System.out.println("PostDAO: getting posts");
             conn.close();
         } catch(Exception e) {
             System.out.println("PostDAO: unsuccessful query");
+            System.out.println(e);
+        }
+        return result;
+    }
+
+    //TO KNOW THE TOTAL COUNT OF POSTS OF A PARTICULAR USER
+    public static int getUserPostTotal(String userid){
+        int total = 0;
+        try {
+            conn = ConnectionProvider.getCon();
+            pst = conn.prepareStatement("select count(*) from normalposts where authorid = ?");
+            pst.setString(1, userid);
+            ResultSet rs = pst.executeQuery();
+            rs.next();
+            total = rs.getInt(1);
+            conn.close();
+        } catch(Exception e){
+            System.out.println("PostDAO: get user post total failed");
+            System.out.println(e);
+        }
+        return total;
+    }
+
+    //TO RETRIEVE POSTS FROM ONE USER ONLY
+    public static ResultSet getUserPost(String userid){
+        ResultSet result = null;
+        try {
+            conn = ConnectionProvider.getCon();
+            pst = conn.prepareStatement("select * from normalposts where authorid = ?");
+            pst.setString(1,userid);
+            result = pst.executeQuery();
+            System.out.println("PostDAO: getting posts written by "+userid);
+            conn.close();
+        } catch (Exception e) {
+            System.out.println("PostDAO: getUserPost unsuccessful");;
             System.out.println(e);
         }
         return result;
