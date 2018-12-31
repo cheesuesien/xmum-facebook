@@ -14,6 +14,7 @@ public class UpvoteDownvoteServlet extends HttpServlet {
         int postid = Integer.parseInt(request.getParameter("postid"));
         String author = request.getParameter("user");
         String userlevel = request.getParameter("userlevel");
+        System.out.println(postid + author + userlevel);
         boolean action = request.getParameter("action").equals("true");
         int totallikes = 0;
         int totalunlikes= 0;

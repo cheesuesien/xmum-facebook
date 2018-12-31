@@ -107,8 +107,7 @@ This function should be added to the loginservlet function when it is ready.--%>
                     <button value = "Unlike" id="unlike_${post.postid()}_${user.getId()}_${post.getUserlevel()}" class="unlike">
                         <i class="fa fa-thumbs-o-down fa-lg"></i>
                     </button>
-                        <script>console.log("${post.getLikes()}")</script>
-                    <span id="likes_${post.getPostid()}_${user.getId()}_${post.getUserlevel()}">
+                    <span id="likes_${post.postid()}_${user.getId()}_${post.getUserlevel()}">
                         ${post.getLikes()}
                     </span>
                     <span id="unlikes_${post.postid()}_${user.getId()}_${post.getUserlevel()}">

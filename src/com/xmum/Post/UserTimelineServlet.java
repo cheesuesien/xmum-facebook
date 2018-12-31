@@ -2,6 +2,7 @@ package com.xmum.Post;
 
 import com.xmum.User.UserBean;
 import com.xmum.User.UserDAO;
+import com.xmum.upvotedownvote.UpvoteDownvoteGetDataDAO;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +24,7 @@ public class UserTimelineServlet extends HttpServlet {
         UserBean author = null;
         try {
             userRs.next();
-            author = new UserBean(userRs.getString("id"), userRs.getString("nickname"), userRs.getString("profilepic"));
+            author = new UserBean(userRs.getString("id"), userRs.getString("nickname"), userRs.getString("level"), userRs.getString("profilepic"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -37,6 +38,8 @@ public class UserTimelineServlet extends HttpServlet {
                 LocalDateTime datetime;
                 String[] images;
                 rs.next();
+                int postid = rs.getInt("postid");
+
 
                 //sends "id" given by request to userServlet to get "user" (author)
 //                if (author == null)
@@ -64,9 +67,12 @@ public class UserTimelineServlet extends HttpServlet {
                 else {
                     images = null;
                 }
+                int likes = UpvoteDownvoteGetDataDAO.getlikedata(postid, userlevel);
+                int dislikes = UpvoteDownvoteGetDataDAO.getunlikedata(postid, userlevel);
+
                 PostDAO.closeConn();
                 //postid = rs.getInt("postid");
-                postBeans[i] = new PostBean(author, message, images, datetime, userlevel);
+                postBeans[i] = new PostBean(author, message, images, datetime, userlevel, likes, dislikes, postid);
 
             }catch(Exception e){
                 System.out.println("UserTimelineServlet: PostBean array error.");
