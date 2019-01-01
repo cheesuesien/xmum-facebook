@@ -22,13 +22,13 @@
     }
 </script>
 
-<div id="register-main-body" style="background-image:url('${pageContext.request.contextPath}/img/book.jpg');">
+<div>
         <div class="register-body">
             <form name="RegisterVerify" method="post" action="${pageContext.request.contextPath}/RegisterController" onsubmit="register_validate()">
                 <div id = "RegisterBlock">
                     Register
                 </div>
-                <div style="display: inline-block">
+                <div style="display: inline-block; padding: 5px">
                     <div class ="line">
                         Username:
                     </div>

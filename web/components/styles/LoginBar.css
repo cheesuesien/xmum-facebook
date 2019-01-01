@@ -1,12 +1,14 @@
 nav {
     display: flex;
     justify-content: space-between;
-    height: 30px;
+    height: 35px;
     background-color: #383838;
-    padding: 5px;
+    padding-bottom: 5px;
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 10;
+    font-family: "Verdana", sans-serif;
 }
 
 .nav-left, .nav-right {
@@ -15,7 +17,7 @@ nav {
 
 .nav-left > div {
     color: white;
-    padding: 5px;
+    padding-bottom: 5px;
 }
 
 .nav-right > div {
@@ -25,7 +27,9 @@ nav {
 }
 
 .icon {
-    width: 30px;
+    width: 35px;
+    padding-top: 5px;
+    margin-left: 5px;
 }
 
 .XMUM_Facebook{
@@ -37,7 +41,8 @@ nav {
     height: 30px;
     padding-bottom: 25px;
     font-weight: bold;
-    font-size: 1.2em
+    font-size: 1.2em;
+    padding-top: 0px;
 }
 
 .ForgetPassword{
