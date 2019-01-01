@@ -1,9 +1,9 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/pages/styles/body.css"/>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/pages/styles/landingPage.css"/>
 
-<jsp:include page="../includes/header.jsp" />
-<jsp:include page="../components/LoginBar.jsp"/>
-<jsp:include page="../components/Register.jsp"/>
+<%@ include file="../includes/header.jsp" %>
+<%@ include file="../components/LoginBar.jsp" %>
+<%@ include file="../components/Register.jsp" %>
 
 <%
     if (session.getAttribute("user") != null) {

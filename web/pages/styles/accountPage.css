@@ -1,16 +1,12 @@
 #main-body {
-    float: left;
-    margin-left: 250px;
-    padding-left: 20px;
-    width: 50%;
+    margin: 60px auto;
+    width: 500px;
+    text-align: center;
 }
 
 .title {
     font-size: 2em;
-    height: 100px;
     font-weight: bold;
-    display: table-cell;
-    vertical-align: middle;
 }
 
 .content > div > div {
@@ -26,15 +22,17 @@
 
 tr {
     vertical-align: top;
+    /*border: 1px solid darkgray;*/
 }
 
 .label {
-    width: 200px;
+    width: 300px;
     height: 50px;
+    font-weight: bold;
 }
 
 .label + td {
-    width: 600px;
+    width: 500px;
 }
 
 .input {
