@@ -7,7 +7,7 @@
 
 
 <div id="main-body">
-    <div style="background-image:linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); padding:20px;">
+    <div style="background-image:radial-gradient(#ffe066, #af950c); padding:20px;">
         <img class="profile" src="${pageContext.request.contextPath}/img/${stalkUser.getProfilePic()}" alt="Avatar" />
         <form id="profilePicForm" method="POST" action="${pageContext.request.contextPath}/user" enctype="multipart/form-data">
             <input type="hidden" name="uploadType" value="profilePic" />

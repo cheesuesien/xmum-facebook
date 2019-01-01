@@ -17,7 +17,10 @@
 
 .profile {
     height: 150px;
+    width: 150px;
     border-radius: 50%;
+    box-shadow: 5px 5px 20px 2px #332800;
+    object-fit: cover;
 }
 
 tr {

@@ -37,7 +37,6 @@ public class PostServlet extends HttpServlet {
         PostBean[] postBeans = new PostBean[PostDAO.getTotal()+1];
         for(int i = postBeans.length-1; i >= 0; i--){
             try{
-                String id;
                 UserBean author;
                 String userlevel;
                 String message;
@@ -48,37 +47,19 @@ public class PostServlet extends HttpServlet {
                 if(i != 0){
                     rs.next();
 
-                    // setting id attribute
-                    id = rs.getString("authorid");
-                    request.setAttribute("id", id);
-                    System.out.println("ID: ok");
-
                     //sends "id" given by request to userServlet to get "user" (author)
-                    ResultSet userRs = UserDAO.getUserMinimum(id);
+                    ResultSet userRs = UserDAO.getUserMinimum(rs.getString("authorid"));
                     userRs.next();
                     author = new UserBean(userRs.getString("id"), userRs.getString("nickname"),  userRs.getString("level"), userRs.getString("profilepic"));
 
-//                    RequestDispatcher rd = request.getRequestDispatcher("/user");
-//                    rd.include(request,response);
-//                    author = (UserBean)(request.getAttribute("user"));
                     if (author == null)
                         System.out.println("Author is null.");
-                    System.out.println("Author: OK");
                     userlevel = author.getLevel();
-                    System.out.println(userlevel);
-                    System.out.println("Level:OK");
-
                     postid = rs.getInt("postid");
                     int likes = UpvoteDownvoteGetDataDAO.getlikedata(postid, userlevel);
                     int dislikes = UpvoteDownvoteGetDataDAO.getunlikedata(postid, userlevel);
 
-                    // initialise postBean array
-                    message = rs.getString("message");
-                    System.out.println("Message: OK");
-
                     Array a = rs.getArray("images");
-                    System.out.println("got SQL array");
-                    System.out.println(a);
 
                     if (a != null){
                         images = (String[])a.getArray();
@@ -89,31 +70,36 @@ public class PostServlet extends HttpServlet {
                         images = null;
                     }
 
-
-
-                    datetime = rs.getTimestamp("timestamp").toLocalDateTime();
-                    System.out.println("Date: OK");
                     PostDAO.closeConn();
-                    //postid = rs.getInt("postid");
 
-                    postBeans[i] = new PostBean(author, message, images, datetime, userlevel, likes, dislikes, postid);
+                    postBeans[i] = new PostBean(author, rs.getString("message"), images, rs.getTimestamp("timestamp").toLocalDateTime(), userlevel, likes, dislikes, postid);
 
                 }else{
                     //PINNED POST WHEN INDEX == 0
                     ps.next();
-                    datetime = ps.getTimestamp("timestamp").toLocalDateTime();
-                    message = ps.getString("message");
-                    System.out.println("Pinpost Message: OK");
-                    System.out.println("Pinpost date: OK");
-                    ResultSet adminRs = UserDAO.getUser("admin");
+                    ResultSet adminRs = UserDAO.getUserMinimum("admin");
                     adminRs.next();
                     author = new UserBean(adminRs.getString("id"), adminRs.getString("nickname"), adminRs.getString("profilepic"));
+                    userlevel = author.getLevel();
+                    postid = ps.getInt("postid");
 
-                    postid = rs.getInt("postid");
+                    int likes = UpvoteDownvoteGetDataDAO.getlikedata(postid, userlevel);
+                    int dislikes = UpvoteDownvoteGetDataDAO.getunlikedata(postid, userlevel);
 
-                    int likes = UpvoteDownvoteGetDataDAO.getlikedata(postid, "admin");
-                    int dislikes = UpvoteDownvoteGetDataDAO.getunlikedata(postid, "admin");
-                    postBeans[i] = new PostBean(author, message, datetime, "admin", likes, dislikes, postid);
+                    Array a = ps.getArray("images");
+
+                    if (a != null){
+                        images = (String[])a.getArray();
+                        System.out.println("got JAVA object array");
+                        System.out.println("images: OK");
+                    }
+                    else {
+                        images = null;
+                    }
+
+                    PostDAO.closeConn();
+
+                    postBeans[i] = new PostBean(author, ps.getString("message"), images, ps.getTimestamp("timestamp").toLocalDateTime(), "admin", likes, dislikes, postid);
                 }
 
 
