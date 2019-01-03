@@ -11,10 +11,6 @@
     <link rel="stylesheet" type="text/css"  href='${pageContext.request.contextPath}/pages/styles/style.css' />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/pages/styles/body.css"/>
 
-    <!--[if lt IE 9]>
-    <script src="../javascript/html5.js"></script>
-    <![endif]-->
-
     <%
         if (session.getAttribute("user") != null) {
             response.sendRedirect(request.getContextPath() + "/pages/publicWall.jsp");
@@ -47,9 +43,9 @@
                     <div class="image-slider-wrapper"  style="width: 60%; display: inline-block;">
                         <div class="caroufredsel_wrapper">
                             <ul id="slider1" class="image-slider slides center-text">
-                                <li><img src="${pageContext.request.contextPath}/img/katt_home_image01_slider01.jpg" alt=""></li>
-                                <li><img src="${pageContext.request.contextPath}/img/katt_home_image01_slider02.jpg" alt=""></li>
-                                <li><img src="${pageContext.request.contextPath}/img/katt_home_image01_slider03.jpg" alt=""></li>
+                                <li><img src="${pageContext.request.contextPath}/img/school_enviroment1.png" alt=""></li>
+                                <li><img src="${pageContext.request.contextPath}/img/school_enviroment2.jpg" alt=""></li>
+                                <li><img src="${pageContext.request.contextPath}/img/school_enviroment3.jpg" alt=""></li>
                             </ul>
                         </div>
                         <div class="slider1_pagination carousel_pagination left"></div>
@@ -59,7 +55,7 @@
                         <jsp:include page="../components/Register.jsp"/>
                     </div>
                 </div>
-            <div class="post-title-holder one_title absolute" style="width: 60%">
+                <%--<div class="post-title-holder one_title absolute" style="width: 60%">
                     <h2 class="entry-title excerpt">
                         <a href="single.html">
                             We are design &amp; digital studio based in New York.<br>
@@ -72,12 +68,12 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div>--%>
                 <div class="clear"></div>
         </article>
 
 
-        <article id="post-2" class="relative blog-item-holder">
+        <%--<article id="post-2" class="relative blog-item-holder">
             <div class="only-post-title-holder">
                 <h2 class="entry-title excerpt">
                     <a href="single.html">
@@ -93,24 +89,24 @@
                 </div>
             </div>
             <div class="clear"></div>
-        </article>
+        </article>--%>
 
 
         <article id="post-3" class="relative blog-item-holder">
             <div class="post-thumb thumb-image two_third_thumb left">
-                <img src="${pageContext.request.contextPath}/img/katt_home_image02.jpg" alt="">
+                <img src="${pageContext.request.contextPath}/img/apple.png" alt="">
             </div>
             <div class="post-title-holder one_third_title right">
                 <h2 class="entry-title">
-                    <a href="single.html">What was most significant about the office chairs</a>
+                    An Apple a Day Keeps The Doctor Away.
                 </h2>
-                <div class="cat-links">
+                <%--<div class="cat-links">
                     <ul>
                         <li>
                             <a href="#">Interior</a>
                         </li>
                     </ul>
-                </div>
+                </div>--%>
             </div>
             <div class="clear"></div>
         </article>
@@ -118,21 +114,19 @@
 
         <article id="post-4" class="relative blog-item-holder">
             <div class="post-thumb thumb-image two_third_thumb right">
-                <img src="${pageContext.request.contextPath}/img/katt_home_image03.jpg" alt="">
+                <img src="${pageContext.request.contextPath}/img/africa.jpg" alt="">
             </div>
             <div class="post-title-holder one_third_title left">
                 <h2 class="entry-title">
-                    <a href="single.html">
-                        The sky is the limit only for those who aren’t afraid to fly
-                    </a>
+                        Did you know? Every 60 seconds in Africa, a minute passes.
                 </h2>
-                <div class="cat-links">
+                <%--<div class="cat-links">
                     <ul>
                         <li>
                             <a href="#">Packaging</a>
                         </li>
                     </ul>
-                </div>
+                </div>--%>
             </div>
             <div class="clear"></div>
         </article>
@@ -140,27 +134,25 @@
 
         <article id="post-5" class="relative blog-item-holder">
             <div class="post-thumb thumb-image one_third_thumb left">
-                <img src="${pageContext.request.contextPath}/img/katt_home_image04.jpg" alt="">
+                <img src="${pageContext.request.contextPath}/img/book.jpg" alt="">
             </div>
             <div class="post-title-holder two_third_title right">
                 <h2 class="entry-title">
-                    <a href="single.html">
-                        To go places and do things that have never been done before, that’s what living is all about
-                    </a>
+                        Keep calm and do your assignment.
                 </h2>
-                <div class="cat-links">
+                <%--<div class="cat-links">
                     <ul>
                         <li>
                             <a href="#">Handmade</a>
                         </li>
                     </ul>
-                </div>
+                </div>--%>
             </div>
             <div class="clear"></div>
         </article>
 
 
-        <article id="post-6" class="relative blog-item-holder">
+        <%--<article id="post-6" class="relative blog-item-holder">
             <div class="only-post-title-holder">
                 <h2 class="entry-title excerpt">
                     <a href="single.html">
@@ -176,24 +168,24 @@
                 </div>
             </div>
             <div class="clear"></div>
-        </article>
+        </article>--%>
 
 
         <article id="post-7" class="relative blog-item-holder">
             <div class="post-thumb thumb-image two_third_thumb right">
-                <img src="${pageContext.request.contextPath}/img/katt_home_image05.jpg" alt="">
+                <img src="${pageContext.request.contextPath}/img/takecare.jpg" alt="">
             </div>
             <div class="post-title-holder one_third_title left">
                 <h2 class="entry-title" style="margin-top: 305px;">
-                    <a href="single.html">I believe every human has a finite number of heartbeats</a>
+                    Take care of yourself in social media.
                 </h2>
-                <div class="cat-links">
+                <%--<div class="cat-links">
                     <ul>
                         <li>
                             <a href="#">Lifestyle</a>
                         </li>
                     </ul>
-                </div>
+                </div>--%>
             </div>
             <div class="clear"></div>
         </article>
@@ -211,5 +203,6 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/javascript/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/javascript/jquery.nicescroll.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/javascript/main.js"></script>
+<script src="${pageContext.request.contextPath}/javascript/html5.js"></script>
 
 <%@ include file="../includes/footer.jsp" %>
