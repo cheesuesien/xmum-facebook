@@ -9,11 +9,39 @@ nav {
     top: 0;
 }
 
-.nav-left, .nav-right {
-    display: flex;
+a {
+    text-decoration: none;
 }
 
-.nav-left > div {
+.nav-left, .nav-right, .nav-center {
+    display: flex;
+    flex: 1;
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+.nav-center {
+    justify-content: center;
+}
+
+.nav-left > a {
+    color: white;
+    margin: 5px 20px;
+    font-size: 0.8em;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-left > .active, .nav-left > a:hover {
+    color: #d1cc6e;
+}
+
+.nav-center > a {
     color: white;
     padding: 5px;
 }

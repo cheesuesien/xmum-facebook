@@ -2,12 +2,8 @@
 
 <nav>
     <div class="nav-left">
-        <img class="icon" src="${pageContext.request.contextPath}/components/icons/main.png" alt="main-icon"/>
-        <div>
-            <form name="main_page" action="${pageContext.request.contextPath}/pages/landingPage.jsp">
-            <input class = "XMUM_Facebook" type = "submit" value="XMUM FACEBOOK"/>
-            </form>
-        </div>
+        <img class="icon" src="${pageContext.request.contextPath}/components/icons/logo.png" alt="main-icon"/>
+        <a href="${pageContext.request.contextPath}/pages/landingPage.jsp" class="homeBtn" style="color: white;">XMUM FACEBOOK</a>
     </div>
     <div class="nav-right">
         <form name="PasswordForget" action="${pageContext.request.contextPath}/pages/PasswordReset.jsp">

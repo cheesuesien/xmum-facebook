@@ -88,6 +88,7 @@ public class UserServlet extends HttpServlet {
         } else {
             System.out.println("UserServlet: update user profilePic failed");
         }
-        response.sendRedirect("/LandingPage_war_exploded/pages/accountPage.jsp");
+        //request.getRequestDispatcher("/profile?id=" + user.getId()).forward(request, response);
+        response.sendRedirect(request.getContextPath() + "/profile?id=" + user.getId());
     }
 }

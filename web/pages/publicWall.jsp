@@ -86,6 +86,11 @@ This function should be added to the loginservlet function when it is ready.--%>
                 </tr>
                 <tr>
                     <td colspan="2">
+                        <script>
+                            if (!("${post.getImages()[0]}")){
+                                console.log("image is null");
+                            }
+                        </script>
                         <c:forEach items="${post.getImages()}" var="image" varStatus="loop">
                             <img src="${pageContext.request.contextPath}/img/postimgs/${image}" alt="Post Picture" style="height:100px"/>
                         </c:forEach>

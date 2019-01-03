@@ -19,24 +19,22 @@ public class PostDAO {
             String userlevel = u.getUserlevel();
             if(userlevel.equals("admin")){
                 //ADMIN POSTS ARE ALWAYS PINNED POSTS
-                pst = conn.prepareStatement("insert into pinnedposts (message,timestamp) values(?,?)");
-                pst.setString(1, u.getMessage());
-                pst.setObject(2, LocalDateTime.now());
+                pst = conn.prepareStatement("insert into pinnedposts (message,images,timestamp) values(?,?,?)");
+
                 //pst.setInt(4, u.postid());
             }else{
-                pst = conn.prepareStatement("insert into normalposts (authorid,message,images,timestamp) values(?,?,?,?)");
-                pst.setString(1, u.getAuthorId());
-                pst.setString(2, u.getMessage());
-                if(u.getImages() != null){
-                    Array sqlArray = conn.createArrayOf("VARCHAR", u.getImages());
-                    pst.setArray(3, sqlArray);
-                } else {
-                    pst.setArray(3, null);
-                }
-
-                pst.setObject(4, LocalDateTime.now());
-                //pst.setInt(4, u.postid());
+                pst = conn.prepareStatement("insert into normalposts (message,images,timestamp,authorid) values(?,?,?,?)");
+                pst.setString(4, u.getAuthorId());
             }
+            pst.setString(1, u.getMessage());
+            if(u.getImages() != null){
+                Array sqlArray = conn.createArrayOf("VARCHAR", u.getImages());
+                pst.setArray(2, sqlArray);
+            } else {
+                pst.setArray(2, null);
+            }
+
+            pst.setObject(3, LocalDateTime.now());
 
             status = pst.executeUpdate();
             conn.close();
@@ -91,7 +89,6 @@ public class PostDAO {
             pst.setInt(1, count);
             result = pst.executeQuery();
             System.out.println("PostDAO: getting pinned post");
-            conn.close();
         } catch(Exception e) {
             System.out.println("PostDAO: unsuccessful query");
             System.out.println(e);
