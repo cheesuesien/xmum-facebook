@@ -1,6 +1,5 @@
 <%@ page import="com.xmum.User.UserBean" %>
 <%@ page import="com.xmum.User.UserDAO" %>
-<%@ page import="java.sql.ResultSet" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
@@ -13,7 +12,6 @@
 <script type="text/javascript" src="../UpvoteDownvote.js"></script>
 
 <%@ include file="../includes/header.jsp" %>
-<%@ include file="../components/sideBar.jsp" %>
 <%@ include file="../components/navBar.jsp" %>
 
 <%
@@ -29,13 +27,16 @@ publicWall.jsp after the posts are done loading--%>
 <%--This is a temporary hardcoded function to set the session attribute "user" to get the logged in user.
 This function should be added to the loginservlet function when it is ready.--%>
 
+    <div class="cover"></div>
+
 <!--Type user status here -->
     <div id="status-input">
         <form id="postForm" method="post" action="${pageContext.request.contextPath}/post" enctype="multipart/form-data">
             <input id="uploadType" type="hidden" name="uploadType" value="postNoPic"/>
-            <input id="imageUpload" type="file" name="imageUpload" id="imageInput" multiple/>
-            <textarea name="postMessage" placeholder=" What's on your mind?" style="width:80%;"></textarea>
-            <div class="buttooon" onclick="submitForms()">Post</div>
+            <input id="imageUpload" type="file" name="imageUpload" id="imageInput" style="margin:10 25px; width:90%;"/>
+            <input type="text" name="postMessage" placeholder="    What's on your mind?" maxlength="70" style="margin:10 25px; width:90%;border-radius: 25px;"/>
+            <input type="submit" value="submit" hidden/>
+            <%--<div class="buttooon" onclick="submitForms()">Post</div>--%>
         </form>
     </div>
     <script>
@@ -54,23 +55,82 @@ This function should be added to the loginservlet function when it is ready.--%>
         function submitForms(){
             document.getElementById('postForm').submit();
         }
+
+        window.addEventListener('scroll', function () {
+            document.body.classList[
+                window.scrollY > 20 ? 'add': 'remove'
+                ]('scrolled');
+        });
     </script>
 
 
     <!--Pinned post: Admin Posts and Official Announcements-->
     <%--get ${posts} from session attribute--%>
+    <div style="display:flex; flex-wrap: wrap; justify-content: center; ">
     <c:forEach items="${posts}" var="post" varStatus="loop">
         <c:choose>
             <c:when test="${loop.index == 0}">
-                <div class="main">
-                    <h2>THIS IS A PINNED MESSAGE</h2>
+                <section class="main">
+                    <%--<h2 style="color:white;">ANNOUNCEMENT</h2>--%>
             </c:when>
             <c:otherwise>
-                <div class="normal">
+                <section class="normal">
             </c:otherwise>
         </c:choose>
 
-            <table>
+        <section class="post-area section" style="border-radius: 25px;"> <%--**blog-area section--%>
+            <div class="container"> <%--**container--%>
+                <div class="row">
+                    <div class="outside x"> <%--**col-lg-4 col-md-6--%>
+                        <div class="card h-100"> <%--**card h-100--%>
+                            <c:choose>
+                            <c:when test="${post.getImages() != null}">
+                                <div class="inside-content style-1"> <%--**single-post post-style-1--%>
+                                    <div class="post-image"> <%--**blog-image--%>
+                                        <img src="${pageContext.request.contextPath}/img/postimgs/${post.getImages()[0]}" alt="Post Image" style="height:100px"/>
+                                    </div><%--POST-IMAGE--%>
+                            </c:when>
+                            <c:otherwise>
+                                <div class="inside-content style-2">
+                            </c:otherwise>
+                            </c:choose>
+                                <div class="avatar-area">
+                                    <%--PROFILE-PICTURE-(PFP)   **avatar--%>
+                                    <a class="pfp" href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}"><img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" alt="Profile Picture" /></a>
+                                    <div class="avatar-right-side">
+                                        <a class="username" href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}"><b>${post.getAuthor().getNickname()}</b></a>
+                                        <h6 class="date" href="#">${post.getFormattedDate()}</h6>
+                                    </div> <%--AVATAR-RIGHT-SIDE--%>
+                                </div><%--AVATAR-AREA--%>
+                                <div class="post-stuff"> <%--**blog-info--%>
+                                    <%--POST-CONTENT--%> <%--**title--%>
+                                    <h4 class="post-content">${post.getMessage()}</h4>
+                                    <ul class="post-votes"> <%--**post-footer--%>
+                                        <li>
+                                            <button value = "Like" id="like_${post.postid()}_${user.getId()}_${post.getUserlevel()}" class="like">
+                                                <i class="fa fa-thumbs-o-up fa-lg"></i>
+                                                <span id="likes_${post.postid()}_${user.getId()}_${post.getUserlevel()}">
+                                                    ${post.getLikes()}
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button value = "Unlike" id="unlike_${post.postid()}_${user.getId()}_${post.getUserlevel()}" class="unlike">
+                                                <i class="fa fa-thumbs-o-down fa-lg"></i>
+                                                <span id="unlikes_${post.postid()}_${user.getId()}_${post.getUserlevel()}">
+                                                    ${post.getDislikes()}
+                                                </span>
+                                            </button>
+                                        </li>
+                                    </ul><%--POST-VOTES--%>
+                                </div><%--POST-STUFF--%>
+                            </div><%--INSIDE-CONTENT--%>
+                        </div><%--INSIDE--%>
+                    </div><%--OUTISDE--%>
+                </div><%--ROW--%>
+            </div><%--CONTAINER--%>
+        </section><%--POST-CONTAINER--%>
+            <%--<table>
                 <tr>
                     <td rowspan="2" width="100px">
                         <img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" alt="Profile Picture" class="pfp"/>
@@ -114,12 +174,14 @@ This function should be added to the loginservlet function when it is ready.--%>
                         ${post.getDislikes()}
                     </span>
                 </tr>
-            </table>
-        </div>
+            </table> --%>
+
+
+        </section><%--NORMAL-OR-PINNED--%>
 
     </c:forEach>
-
-    <div class="main">
+    </div>
+    <%--<div class="main">
         <div class="pin-post">
             <h2>THIS IS A PINNED MESSAGE</h2>
             <table>
@@ -208,6 +270,6 @@ This function should be added to the loginservlet function when it is ready.--%>
             </table>
         </div>
     </div>
-    <div><br>  <br></div>
+    <div><br>  <br></div>--%>
 
 <%@ include file="../includes/footer.jsp" %>
