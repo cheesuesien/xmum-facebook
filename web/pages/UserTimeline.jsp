@@ -12,7 +12,6 @@
 <script type="text/javascript" src="../javascript/UpvoteDownvote.js"></script>
 
 <%@ include file="../includes/header.jsp" %>
-<%@ include file="../components/sideBar.jsp" %>
 <%@ include file="../components/navBar.jsp" %>
 
 <div style="display:flex; flex-wrap: wrap; justify-content: center; ">
@@ -35,9 +34,9 @@
                                         </c:otherwise>
                                         </c:choose>
                                         <div class="avatar-area">
-                                            <a class="pfp" href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}"><img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" alt="Profile Picture" /></a>
+                                            <a class="pfp" href="${pageContext.request.contextPath}/profile?id=${post.getAuthor().getId()}"><img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" alt="Profile Picture" /></a>
                                             <div class="avatar-right-side">
-                                                <a class="username" href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}"><b>${post.getAuthor().getNickname()}</b></a>
+                                                <a class="username" href="${pageContext.request.contextPath}/profile?id=${post.getAuthor().getId()}"><b>${post.getAuthor().getNickname()}</b></a>
                                                 <h6 class="date" href="#">${post.getFormattedDate()}</h6>
                                             </div>
                                         </div>

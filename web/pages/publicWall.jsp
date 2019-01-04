@@ -33,8 +33,8 @@ This function should be added to the loginservlet function when it is ready.--%>
     <div id="status-input">
         <form id="postForm" method="post" action="${pageContext.request.contextPath}/post" enctype="multipart/form-data">
             <input id="uploadType" type="hidden" name="uploadType" value="postNoPic"/>
-            <input id="imageUpload" type="file" name="imageUpload" id="imageInput" style="margin:10 25px; width:90%;"/>
-            <input type="text" name="postMessage" placeholder="    What's on your mind?" maxlength="70" style="margin:10 25px; width:90%;border-radius: 25px;"/>
+            <input id="imageUpload" type="file" name="imageUpload" id="imageInput" style="margin:10px 25px; width:90%;"/>
+            <input type="text" name="postMessage" placeholder="    What's on your mind?" maxlength="70" style="margin:10px 25px; width:90%;border-radius: 25px;"/>
             <input type="submit" value="submit" hidden/>
             <%--<div class="buttooon" onclick="submitForms()">Post</div>--%>
         </form>
@@ -83,20 +83,33 @@ This function should be added to the loginservlet function when it is ready.--%>
                 <div class="row">
                     <div class="outside x"> <%--**col-lg-4 col-md-6--%>
                         <div class="card h-100"> <%--**card h-100--%>
+                            <script>console.log("${loop.index}")</script>
+                            <script>console.log("${post.getImages()}")</script>
                             <c:choose>
-                            <c:when test="${post.getImages() != null}">
+                            <%--normal post with image--%>
+                            <c:when test="${(post.getImages() != null) && (loop.index != 0)}">
+                                <script>console.log("style1!!!")</script>
                                 <div class="inside-content style-1"> <%--**single-post post-style-1--%>
                                     <div class="post-image"> <%--**blog-image--%>
-                                        <img src="${pageContext.request.contextPath}/img/postimgs/${post.getImages()[0]}" alt="Post Image" style="height:100px"/>
+                                        <img src="${pageContext.request.contextPath}/img/postimgs/${post.getImages()[0]}" alt="Post Image" style="height:100px; object-fit:cover;"/>
                                     </div><%--POST-IMAGE--%>
+                            </c:when>
+                                    <%--pinned post with image--%>
+                            <c:when test="${post.getImages() != null && (loop.index == 0)}">
+                                <script>console.log("style2!!!")</script>
+                                <div class="inside-content style-2" style="display:flex; justify-content:flex-start;"> <%--**single-post post-style-1--%>
+                                    <div class="post-image" style="height:100%;"> <%--**blog-image--%>
+                                        <img src="${pageContext.request.contextPath}/img/postimgs/${post.getImages()[0]}" alt="Post Image" style="width:300px; object-fit:cover;"/>
+                                    </div>
                             </c:when>
                             <c:otherwise>
                                 <div class="inside-content style-2">
                             </c:otherwise>
                             </c:choose>
+                                <div style="width:100%;">
                                 <div class="avatar-area">
                                     <%--PROFILE-PICTURE-(PFP)   **avatar--%>
-                                    <a class="pfp" href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}"><img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" alt="Profile Picture" /></a>
+                                    <a class="pfp" href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}"><img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" alt="Profile Picture" style="height:100%; object-fit:cover;"/></a>
                                     <div class="avatar-right-side">
                                         <a class="username" href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}"><b>${post.getAuthor().getNickname()}</b></a>
                                         <h6 class="date" href="#">${post.getFormattedDate()}</h6>
@@ -124,6 +137,7 @@ This function should be added to the loginservlet function when it is ready.--%>
                                         </li>
                                     </ul><%--POST-VOTES--%>
                                 </div><%--POST-STUFF--%>
+                                </div>
                             </div><%--INSIDE-CONTENT--%>
                         </div><%--INSIDE--%>
                     </div><%--OUTISDE--%>
