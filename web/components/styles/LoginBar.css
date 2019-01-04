@@ -1,44 +1,41 @@
 nav {
     display: flex;
     justify-content: space-between;
-    height: 30px;
+    height: 35px;
     background-color: #383838;
-    padding: 5px;
+    padding-bottom: 5px;
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 10;
+    font-family: "Verdana", sans-serif;
 }
 
-.nav-left, .nav-right {
+a {
+    text-decoration: none;
+}
+
+.nav-left, .nav-right{
     display: flex;
 }
 
-.nav-left > div {
-    color: white;
-    padding: 5px;
+.nav-left {
+    justify-content: flex-start;
 }
 
-.nav-right > div {
-    width: 80px;
+.nav-right {
+    justify-content: flex-end;
+}
+
+.nav-left > a {
     color: white;
-    padding: 5px;
+    padding-bottom: 5px;
 }
 
 .icon {
     width: 30px;
 }
 
-.XMUM_Facebook{
-    display:inline-block;
-    background-color: #383838;
-    color: white;
-    border: 0px;
-    font-family: Verdana, san-serif;
-    height: 30px;
-    padding-bottom: 25px;
-    font-weight: bold;
-    font-size: 1.2em
-}
 
 .ForgetPassword{
     display:inline-block;
@@ -52,18 +49,16 @@ nav {
 }
 
 .Text{
-    display:inline-block;
     color:white;
+    display: inline-block;
 }
 
 .InputBlock{
-    display:inline-block;
     background-color: #565656;
     border: 1px white solid;
 }
 
 .LoginButton{
-    display:inline-block;
     background-color: #383838;
     color: white;
     border: 0px;
@@ -75,7 +70,6 @@ nav {
 }
 
 .submit-result{
-    display: inline-block;
     color: red;
     font-size: 0.7em;
     padding: 5px;

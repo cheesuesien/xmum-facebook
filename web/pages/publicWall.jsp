@@ -7,9 +7,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="styles/body.css"/>
 <link rel="stylesheet" type="text/css" href="styles/publicWall.css"/>
-<script type="text/javascript" src="../jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../javascript/jquery-3.3.1.js"></script>
 <script>var rootPath = "${pageContext.request.contextPath}"</script>
-<script type="text/javascript" src="../UpvoteDownvote.js"></script>
+<script type="text/javascript" src="../javascript/UpvoteDownvote.js"></script>
 
 <%@ include file="../includes/header.jsp" %>
 <%@ include file="../components/navBar.jsp" %>
@@ -146,6 +146,11 @@ This function should be added to the loginservlet function when it is ready.--%>
                 </tr>
                 <tr>
                     <td colspan="2">
+                        <script>
+                            if (!("${post.getImages()[0]}")){
+                                console.log("image is null");
+                            }
+                        </script>
                         <c:forEach items="${post.getImages()}" var="image" varStatus="loop">
                             <img src="${pageContext.request.contextPath}/img/postimgs/${image}" alt="Post Picture" style="height:100px"/>
                         </c:forEach>

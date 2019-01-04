@@ -1,29 +1,17 @@
-#register-main-body{
-    float: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 450px;
-    height: 90%;
-    width: 100%;
-    background-size: 100%;
-}
-
 .register-body{
-    flex: 1 1 auto;
-    margin: 250px auto;
+    margin: 127px auto;
     width: 390px;
-    border: black solid 2px;
-    height: 195px;
+    border: white solid 2px;
+    height: 210px;
 }
 
 #RegisterBlock{
     color: white;
-    padding: 10px;
     text-align: center;
     background-color: #383838;
     margin: 0 auto;
     font-size: 1.5em;
+    border-bottom: white solid 2px;
 }
 
 .line{
@@ -46,9 +34,9 @@
     text-align: center;
     background-color: #383838;
     color: white;
-    padding: 10px;
+    padding: 8px;
     margin-left: 0px;
     margin-right: 0px;
     cursor: pointer;
-    border: none;
+    border: white 1px solid;
 }
