@@ -1,56 +1,58 @@
-<link rel="stylesheet" type="text/css" href="styles/body.css"/>
-<link rel="stylesheet" type="text/css" href="styles/feedBack.css"/>
 
-        <%@ include file="../includes/header.jsp" %>
+
+<%@ include file="../includes/header.jsp" %>
 <%@ include file="../components/sideBar.jsp" %>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="../pages/styles/main.css">
+
+<body>
+
 <%@ include file="../components/navBar.jsp" %>
+<div class="container-contact100">
 
+        <div class="wrap-contact100">
+                <form class="contact100-form validate-form" method="post" data-email="cdtomgreen@gmail.com" action="https://script.google.com/macros/s/AKfycbwvpC8XfAJWPlCKzv1G5AmSPs0-UK9IrQcRlpG3/exec">
+				<span class="contact100-form-title">
+					Send Us A Message
+				</span>
 
+                        <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+                                <input class="input100" type="text" name="name" placeholder="Full Name">
+                                <span class="focus-input100"></span>
+                        </div>
 
-<div class="background">
-<div id="main-body" >
+                        <div class="wrap-input100 validate-input" data-validate = "Please enter your email: e@a.x">
+                                <input class="input100" type="text" name="email" placeholder="E-mail">
+                                <span class="focus-input100"></span>
+                        </div>
 
-        <div style="margin:0px auto;">
-        <div class="title">Feedback</div>
-        <div class="content" style="margin: 20px">What is your feedback for us?</div>
-        <form class="form" method="post" data-email="cdtomgreen@gmail.com" action="https://script.google.com/macros/s/AKfycbwvpC8XfAJWPlCKzv1G5AmSPs0-UK9IrQcRlpG3/exec">
-                <table width="900px">
+                        <div class="wrap-input100 validate-input" data-validate = "Please enter your phone">
+                                <input class="input100" type="text" name="phone" placeholder="Phone">
+                                <span class="focus-input100"></span>
+                        </div>
 
-                        <tr>
+                        <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+                                <textarea class="input100" name="message" placeholder="Your Message"></textarea>
+                                <span class="focus-input100"></span>
+                        </div>
 
-                                <td >
-                                       <textarea name="content" style="align-content: center;width: 300px;height:100px;" placeholder="Please type in your comment"></textarea>
-                                </td>
-                        </tr>
-                        <tr>
-
-                                <td width="100px;" >
-                                        <h>Your name:</h>
-
-                                        <input type="text" name="name" style="width: 200px;"placeholder="name">
-                                </td>
-                        </tr>
-                        <tr>
-
-                                <td width="100px;"  >
-                                        <h>Email:</h>
-
-                                        <input type="text" name="email" style="margin-left:42px;width: 200px;" placeholder="Email(optional)">
-                                </td>
-                        </tr>
-                        <tr>
-
-                                <td>
-                                        <button class="button" type="submit">Submit</button>
-                                        <button class="button" type="reset">Reset</button>
-                                </td>
-                        </tr>
-
-                </table>
-        </form >
+                        <div class="container-contact100-form-btn">
+                                <button class="contact100-form-btn" type="submit">
+						<span>
+							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+							Send
+						</span>
+                                </button>
+                        </div>
+                </form>
         </div>
 </div>
-</div>
+</body>
+
 
 <%@ include file="../includes/footer.jsp" %>
 

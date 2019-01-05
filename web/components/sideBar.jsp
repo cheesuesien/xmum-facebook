@@ -4,5 +4,7 @@
 
         <a href="../pages/feedBack.jsp" class="button">Report</a>
 
+        <a href="../pages/ChatList.jsp" class="button">Chat</a>
+
         <a href="../pages/aboutUs.jsp" class="button">About us</a>
 </div>
