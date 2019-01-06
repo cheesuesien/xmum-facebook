@@ -1,5 +1,6 @@
-<%@ page import="java.sql.DriverManager" %>
-<%@ page import="java.sql.ResultSet" %>
+<%@ page import="com.xmum.User.UserBean" %>
+<%@ page import="com.xmum.DatabaseConnection.ConnectionProvider" %>
+<%@ page import="java.sql.*" %>
 <%--
   Created by IntelliJ IDEA.
   User: cdtom
@@ -11,8 +12,8 @@
 <link rel="stylesheet" type="text/css" href="styles/body.css"/>
 <link rel="stylesheet" type="text/css" href="styles/chatRoom.css"/>
 
-<script type="text/javascript" src="../pages/Chat/jquery-1.8.0.js"></script>
-<script type="text/javascript" src="../pages/Chat/chat.js"></script>
+<%--<script type="text/javascript" src="../pages/Chat/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="../pages/Chat/chat.js"></script>--%>
 <%@ include file="../includes/header.jsp" %>
 <%@ include file="../components/sideBar.jsp" %>
 <%@ include file="../components/navBar.jsp" %>
@@ -25,12 +26,17 @@
     <b>Let's chat</b>
 </div>
 <%
+    String userId = ((UserBean)(session.getAttribute("user"))).getId();
+    Connection conn = ConnectionProvider.getCon();
+    PreparedStatement pst = conn.prepareStatement("select * from chatgroups,Users, groupmembers WHERE chatgroups.groupid = groupmembers.groupid AND groupmembers.idmember = Users.id AND Users.id = ?");
+    pst.setString(1, userId);
     Class.forName ("org.postgresql.Driver");
-    java.sql.Statement stm = DriverManager.getConnection("jdbc:postgresql://localhost:5432/whatever","postgres", "tom123"
-    ). createStatement();
-    String sql = "select * from chatgroups,Users, groupmembers WHERE groupid = groupmembers.id AND groupmembers.idmember = Users.id";
-
-    ResultSet rs = stm.executeQuery(sql);
+    ResultSet rs = null;
+    try {
+        rs = pst.executeQuery();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
 %>
 <div style="margin-left: 260px; margin-top:10px;">
 
@@ -59,12 +65,12 @@
                 </td>
                 <td>
                     <div class="container-contact100-form-btn" >
-                        <button class="contact100-form-btn" type="submit" >
+                        <a class="contact100-form-btn" type="submit" href="../chat?action=Enter&groupid=<%=rs.getString("groupid")%>">
 						<span>
 							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
 							Chat!
 						</span>
-                        </button>
+                        </a>
                     </div>
                 </td>
             </div>
@@ -77,15 +83,13 @@
 
 </div>
 
-<%Class.forName ("org.postgresql.Driver");
-   stm = DriverManager.getConnection("jdbc:postgresql://localhost:5432/whatever","postgres", "tom123"
-    ). createStatement();
-sql = "select groupname, groupintro \n" +
-        "from chatgroups, Users, groupmembers \n" +
-        "WHERE NOT EXISTS (select groupname, groupintro \n" +
-        "from chatgroups, Users, groupmembers \n" +
-        "where groupid = groupmembers.id AND groupmembers.idmember = Users.id); ";
-rs = stm.executeQuery(sql);%>
+<%
+    pst = conn.prepareStatement("select groupname, groupintro \n" +
+            "from chatgroups, Users, groupmembers \n" +
+            "WHERE NOT EXISTS (select groupname, groupintro \n" +
+            "from chatgroups, Users, groupmembers \n" +
+            "where chatgroups.groupid = groupmembers.groupid AND groupmembers.idmember = Users.id); ");
+    rs = pst.executeQuery();%>
     <div style="margin-left: 260px; margin-top:10px;">
 
 

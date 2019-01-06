@@ -1,9 +1,10 @@
 
-function UserEnter(id,nickname){
+function UserEnter(){
+    console.log("UserEnter triggered");
     $.ajax({
         type:"POST",
         url:"chat",  //项目web.xml 内配置了 servlet
-        data:"action=Login&d="+new Date()+"&id="+id+"&nickname="+nickname,
+        data:"action=Enter&d="+new Date(),
         success:function(msg){
             if(msg == "ok"){
                 window.location.href="../pages/Chatroom.jsp";
@@ -17,18 +18,20 @@ function UserEnter(id,nickname){
 
 
 $(function(){
+    //UserEnter();
     $("#divMsg").ajaxStart(function(){
         $(this).show();
     })
     $("#divMsg").ajaxStop(function(){
         $(this).html("Success!").hide();
     })
-    $("#Login").click(function(){
+
+    /*$("#Login").click(function(){
         var $id=$("#txtid");
         var $nickname=$("#txtnickname");
 
             UserEnter($id.val(),$nickname.val());
-    })
+    })*/
 });
 
 
@@ -43,7 +46,7 @@ function InitFace() {
 $(function() {
 
     InitFace();
-
+    console.log('initface just run');
     $("table tr td img").click(function() {
         var strContent = $("#txtContent").val() + "<:" + this.id + ":>";
         $("#txtContent").val(strContent);
@@ -72,7 +75,7 @@ function GetMessageList() {
             $("#divContent").html(data);
         }
     });
-    AutoUpdContent();
+    AutoUpdMessageList();
 }
 function  GetOnLineList() {
     $.ajax({
@@ -83,32 +86,34 @@ function  GetOnLineList() {
             $("#divOnLine").html(data);
         }
     });
-    AutoUpdContent();
+    AutoUpdOnlineList();
 }
 
 //auto update member and message
-function AutoUpdContent() {
+function AutoUpdMessageList() {
     setTimeout(GetMessageList, 5000);
+}
+function AutoUpdOnlineList() {
     setTimeout(GetOnLineList, 5000);
 }
 
 //send message
 function SendContent(content) {
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: "../chat",
         data: "action=SendContent&d=" + new Date() + "&content=" + content,
         success: function() {
             //alert(data);
-            // if (data==1) {
+             if (data==1) {
                 GetMessageList();
                 $("#txtContent").val("");
-          /*  }else {
+            }else {
                 GetMessageList();
                 alert("请先登录!");
                 window.location.href="http://localhost:8082/LandingPage_war_exploded/pages/Chatroom.jsp";
 
-            }*/
+            }
         }
     });
 }
@@ -131,25 +136,28 @@ $(function() {
         }
     })
 
+    $("#Button2").click(function() { //logout
+        console.log("Logout clicked!");
+        $.ajax({
+            type: "POST",
+            url: "../chat",
+            data: "action=Logout&d=" + new Date(),
+            success: function(data) {
+                if (data) {
+                    window.location.href="../pages/ChatList.jsp";
+                }
+                else {
+                    alert("Failure!");
+                    return false;
+                }
+            }
+        });
+    })
+
     $("table tr td img").click(function() { //image
         var strContent = $("#txtContent").val() + "<:" + this.id + ":>";
         $("#txtContent").val(strContent);
 
     })
 });
-$("#Button2").click(function() { //logout
-    $.ajax({
-        type: "POST",
-        url: "chat",
-        data: "action=Logout&d=" + new Date(),
-        success: function(data) {
-            if (data) {
-                window.location.href="../pages/ChatList.jsp";
-            }
-            else {
-                alert("Failure!");
-                return false;
-            }
-        }
-    });
-})
+

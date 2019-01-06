@@ -2,12 +2,7 @@ package cn.crabshell.servlet;
 
 
 
-import java.io.IOException;
-import java.io.PrintWriter;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import com.xmum.User.UserBean;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,11 +10,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Servlet implementation class ChatRoomServlet
  */
-@WebServlet("/ChatRoomServlet")
+@WebServlet("/chat")
 public class ChatRoomServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
@@ -28,8 +28,10 @@ public class ChatRoomServlet extends HttpServlet {
 
     public void service(HttpServletRequest request, HttpServletResponse response)throws ServletException,IOException{
         //get user action , name, pass, content
+        System.out.println("service activated");
         String idmember = request.getParameter("id");
-        String groupnickname = request.getParameter("nickname")     ;
+        //int groupid = Integer.parseInt(request.getParameter("groupid"));
+        String groupnickname = ((UserBean) request.getSession().getAttribute("user")).getNickname();
         String strAction = request.getParameter("action");
         String strContent = request.getParameter("content");
         HttpSession session = request.getSession();
@@ -37,33 +39,40 @@ public class ChatRoomServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         //base on action to do things
         if("Enter".equals(strAction)){
+            System.out.println("Enter triggered");
+            String res=UserEnter(groupnickname);
+            if (res.equals("ok"))
+                response.sendRedirect(request.getContextPath() + "/pages/Chatroom.jsp");
 
-            String res=UserEnter(idmember,groupnickname,session);
-            out.print(res);
-            out.close();
 
         }else if("ChatList".equals(strAction)){
+            System.out.println("ChatList triggered");
             String result1=AllChatList();
             out.println(result1);
             out.close();
 
         }else if("OnLineList".equals(strAction)){
+            System.out.println("OnLineList triggered");
             String result2=GetOnlineUserList(session);
             out.println(result2);
             out.close();
 
         }else if("SendContent".equals(strAction)){
+            System.out.println("SendContent triggered");
             Boolean res2=AddSendContent(strContent,session);
             String result="";
             if(res2){
+                System.out.println("printing result1");
                 result="1";
             }else{
+                System.out.println("printing result2");
                 result="2";
             }
             out.println(result);
             out.close();
 
         }else if("Logout".equals(strAction)){
+            System.out.println("Logout triggered");
             boolean res3=Logout(session);
             out.println(res3);
             out.close();
@@ -71,7 +80,7 @@ public class ChatRoomServlet extends HttpServlet {
     }
 
     //check user login
-    public String UserEnter(String id, String nickname , HttpSession session){
+    public String UserEnter(String nickname){
         String flag = "no";
 
             if (OnLineUserList.size() == 0)//check use if empty
@@ -79,7 +88,7 @@ public class ChatRoomServlet extends HttpServlet {
                 OnLineUserList = new ArrayList<String>();// in use is empty , init the arraylist
             }
             OnLineUserList.add(nickname);//add use to the arrayList
-            session.setAttribute("LOGINUSER",id);//session to set user info
+            //session.setAttribute("LOGINUSER",id);//session to set user info
             flag = "ok";
 
         return flag;
@@ -122,7 +131,8 @@ public class ChatRoomServlet extends HttpServlet {
 
     //send message
     public Boolean AddSendContent(String strContent,HttpSession session){
-        String user=(String) session.getAttribute("LOGINUSER,nickname");
+        //String user=(String) session.getAttribute("LOGINUSER,nickname");
+        String user=((UserBean) session.getAttribute("user")).getNickname();
 
 
         //String name = session.getAttribute("LOGINUSER").toString();
@@ -139,11 +149,10 @@ public class ChatRoomServlet extends HttpServlet {
     }
     //logout
     public boolean Logout(HttpSession session){
-        if(null==session.getAttribute("LOGINUSER")){
+        if(null==session.getAttribute("user")){
             return false;
         }
-        String name = session.getAttribute("LOGINUSER").toString();
-        session.removeAttribute("LOGINUSER");
+        String name = ((UserBean)session.getAttribute("user")).getNickname();
         if(OnLineUserList.size()!=0){
             for(int i=0;i<OnLineUserList.size();i++) {
                 if(name.equals(OnLineUserList.get(i))) {

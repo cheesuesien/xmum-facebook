@@ -38,7 +38,6 @@
             <tr><td colspan="2" id="divFace" class="pb"></td></tr><tr><td>
             <textarea id="txtContent" cols="64" rows="3" class="txt"></textarea></td><td class="pl">
             <input id="Button1" type="button" value="Send" class="btn"/>
-            <input id="Button3" type="button" value="Upload" class="btn"/>
             <input id="Button2" type="button" value="Exit" class="btn"/>
             <input id="Button4" style="display:none" type="button" value="Hide" class="btn"/>
 
