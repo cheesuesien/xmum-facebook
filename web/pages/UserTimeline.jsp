@@ -26,7 +26,7 @@
                                 <c:when test="${post.getImages() != null}">
                                 <div class="inside-content style-1"> <%--**single-post post-style-1--%>
                                     <div class="post-image"> <%--**blog-image--%>
-                                        <img src="${pageContext.request.contextPath}/img/postimgs/${post.getImages()[0]}" alt="Post Image" style="height:100px"/>
+                                        <img src="${pageContext.request.contextPath}/img/postimgs/${post.getImages()[0]}" alt="Post Image" style="height:100px; object-fit:cover;"/>
                                     </div><%--POST-IMAGE--%>
                                     </c:when>
                                     <c:otherwise>
@@ -34,7 +34,7 @@
                                         </c:otherwise>
                                         </c:choose>
                                         <div class="avatar-area">
-                                            <a class="pfp" href="${pageContext.request.contextPath}/profile?id=${post.getAuthor().getId()}"><img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" alt="Profile Picture" /></a>
+                                            <a class="pfp" href="${pageContext.request.contextPath}/profile?id=${post.getAuthor().getId()}"><img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" style="height:100%; object-fit:cover;" alt="Profile Picture" /></a>
                                             <div class="avatar-right-side">
                                                 <a class="username" href="${pageContext.request.contextPath}/profile?id=${post.getAuthor().getId()}"><b>${post.getAuthor().getNickname()}</b></a>
                                                 <h6 class="date" href="#">${post.getFormattedDate()}</h6>

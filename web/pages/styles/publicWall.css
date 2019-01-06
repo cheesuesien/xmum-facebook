@@ -2,11 +2,12 @@
 
 #status-input{
     border-radius: 25px;
+    left: 25%;
     margin-top: 60px;
-    margin-left: 350px;
     width: 50%;
     position: fixed;
-    background-color:#e8e8e8;
+    background-color: #f2f2f2;
+    /*background-color:#e8e8e8;*/
     /*border: 1px solid #d1cc6e;*/
     z-index: 5;
 }
@@ -40,7 +41,7 @@ body{
     -moz-osx-font-smoothing: grayscale;
     word-wrap: break-word;
     /*background: #b6b7ba;*/
-    background: #515156;
+    /*background: #515156;*/
     color: #000;
 }
 
@@ -91,21 +92,22 @@ li{
     margin:50px 20px;
     width: 300px;
     height: 350px;
-    background: #EDF3F3;
+    background: #FFFFFF;
     border-radius: 25px;
 
 }
 
 .main{
     float: left;
-    margin-left: 30px;
+    /*margin-left: 30px;*/
     margin-top:180px;
     height: 300px;
     width: 80%;
     text-align: center;
-    background-color: #ffdd7a;
+    background-image:radial-gradient(#ffe066, #af950c);
+    /*background-color: #ffdd7a;*/
     border-radius: 25px;
-    box-shadow: 0px 0px 20px rgba(255, 228,153,1);
+    /*box-shadow: 0px 0px 20px rgba(255, 228,153,1);*/
 }
 
 .main a{
@@ -183,7 +185,7 @@ li{
     padding-bottom: 0;
     text-align: left;
     border:none;
-    box-shadow: none;
+    /*box-shadow: none;*/
 }
 
 .post-area .style-2 .post-content{

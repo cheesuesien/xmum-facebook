@@ -3,7 +3,7 @@
 <head>
     <link rel="icon"
           type="image/png"
-          href="../components/icons/main.png"
+          href="../components/icons/logo.jpg"
           sizes="16px">
     <title>XMUM Facebook</title>
 </head>
