@@ -2,7 +2,8 @@
 <nav>
     <div class="nav-left">
         <a id="home" href="${pageContext.request.contextPath}/post" class="button">Home</a>
-        <a id="profile" href="${pageContext.request.contextPath}/profile?id=${user.getId()}" class="button">Profile</a>
+        <%--<a id="profile" href="${pageContext.request.contextPath}/profile?id=${user.getId()}" class="button">Profile</a>--%>
+        <a id="chat" href="${pageContext.request.contextPath}/chat?action=Enter" class="button">Chat</a>
         <a id="feedback" href="${pageContext.request.contextPath}/pages/feedBack.jsp" class="button">Report</a>
         <a id="about" href="${pageContext.request.contextPath}/pages/aboutUs.jsp" class="button">About us</a>
     </div>
@@ -25,8 +26,8 @@
                 case "publicWall.jsp":
                     document.getElementById("home").classList.add("active");
                     break;
-                case "accountPage.jsp":
-                    document.getElementById("profile").classList.add("active");
+                case "ChatRoom.jsp":
+                    document.getElementById("chat").classList.add("active");
                     break;
                 case "feedback.jsp":
                     document.getElementById("feedback").classList.add("active");

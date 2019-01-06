@@ -1,0 +1,155 @@
+body
+{
+    font-size:11px
+}
+h3
+{
+    margin:0px
+}
+.divShow
+{
+    border:solid 1px #ccc;
+    height:300px;
+    padding:5px;
+    font-size:12px;
+    overflow-y:scroll
+}
+#divMain
+{
+    border:solid 5px #ccc
+}
+#divMain .divtop
+{
+    padding:10px
+}
+#divMain .divtop .divL
+{
+    float:left;
+    width:78%
+}
+#divMain .divtop .divR
+{
+    float:right;
+    width:20%
+}
+#divMain .divBot
+{
+    clear:both;
+    padding:10px
+}
+#divMain .divBot .pb
+{
+    padding-bottom:3px
+}
+#divMain .divBot .pl
+{
+    padding-left:12px
+}
+#divMain .divBot .pt
+{
+    padding-top:3px;
+    color:#555
+}
+.clsTip
+{
+    position:absolute;
+    width:160px;
+    text-align:center;
+    font-size:13px;
+    border:solid 1px #cc3300;
+    margin-top:5px;
+    padding:2px;
+    margin-bottom:5px;
+    background-color:#ffe0a3;
+    display:none;
+}
+.upload
+{
+    display:none;
+}
+.txt
+{
+    border:#666 1px solid;
+    padding:2px;
+    margin-right:3px
+}
+.btn
+{
+    border:#666 1px solid;
+    padding:2px;
+    width:135px;
+    height:54px;
+    font-size:16px;
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffff, EndColorStr=#ECE9D8)
+}
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-contact100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.contact100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 150px;
+    height: 62px;
+    background-color: transparent;
+    border-radius: 31px;
+
+    font-family: Ubuntu-Bold;
+    font-size: 16px;
+    color:gray();
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    position: relative;
+    z-index: 1;
+}
+
+.contact100-form-btn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-radius: 31px;
+    background-color:whitesmoke;
+    pointer-events: none;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.contact100-form-btn:hover:before {
+    background-color: lightgrey;
+    width: calc(100% + 20px);
+}
+
+
