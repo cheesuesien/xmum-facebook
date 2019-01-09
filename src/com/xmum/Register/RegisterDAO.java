@@ -13,14 +13,15 @@ public class RegisterDAO {
         boolean id=false;
         try{
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("select password from student where username=?");
+            pst = conn.prepareStatement("select nickname from users where id=?");
 
-            pst.setString(1,bean.getUsername());
+            pst.setString(1,bean.getId());
 
             ResultSet rs=pst.executeQuery();
-            id=rs.next();
-            String password = rs.getString("password");
-            if(password == null)
+
+            id=rs.next(); // id = true (can register) if user exists in database
+            String nickname = rs.getString("nickname");
+            if(nickname == null) // id = true (can register) if user has no nickname yet (hasn't registered).
                 id = true;
             else
                 id = false;
@@ -32,11 +33,31 @@ public class RegisterDAO {
         int status = 0;
         try{
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("update student set password = ? where username = ?");
-            pst.setString(1,bean.getPassword());
-            pst.setString(2,bean.getUsername());
+            pst = conn.prepareStatement("update users set nickname = ?, level = 'student' where id = ?;");
+            pst.setString(1,bean.getNickname());
+            pst.setString(2,bean.getId());
             status = pst.executeUpdate();
-            System.out.println("register succeeded");
+            if (status < 0){
+                System.out.println("can't update users");
+            }
+
+            pst = conn.prepareStatement("insert into login(id, password) values(?,?);");
+            pst.setString(1, bean.getId());
+            pst.setString(2, bean.getPassword());
+            status = pst.executeUpdate();
+            if (status < 0){
+                System.out.println("can't insert into login");
+            }
+
+            pst = conn.prepareStatement("insert into profile(id) values(?);");
+            pst.setString(1, bean.getId());
+            status = pst.executeUpdate();
+            if (status<0){
+                System.out.println("can't create a profile for the user");
+            }
+            else {
+                System.out.println("register succeeded");
+            }
             conn.close();
         }catch(Exception ex){
             System.out.println("register failed");

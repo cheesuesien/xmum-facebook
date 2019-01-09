@@ -1,19 +1,19 @@
 package com.xmum.PasswordReset;
 
 public class ResetBean {
-    String username, password, newpassword, newpassword2;
+    String id, password, newpassword, newpassword2;
 
-    public ResetBean(String username, String password, String newpassword, String newpassword2){
-        this.username = username;
+    public ResetBean(String id, String password, String newpassword, String newpassword2){
+        this.id = id;
         this.password = password;
         this.newpassword = newpassword;
         this.newpassword2 = newpassword2;
     }
-    public String getUsername() {
-        return username;
+    public String getId() {
+        return id;
     }
-    public void setUsername(String email) {
-        this.username = username;
+    public void setId(String id) {
+        this.id = id;
     }
     public String getPassword() {
         return password;

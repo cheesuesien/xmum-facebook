@@ -1,15 +1,17 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/components/styles/Register.css"/>
 
 <script>
     function register_validate()
     {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        var password2 = document.getElementById("password2").value;
+        var id = document.getElementById("registerId").value;
+        var nickname = document.getElementById("registerNickname").value;
+        var password = document.getElementById("registerPassword").value;
+        var password2 = document.getElementById("registerPassword2").value;
 
-        if (username===null || username==="")
+        if (!id || !nickname || !password || !password2)
         {
-            alert("Username can't be blank");
+            alert("Don't leave any inputs blank");
             return false;
         }
         else if (password !== password2)
@@ -23,14 +25,25 @@
 </script>
 
 <div>
-        <div class="register-body">
-            <form name="RegisterVerify" method="post" action="${pageContext.request.contextPath}/RegisterController" onsubmit="register_validate()">
+    <c:choose>
+        <c:when test="${toggle == 'resetPassword'}">
+            <div class="register-body" id="register" style="display:none;">
+        </c:when>
+        <c:otherwise>
+            <div class="register-body" id="register">
+        </c:otherwise>
+    </c:choose>
+        <%--<div class="register-body" id="register">--%>
+            <form name="RegisterVerify" method="post" action="${pageContext.request.contextPath}/RegisterController" onsubmit="return register_validate()">
                 <div id = "RegisterBlock">
                     Register
                 </div>
                 <div style="display: inline-block; padding: 5px">
                     <div class ="line">
-                        Username:
+                        ID:
+                    </div>
+                    <div class ="line">
+                        Nickname:
                     </div>
                     <div class ="line">
                         NewPassword:
@@ -41,13 +54,16 @@
                 </div>
                 <div style="display: inline-block">
                     <div>
-                        <input class = "InputBlock" id="username" type = "text" name = "username"/>
+                        <input class = "InputBlock" id="registerId" type = "text" name = "id"/>
                     </div>
-                    <div style="padding-top: 10px">
-                        <input class = "InputBlock" id="password" minlength="6" type = "password" name = "password"/>
+                    <div style="padding-top: 9px">
+                        <input class = "InputBlock" id="registerNickname" type = "text" name = "nickname"/>
                     </div>
-                    <div style="padding-top: 10px;">
-                        <input class = "InputBlock" id="password2" minlength="6" type = "password" name = "password2"/>
+                    <div style="padding-top: 9px">
+                        <input class = "InputBlock" id="registerPassword" minlength="6" type = "password" name = "password"/>
+                    </div>
+                    <div style="padding-top: 9px;">
+                        <input class = "InputBlock" id="registerPassword2" minlength="6" type = "password" name = "password2"/>
                     </div>
                 </div>
                 <div>

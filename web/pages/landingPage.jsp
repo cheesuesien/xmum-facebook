@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-    <link rel="shortcut icon" href="${pageContext.request.contextPath}/components/icons/main.png" />
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/components/icons/logo.jpg" />
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CPT+Serif:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css"  href='${pageContext.request.contextPath}/pages/styles/clear.css'/>
     <link rel="stylesheet" type="text/css"  href='${pageContext.request.contextPath}/pages/styles/common.css'/>
@@ -52,6 +52,7 @@
                         <div class="clear"></div>
                     </div>
                     <div style="display: inline-block; background-color: #383838;width: 40%;" class="right">
+                        <jsp:include page="../components/PasswordReset.jsp"/>
                         <jsp:include page="../components/Register.jsp"/>
                     </div>
                 </div>

@@ -29,7 +29,7 @@
                 case "ChatRoom.jsp":
                     document.getElementById("chat").classList.add("active");
                     break;
-                case "feedback.jsp":
+                case "feedBack.jsp":
                     document.getElementById("feedback").classList.add("active");
                     break;
                 case "aboutUs.jsp":

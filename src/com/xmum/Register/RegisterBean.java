@@ -1,21 +1,31 @@
 package com.xmum.Register;
 
 public class RegisterBean {
-    String username, password, password2;
+    String id, nickname, password, password2;
 
 
-    public RegisterBean(String username, String password, String password2){
-        this.username = username;
+    public RegisterBean(String id, String nickname, String password, String password2){
+        this.id = id;
+        this.nickname = nickname;
         this.password = password;
         this.password2 = password2;
     }
 
-    public String getUsername(){
-        return username;
+    public String getId(){
+        return id;
     }
-    public void setUsername(String username){
-        this.username = username;
+    public void setId(String id){
+        this.id = id;
     }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
     public String getPassword() {
         return password;
     }

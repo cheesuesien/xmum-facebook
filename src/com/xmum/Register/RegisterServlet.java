@@ -11,15 +11,16 @@ import java.io.IOException;
 @WebServlet("/RegisterController")
 public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
+        String id = request.getParameter("id");
+        String nickname = request.getParameter("nickname");
         String password = request.getParameter("password");
         String password2 = request.getParameter("password2");
         String register_result;
         RequestDispatcher rd = request.getRequestDispatcher("/pages/landingPage.jsp");
 
-        RegisterBean obj =  new RegisterBean(username, password, password2);
-        boolean id = RegisterDAO.validate(obj);
-        if(id){
+        RegisterBean obj =  new RegisterBean(id, nickname, password, password2);
+        boolean result = RegisterDAO.validate(obj);
+        if(result){
             int status = RegisterDAO.insertUser(obj);
             if(status>0)
                 register_result = "Register Successfully";

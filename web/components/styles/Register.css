@@ -1,17 +1,17 @@
 .register-body{
     margin: 127px auto;
     width: 390px;
-    border: white solid 2px;
+    /*border: #d1cc6e solid 2px;*/
     height: 210px;
 }
 
 #RegisterBlock{
-    color: white;
+    color: #d1cc6e;
     text-align: center;
-    background-color: #383838;
+    /*background-color: #383838;*/
     margin: 0 auto;
     font-size: 1.5em;
-    border-bottom: white solid 2px;
+    border-bottom: #d1cc6e solid 1px;
 }
 
 .line{
@@ -19,24 +19,24 @@
     margin-top: 5px;
     margin-bottom: 10px;
     text-align: right;
-    color: white;
+    color: #d1cc6e;
 }
 
 .InputBlock{
     background-color: #565656;
     height: 25px;
-    color: white;
-    border: 1px white solid;
+    color: #d1cc6e;
+    border: 1px #d1cc6e solid;
 }
 
 .SubmitBlock{
     width: 150px;
     text-align: center;
     background-color: #383838;
-    color: white;
+    color: #d1cc6e;
     padding: 8px;
     margin-left: 0px;
     margin-right: 0px;
     cursor: pointer;
-    border: white 1px solid;
+    border: #d1cc6e 1px solid;
 }
