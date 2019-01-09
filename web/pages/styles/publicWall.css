@@ -41,7 +41,7 @@ body{
     -moz-osx-font-smoothing: grayscale;
     word-wrap: break-word;
     /*background: #b6b7ba;*/
-    /*background: #515156;*/
+    background: #515156;
     color: #000;
 }
 
@@ -104,10 +104,11 @@ li{
     height: 300px;
     width: 80%;
     text-align: center;
-    background-image:radial-gradient(#ffe066, #af950c);
+    /*background-image:radial-gradient(#af950c, #ffe066);*/
     /*background-color: #ffdd7a;*/
+    background-color: #dbcf69;
     border-radius: 25px;
-    /*box-shadow: 0px 0px 20px rgba(255, 228,153,1);*/
+    box-shadow: 0px 0px 20px rgba(255, 228,153,1);
 }
 
 .main a{

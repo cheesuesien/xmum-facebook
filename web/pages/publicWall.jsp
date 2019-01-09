@@ -98,8 +98,8 @@ This function should be added to the loginservlet function when it is ready.--%>
                             <c:when test="${post.getImages() != null && (loop.index == 0)}">
                                 <script>console.log("style2!!!")</script>
                                 <div class="inside-content style-2" style="display:flex; justify-content:flex-start;"> <%--**single-post post-style-1--%>
-                                    <div class="post-image" style="height:100%;"> <%--**blog-image--%>
-                                        <img src="${pageContext.request.contextPath}/img/postimgs/${post.getImages()[0]}" alt="Post Image" style="width:300px; object-fit:cover;"/>
+                                    <div class="post-image" style="height:100%; width:80%;"> <%--**blog-image--%>
+                                        <img src="${pageContext.request.contextPath}/img/postimgs/${post.getImages()[0]}" alt="Post Image" style="width:100%; height:100%; object-fit:cover;"/>
                                     </div>
                             </c:when>
                             <c:otherwise>
