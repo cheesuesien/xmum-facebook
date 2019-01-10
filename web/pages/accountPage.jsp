@@ -5,9 +5,40 @@
 <%@ include file="../includes/header.jsp" %>
 <%@ include file="../components/navBar.jsp" %>
 
+<script>
+    function validate(){
+        const nickname = document.getElementById("username").value;
+        const gender = document.getElementById("gender").value;
+        const phonenum = document.getElementById("phonenum").value;
+        const email = document.getElementById("email").value;
+        const intro = document.getElementById("intro").value;
+        const birthdate = document.getElementById("birthdate").value;
+        const starsign = document.getElementById("starsign").value;
+
+        if (!nickname || !gender || !phonenum || !email || !intro || !birthdate || !starsign)
+        {
+            alert("Don't leave any inputs blank");
+            return false;
+        }
+        else if (nickname.length > 20){
+            alert("Nickname must be less than 20 characters");
+            return false;
+        }
+        else if (gender.length > 1){
+            alert("Gender can only be M or F");
+            return false;
+        }
+
+        else
+            return true;
+    }
+
+
+</script>
+
 
 <div id="main-body">
-    <div style="background-image:radial-gradient(#ffe066, #af950c); padding:20px;">
+    <div style="/*background-image:radial-gradient(#ffe066, #af950c);background-color: #dbcf69;*/border-bottom:1px solid #dbcf69; margin: 0 auto; width: 60%; padding:20px;">
         <img class="profile" src="${pageContext.request.contextPath}/img/${stalkUser.getProfilePic()}" alt="Avatar" />
         <form id="profilePicForm" method="POST" action="${pageContext.request.contextPath}/user" enctype="multipart/form-data">
             <input type="hidden" name="uploadType" value="profilePic" />
@@ -18,58 +49,65 @@
             </div>
             </c:if>
         </form>
-        <div style="font-size:1.5em; font-weight:bold;">${stalkUser.getNickname()}</div>
+        <div style="font-size:1.5em; font-weight:bold; color: white;">${stalkUser.getNickname()}</div>
     </div>
     <%--<div class="title">My Profile</div>--%>
-    <div style="background-color: white; padding:20px;" class="content">
-        <form id="userDetailsForm" method="POST" action="${pageContext.request.contextPath}/user" onsubmit="console.log('submitting form');">
+    <div style="/*background-color: white;*/ padding:20px; width: 300px; margin: 0 auto; /*padding-left: 100px;*/" class="content">
+        <form id="userDetailsForm" method="POST" action="${pageContext.request.contextPath}/user" onsubmit="return validate()">
             <input type="hidden" name="uploadType" value="profileDetails" />
             <input type="hidden" name="id" value="${stalkUser.getId()}"/>
             <table>
                 <tr>
-                    <td class="label">Nickname:</td>
+                    <td class="label">Nickname</td>
+                    <td>:</td>
                     <td>
                         <div class="userInfo">${stalkUser.getNickname()}</div>
                         <input style="display:none;" type="text" name="username" class="input" id="username" value="${stalkUser.getNickname()}"/>
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">Gender: </td>
+                    <td class="label">Gender</td>
+                    <td>:</td>
                     <td>
                         <div class="userInfo">${stalkUser.getProfile().getGender()}</div>
                         <input style="display:none;" type="text" name="gender" class="input" id="gender" value="${stalkUser.getProfile().getGender()}"/>
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">Phone number: </td>
+                    <td class="label">Phone number</td>
+                    <td>:</td>
                     <td>
                         <div class="userInfo">${stalkUser.getProfile().getPhonenum()}</div>
                         <input style="display:none;" type="text" name="phonenum" class="input" id="phonenum" value="${stalkUser.getProfile().getPhonenum()}"/>
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">Email: </td>
+                    <td class="label">Email</td>
+                    <td>:</td>
                     <td>
                         <div class="userInfo">${stalkUser.getProfile().getEmail()}</div>
                         <input style="display:none;" type="text" name="email" class="input" id="email" value="${stalkUser.getProfile().getEmail()}"/>
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">Intro: </td>
+                    <td class="label">Intro</td>
+                    <td>:</td>
                     <td>
                         <div class="userInfo">${stalkUser.getProfile().getIntro()}</div>
                         <textarea style="display:none; margin-bottom:10px;" rows="4" name="intro" class="input" id="intro">${stalkUser.getProfile().getIntro()}</textarea>
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">Birthdate: </td>
+                    <td class="label">Birthdate</td>
+                    <td>:</td>
                     <td>
                         <div class="userInfo">${stalkUser.getProfile().getBirthdate()}</div>
                         <input style="display:none;" type="date" name="birthdate" class="input" id="birthdate" value="${stalkUser.getProfile().getBirthdate()}"/>
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">Star Sign: </td>
+                    <td class="label">Star Sign</td>
+                    <td>:</td>
                     <td>
                         <div class="userInfo">${stalkUser.getProfile().getStarsign()}</div>
                         <input style="display:none;" type="text" name="starsign" class="input" id="starsign" value="${stalkUser.getProfile().getStarsign()}"/>

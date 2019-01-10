@@ -18,7 +18,7 @@ import java.time.LocalDate;
 @WebServlet("/LoginController")
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String id = request.getParameter("id");
+        String id = request.getParameter("id").toLowerCase();
         String password = request.getParameter("password");
         System.out.println("LoginServlet: got id and password params");
         String submit_result;

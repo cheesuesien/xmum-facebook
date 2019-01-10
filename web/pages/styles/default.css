@@ -294,7 +294,8 @@
 		overflow: hidden;
 		/*background:  no-repeat center;*/
 		background-size: 100% auto;
-		background-image:radial-gradient(#ffe066, #af950c);
+		/*background-image:radial-gradient(#ffe066, #af950c);*/
+		background-color: #dbcf69;
 	}
 
 	#header
@@ -438,10 +439,21 @@
 	#featured .title h2
 	{
 		margin-bottom: 2em;
-		border-bottom: 1px solid rgba(0,0,0,0.08);
+		border-bottom: 1px solid #dbcf69;
 		text-align: center;
 		font-size: 2.6em;
-		color: #40493C;
+		/*color: #40493C;*/
+		color: white;
+	}
+
+	.description {
+		color: #dbcf69;
+	}
+
+	.image {
+		border-radius: 20px;
+		/*border: 10px solid #fff;*/
+		box-shadow: 2px 2px 20px 3px rgba(0,0,0,.2);
 	}
 
 	#featured h2
@@ -450,7 +462,8 @@
 		text-transform: uppercase;
 		font-size: 1.8em;
 		font-weight: 300;
-		color: #40493C;
+		/*color: #40493C;*/
+		color: #dbcf69;
 	}
 
 	#featured img

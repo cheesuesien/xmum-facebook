@@ -156,7 +156,7 @@ iframe {
   align-items: center;
   padding: 15px;
   position: relative;
-  background-color: #f2f2f2;
+  /*background-color: #f2f2f2;*/
 }
 
 .wrap-contact100 {
@@ -177,7 +177,8 @@ iframe {
   display: block;
   /*font-family: Ubuntu-Bold;*/
   font-size: 30px;
-  color: #403866;
+  /*color: #403866;*/
+  color: #dbcf69;
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
@@ -307,7 +308,8 @@ textarea.input100 {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
   border-radius: 31px;
-  background-color: #827ffe;
+  border: 1px solid #dbcf69;
+  /*background-color: #827ffe;*/
   pointer-events: none;
   
   -webkit-transition: all 0.4s;
@@ -317,7 +319,8 @@ textarea.input100 {
 }
 
 .contact100-form-btn:hover:before {
-  background-color: #403866;
+  /*background-color: #403866;*/
+  background-color: #dbcf69;
   width: calc(100% + 20px);
 }
 

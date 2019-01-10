@@ -33,15 +33,16 @@ This function should be added to the loginservlet function when it is ready.--%>
     <div id="status-input" >
         <form id="postForm" method="post" action="${pageContext.request.contextPath}/post" enctype="multipart/form-data">
             <input id="uploadType" type="hidden" name="uploadType" value="postNoPic"/>
-            <div style="padding-top:10px;display:flex; height:100%; width:100%; align-items: center">
-            <div class="upload-image" style="height: 25px; width:25px; margin:15px 25px">
-            <label for="imageUpload" style="cursor: pointer;"><img src="../img/icon-04-512.png"/></label>
-            <input id="imageUpload" type="file" name="imageUpload"  style="display:none;margin:10px 25px;"/>
-            </div>
-            <div style="flex: 1 0 auto">
-                <input type="text" name="postMessage" placeholder="    What's on your mind?" maxlength="70" style="margin:10px 10px; width:90%;border-radius: 25px;"/>
-                <input type="submit" value="submit" hidden/>
-            </div>
+            <div style="padding-top: 10px;display:flex;height:100%;width: 90%;justify-content: space-evenly;align-items: center; margin: 0 auto;">
+                <div class="upload-image" style="height: 25px; display:flex;">
+                    <output id="list" style="height:25px; "></output>
+                    <label for="imageUpload" style="cursor: pointer;"><img style="width:25px; height:25px;" src="${pageContext.request.contextPath}/components/icons/add-img-icon.png" alt=""/></label>
+                    <input id="imageUpload" type="file" name="imageUpload"  style="display:none;margin:10px 25px;"/>
+                </div>
+                <div style="flex: 1 0 auto; margin-left: 20px;">
+                    <input type="text" name="postMessage" placeholder="What's on your mind?" maxlength="70" style="width: 100%;padding-left:10px;border-radius: 25px;"/>
+                    <input type="submit" value="submit" hidden/>
+                </div>
             </div>
         </form>
     </div>
@@ -57,6 +58,23 @@ This function should be added to the loginservlet function when it is ready.--%>
                 document.getElementById("uploadType").value = "postNoPic";
             }
         }
+        document.getElementById('imageUpload').addEventListener('change', handleFileSelect, false);
+
+        function handleFileSelect(evt) {
+            var files = evt.target.files;
+            var f = files[0];
+            var reader = new FileReader();
+
+            reader.onload = (function(theFile) {
+                return function(e) {
+                    document.getElementById('list').innerHTML = ['<img src="', e.target.result,'" title="', theFile.name, '" height="25px" />'].join('');
+                    document.getElementById('list').style.width = "25px";
+                };
+            })(f);
+
+            reader.readAsDataURL(f);
+        }
+
 
         function submitForms(){
             document.getElementById('postForm').submit();

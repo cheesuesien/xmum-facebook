@@ -70,7 +70,15 @@
                     <div style="text-align: right; width: 260px; display: inline-block;">
                         <input  class="SubmitBlock" type="submit"/>
                     </div>
-                    <div style="display: inline-block; color: red; font-size: 0.7em;">
+                    <c:choose>
+                        <c:when test="${register_result.equals('Register Fail')}">
+                    <div style="display: inline-block; color: red; font-size: 0.7em; font-weight: lighter;">
+                        </c:when>
+                        <c:otherwise>
+                    <div style="display: inline-block; color: #dbcf69; font-size: 0.7em; font-weight: lighter;">
+                        </c:otherwise>
+                    </c:choose>
+
                         <%
                             out.println(request.getAttribute("register_result") != null? request.getAttribute("register_result") : "");
                         %>

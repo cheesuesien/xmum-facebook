@@ -3,10 +3,12 @@
 #status-input{
     border-radius: 25px;
     left: 25%;
-    margin-top: 60px;
+    margin-top: 10px;
     width: 50%;
+    height: 80px;
     position: fixed;
-    background-color: #f2f2f2;
+    /*background-color: #f2f2f2;*/
+    background-color: #383838;
     z-index: 5;
 }
 
@@ -96,7 +98,7 @@ li{
 
 .main{
     float: left;
-    margin-top:180px;
+    margin-top:130px;
     height: 300px;
     width: 80%;
     text-align: center;

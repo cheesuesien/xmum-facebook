@@ -11,7 +11,7 @@ import java.io.IOException;
 @WebServlet("/RegisterController")
 public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String id = request.getParameter("id");
+        String id = request.getParameter("id").toLowerCase();
         String nickname = request.getParameter("nickname");
         String password = request.getParameter("password");
         String password2 = request.getParameter("password2");

@@ -33,7 +33,7 @@ public class RegisterDAO {
         int status = 0;
         try{
             conn = ConnectionProvider.getCon();
-            pst = conn.prepareStatement("update users set nickname = ?, level = 'student' where id = ?;");
+            pst = conn.prepareStatement("update users set nickname = ?, level = 'student', profilepic = 'logo.jpg' where id = ?;");
             pst.setString(1,bean.getNickname());
             pst.setString(2,bean.getId());
             status = pst.executeUpdate();

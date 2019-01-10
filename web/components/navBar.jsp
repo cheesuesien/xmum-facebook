@@ -15,7 +15,7 @@
         <img style="border-radius:50%; width:25px; height:25px; background-size:contain;" src="${pageContext.request.contextPath}/img/${user.getProfilePic()}" alt="Avatar" />
         <a style="margin:5px 20px 5px 10px; color:white;" href="${pageContext.request.contextPath}/profile?id=${user.getId()}">${user.getNickname()}</a>
         <form name = "Logout" action="${pageContext.request.contextPath}/LogoutServlet">
-            <input type="submit" class="LogoutButton" value = "Logout"/>
+            <input style="cursor:pointer;" type="submit" class="LogoutButton" value = "Logout"/>
         </form>
     </div>
     <script>
