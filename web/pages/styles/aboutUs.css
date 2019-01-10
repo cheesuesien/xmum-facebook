@@ -1,60 +1,170 @@
-#main-body {
-    align-content: center;
-    margin:30px auto;
-    padding-left: 20px;
-    width: 800px;
-    border: 1px cornflowerblue;
+	html, body
+	{
+		height: 100%;
+	}
+	
+	body
+	{
+		margin: 0px;
+		padding: 0px;
+		/*background: #4C5748;*/
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 12pt;
+		font-weight: 300;
+		color: #000000;
+	}
+	
+	
+	h1, h2, h3
+	{
+		margin: 0;
+		padding: 0;
+	}
 
-}
+	p
+	{
+		margin-top: 0;
+		line-height: 180%;
+	}
+	
+	.container
+	{
+		overflow: hidden;
+		margin: 0em auto;
+		width: 1000px;
+	}
+	
+/*********************************************************************************/
+/* Image Style                                                                   */
+/*********************************************************************************/
 
-.title {
+	.image
+	{
+		display: inline-block;
+	}
+	
+	.image img
+	{
+		display: block;
+		width: 100%;
+	}
 
-    font-size: 2em;
-    height: 100px;
-    font-weight: bold;
-    display: table-cell;
-    vertical-align: middle;
-}
+/*********************************************************************************/
+/* List Styles                                                                   */
+/*********************************************************************************/
 
-.content> div > div {
-    height: 50px;
-    display: table-cell;
-    vertical-align: middle;
-}
-.block {
-    height: 90%;
-    width: 100%;
-    flex: 0 1 auto;
-    background-color: #d1cc6e;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+	ul.style2
+	{
+		margin: 0;
+		padding-top: 1em;
+		list-style: none;
+	}
+	
+	ul.style2 li
+	{
+		border-top: 1px solid rgba(0,0,0,0.08);
+		padding: 0.80em 0 0.80em 0;
+		/*font-family: 0.80em;*/
+	}
+	
+	ul.style2 li:before
+	{
+		display: inline-block;
+		padding: 4px;
+		background: #DB3256;
+	}
+	
+	ul.style2 a
+	{
+		display: inline-block;
+		color: #35514f;
+	}
+	
+	ul.style2 li:first-child
+	{
+		border-top: 0;
+		padding-top: 0;
+	}
 
-.block > div {
-    font-size: 2em;
-    text-align: center;
-    height: 30%;
-    width: 70%;
-    flex: 0 1 auto;
-}
+/*********************************************************************************/
+/* 2-column                                                                      */
+/*********************************************************************************/
 
-#block1 {
-    background-color: #d1cc6e;
-}
+	.tbox1,
+	.tbox2
+	{
+		width: 480px;
+	}
+	
+	.tbox1
+	{
+		/*width:px;*/
+		float: left;
+	}
 
-#block2 {
-    background-color: lightblue;
-}
+	.tbox2
+	{
+		float: right;
+	}
 
-#block3 {
-    background-color: coral;
-}
+/*********************************************************************************/
+/* Page                                                                          */
+/*********************************************************************************/
 
+	#page-wrapper
+	{
+		overflow: hidden;
+		padding: 5em 0em;
+		/*background: #FFF;*/
+	}
 
+/*********************************************************************************/
+/* Featured                                                                      */
+/*********************************************************************************/
 
-.profile {
-    height: 150px;
-    border-radius: 50%;
-}
+	#featured
+	{
+		overflow: hidden;
+		text-align: center;
+	}
+	
+	#featured .title h2
+	{
+		margin-bottom: 2em;
+		border-bottom: 1px solid #dbcf69;
+		text-align: center;
+		font-size: 2.6em;
+		/*color: #40493C;*/
+		color: white;
+	}
+
+	.description {
+		color: #dbcf69;
+	}
+
+	.image {
+		border-radius: 20px;
+		/*border: 10px solid #fff;*/
+		box-shadow: 2px 2px 20px 3px rgba(0,0,0,.2);
+	}
+
+	#featured h2
+	{
+		padding-bottom: 1em;
+		text-transform: uppercase;
+		font-size: 1.8em;
+		font-weight: 300;
+		/*color: #40493C;*/
+		color: #dbcf69;
+	}
+
+	#featured img
+	{
+		margin-bottom: 2em;
+	}
+	
+	#featured .padding-bottom
+	{
+		margin-bottom: 6em;
+	}
+

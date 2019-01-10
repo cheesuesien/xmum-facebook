@@ -1,10 +1,7 @@
-
-
-<%@ include file="../includes/header.jsp" %>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/pages/styles/body.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/pages/styles/main.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/pages/styles/feedBack.css">
+<%@ include file="../includes/header.jsp" %>
 
-<body>
 <script data-cfasync="false" type="text/javascript" src="${pageContext.request.contextPath}/javascript/FormSubmit.js"></script>
 <%@ include file="../components/navBar.jsp" %>
 <div class="container-contact100">
@@ -49,8 +46,6 @@
                 </form>
         </div>
 </div>
-</body>
-
 
 <%@ include file="../includes/footer.jsp" %>
 

@@ -5,38 +5,6 @@
 <%@ include file="../includes/header.jsp" %>
 <%@ include file="../components/navBar.jsp" %>
 
-<script>
-    function validate(){
-        const nickname = document.getElementById("username").value;
-        const gender = document.getElementById("gender").value;
-        const phonenum = document.getElementById("phonenum").value;
-        const email = document.getElementById("email").value;
-        const intro = document.getElementById("intro").value;
-        const birthdate = document.getElementById("birthdate").value;
-        const starsign = document.getElementById("starsign").value;
-
-        if (!nickname || !gender || !phonenum || !email || !intro || !birthdate || !starsign)
-        {
-            alert("Don't leave any inputs blank");
-            return false;
-        }
-        else if (nickname.length > 20){
-            alert("Nickname must be less than 20 characters");
-            return false;
-        }
-        else if (gender.length > 1){
-            alert("Gender can only be M or F");
-            return false;
-        }
-
-        else
-            return true;
-    }
-
-
-</script>
-
-
 <div id="main-body">
     <div style="/*background-image:radial-gradient(#ffe066, #af950c);background-color: #dbcf69;*/border-bottom:1px solid #dbcf69; margin: 0 auto; width: 60%; padding:20px;">
         <img class="profile" src="${pageContext.request.contextPath}/img/${stalkUser.getProfilePic()}" alt="Avatar" />
@@ -51,7 +19,6 @@
         </form>
         <div style="font-size:1.5em; font-weight:bold; color: white;">${stalkUser.getNickname()}</div>
     </div>
-    <%--<div class="title">My Profile</div>--%>
     <div style="/*background-color: white;*/ padding:20px; width: 300px; margin: 0 auto; /*padding-left: 100px;*/" class="content">
         <form id="userDetailsForm" method="POST" action="${pageContext.request.contextPath}/user" onsubmit="return validate()">
             <input type="hidden" name="uploadType" value="profileDetails" />
@@ -123,25 +90,7 @@
     </div>
 </div>
 
-<script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/javascript/accountPage.js"></script>
 
-    const profileInput = document.getElementById('profilePicInput');
-    profileInput.addEventListener("change", submitForm, false);
-
-    function submitForm(){
-        document.getElementById("profilePicForm").submit();
-    }
-
-    function changeToInput(){
-        const inputs = document.getElementsByClassName("input");
-        const userInfo = document.getElementsByClassName("userInfo");
-        for(i = 0; i< inputs.length; i++){
-            inputs[i].style.display = 'inline-block';
-            userInfo[i].style.display = 'none';
-        }
-        document.getElementById("submitButton").style.display = '';
-        document.getElementById("changeInputButton").style.display = 'none';
-    }
-</script>
 
 <%@ include file="../includes/footer.jsp" %>

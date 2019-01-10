@@ -26,7 +26,8 @@ h3
 }
 .divShow
 {
-    border:solid 1px #ccc;
+    /*border:solid 1px #ccc;*/
+    margin-left:20px;
     height:70%;
     padding:5px;
     font-size:12px;
@@ -34,17 +35,23 @@ h3
 }
 #divMain .divtop
 {
-    padding:10px
+    padding:0 10px;
 }
 #divMain .divtop .divL
 {
     float:left;
-    width:78%
+    width:80%
 }
 #divMain .divtop .divR
 {
     float:right;
     width:20%
+}
+.divR{
+    background-color:#383838;
+    height: 100%;
+    position:fixed;
+    right:0;
 }
 #divMain .divBot
 {

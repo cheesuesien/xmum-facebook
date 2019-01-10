@@ -20,9 +20,11 @@ a {
 
 .nav-left, .nav-right{
     display: flex;
+    padding-top: 5px;
 }
 
 .nav-left {
+    margin-left: 10px;
     justify-content: flex-start;
 }
 
@@ -38,6 +40,11 @@ a {
     width: 30px;
 }
 
+.homeBtn{
+    color: white;
+    font-size: 1.2em;
+    padding-top: 5px;
+}
 
 .ForgetPassword{
     border: 0;
@@ -56,9 +63,10 @@ a {
     padding: 0 5px 0 10px;
 }
 
-.InputBlock{
+.LoginInputBlock{
     background-color: #565656;
     border: 1px white solid;
+    color: white;
 }
 
 .LoginButton{

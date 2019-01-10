@@ -1,8 +1,10 @@
 .register-body{
-    margin: 127px auto;
-    width: 390px;
-    /*border: #d1cc6e solid 2px;*/
-    height: 210px;
+/*    margin: 127px auto;
+    width: 350px;
+    !*border: #d1cc6e solid 2px;*!
+    height: 210px;*/
+
+    height: 100%;display: flex;justify-content: center;width: 100%; flex: 0 1 auto;align-items: center;
 }
 
 #RegisterBlock{

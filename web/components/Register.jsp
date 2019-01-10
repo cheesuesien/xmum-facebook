@@ -24,7 +24,6 @@
     }
 </script>
 
-<div>
     <c:choose>
         <c:when test="${toggle == 'resetPassword'}">
             <div class="register-body" id="register" style="display:none;">
@@ -46,13 +45,13 @@
                         Nickname:
                     </div>
                     <div class ="line">
-                        NewPassword:
+                        New Password:
                     </div>
                     <div class ="line">
-                        Retype NewPassword:
+                        Retype New Password:
                     </div>
                 </div>
-                <div style="display: inline-block">
+                <div style="display: inline-block; padding: 5px;">
                     <div>
                         <input class = "InputBlock" id="registerId" type = "text" name = "id"/>
                     </div>
@@ -86,5 +85,4 @@
                 </div>
             </form>
         </div>
-</div>
 

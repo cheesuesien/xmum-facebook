@@ -1,47 +1,35 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: cdtom
-  Date: 12/22/2018
-  Time: 7:56 PM
-  To change this template use File | Settings | File Templates.
---%>
 <link rel="stylesheet" type="text/css" href="styles/body.css"/>
 <link rel="stylesheet" type="text/css" href="styles/chatRoom.css"/>
 
 <%@ include file="../includes/header.jsp" %>
 
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <html>
 <head>
     <title>Chat Room</title>
-    <script type="text/javascript" src="../javascript/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="../javascript/chat.js"></script>
-    <link rel="stylesheet" href="../pages/styles/chatRoom.css"/>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/javascript/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/javascript/chat.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/pages/styles/chatRoom.css"/>
 
 </head>
 <body>
 <div id="divMain">
     <div class="divtop">
         <div class="divL">
-            <h1 style="color:#d1cc6e;">Chat Room</h1>
+            <p style="margin: 20px auto;color:#d1cc6e;text-align:center;font-size:2.5em;border-bottom: 1px solid #d1cc6e;width: 70%;padding: 10px;">CHAT ROOM</p>
             <div class="divShow" id="divContent"></div>
         </div>
         <div class="divR">
-            <h1 style="color:#d1cc6e;">Online Members</h1>
+            <p style="color:#d1cc6e; text-align:center; font-size:2.5em;">Online Members</p>
             <div class="divShow" id="divOnLine"></div>
         </div>
     </div>
     <div class="divBot">
         <table cellpadding="0" cellspacing="0">
-            <tr><td colspan="2" id="divFace" class="pb"></td></tr><tr><td>
+            <%--<tr><td colspan="2" id="divFace" class="pb"></td></tr>--%>
+            <tr><td>
             <textarea id="txtContent" placeholder="Type your message here..."  cols="64" rows="3" class="txt"></textarea></td><td class="pl">
             <button id="Button1" class="btn">Send</button>
             <button id="Button2" class="btn">Exit</button>
-            <%--<input id="Button1" type="button" value="Send" class="btn"/>
-            <input id="Button2" type="button" value="Exit" class="btn"/>
-            <input id="Button4" style="display:none" type="button" value="Hide" class="btn"/>--%>
 
         </td></tr><tr><td colspan="2" class="pt">Content Cannot Be Empty</td></tr></table>
     </div>

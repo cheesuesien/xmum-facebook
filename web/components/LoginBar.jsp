@@ -4,13 +4,13 @@
 <script>
     function toggleResetPassword(){
         if(document.getElementById("resetPassword").style.display === "none"){
-            document.getElementById("resetPassword").style.display = "block";
+            document.getElementById("resetPassword").style.display = "flex";
             document.getElementById("register").style.display = "none";
             document.getElementById("resetPasswordBtn").style.display = "none";
             document.getElementById("registerBtn").style.display = "inline-block";
         } else {
             document.getElementById("resetPassword").style.display = "none";
-            document.getElementById("register").style.display = "block";
+            document.getElementById("register").style.display = "flex";
             document.getElementById("resetPasswordBtn").style.display = "inline-block";
             document.getElementById("registerBtn").style.display = "none";
         }
@@ -20,7 +20,7 @@
 <nav>
     <div class="nav-left">
         <img class="icon" src="${pageContext.request.contextPath}/components/icons/logo.png" alt="main-icon"/>
-        <a href="${pageContext.request.contextPath}/pages/landingPage.jsp" class="homeBtn" style="color: white;">XMUM FACEBOOK</a>
+        <a href="${pageContext.request.contextPath}/pages/landingPage.jsp" class="homeBtn">XMUM FACEBOOK</a>
     </div>
     <div class="nav-right">
         <c:choose>
@@ -41,9 +41,9 @@
         </form>--%>
         <form name ="Login" method="post" action = "${pageContext.request.contextPath}/LoginController">
             <div class="Text">Student/Staff ID: </div>
-            <input class="InputBlock" type = "text" name = "id"/>
+            <input class="LoginInputBlock" type = "text" name = "id"/>
             <div class="Text">Password: </div>
-            <input class="InputBlock" type = "password" name = "password"/>
+            <input class="LoginInputBlock" type = "password" name = "password"/>
             <input class="LoginButton" type = "submit" value = "Login"/>
             <div class="submit-result">
                <%

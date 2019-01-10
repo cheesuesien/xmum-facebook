@@ -24,7 +24,6 @@
     }
 </script>
 
-<div>
     <c:choose>
         <c:when test="${toggle == 'resetPassword'}">
             <div class="register-body" id="resetPassword">
@@ -78,7 +77,6 @@
             </div>
         </form>
     </div>
-</div>
 
 
 
