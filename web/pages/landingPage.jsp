@@ -23,6 +23,8 @@
 </header>
 
 <body class="home blog">
+
+
 <div class="content-1170 header-holder center-relative">
     <div class="header-menu">
         <div class="clear"></div>
@@ -95,11 +97,11 @@
 
         <article id="post-3" class="relative blog-item-holder">
             <div class="post-thumb thumb-image two_third_thumb left">
-                <img src="${pageContext.request.contextPath}/img/apple.png" alt="">
+                <img src="${pageContext.request.contextPath}/img/Beautiful-Apple-Photography-19.jpg" alt="" >
             </div>
             <div class="post-title-holder one_third_title right">
                 <h2 class="entry-title">
-                    An Apple a Day Keeps The Doctor Away.
+                    An apple a day keeps anyone away if you throw it hard enough.
                 </h2>
                 <%--<div class="cat-links">
                     <ul>
@@ -174,11 +176,11 @@
 
         <article id="post-7" class="relative blog-item-holder">
             <div class="post-thumb thumb-image two_third_thumb right">
-                <img src="${pageContext.request.contextPath}/img/takecare.jpg" alt="">
+                <img src="${pageContext.request.contextPath}/img/Beautiful%20Books%202.jpg" alt="" >
             </div>
             <div class="post-title-holder one_third_title left">
                 <h2 class="entry-title" style="margin-top: 305px;">
-                    Take care of yourself in social media.
+                    Education is learning what you didn't even know you didn't know.
                 </h2>
                 <%--<div class="cat-links">
                     <ul>

@@ -1292,7 +1292,9 @@ li.left-footer-content.mobile
     .header-image + article .content-wrapper 
     {
         margin-top: 0;
-    } 
+    }
+
+
 
     blockquote:before
     {
@@ -1474,3 +1476,4 @@ li.left-footer-content.mobile
         padding: 0 10px;
     }
 }
+
