@@ -30,13 +30,19 @@ This function should be added to the loginservlet function when it is ready.--%>
     <div class="cover"></div>
 
 <!--Type user status here -->
-    <div id="status-input">
+    <div id="status-input" >
         <form id="postForm" method="post" action="${pageContext.request.contextPath}/post" enctype="multipart/form-data">
             <input id="uploadType" type="hidden" name="uploadType" value="postNoPic"/>
-            <input id="imageUpload" type="file" name="imageUpload" id="imageInput" style="margin:10px 25px; width:90%;"/>
-            <input type="text" name="postMessage" placeholder="    What's on your mind?" maxlength="70" style="margin:10px 25px; width:90%;border-radius: 25px;"/>
-            <input type="submit" value="submit" hidden/>
-            <%--<div class="buttooon" onclick="submitForms()">Post</div>--%>
+            <div style="padding-top:10px;display:flex; height:100%; width:100%; align-items: center">
+            <div class="upload-image" style="height: 25px; width:25px; margin:15px 25px">
+            <label for="imageUpload" style="cursor: pointer;"><img src="../img/icon-04-512.png"/></label>
+            <input id="imageUpload" type="file" name="imageUpload"  style="display:none;margin:10px 25px;"/>
+            </div>
+            <div style="flex: 1 0 auto">
+                <input type="text" name="postMessage" placeholder="    What's on your mind?" maxlength="70" style="margin:10px 10px; width:90%;border-radius: 25px;"/>
+                <input type="submit" value="submit" hidden/>
+            </div>
+            </div>
         </form>
     </div>
     <script>
