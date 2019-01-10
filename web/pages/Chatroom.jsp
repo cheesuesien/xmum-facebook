@@ -25,21 +25,23 @@
 <div id="divMain">
     <div class="divtop">
         <div class="divL">
-            <h3>Chat Room</h3>
+            <h1 style="color:#d1cc6e;">Chat Room</h1>
             <div class="divShow" id="divContent"></div>
         </div>
         <div class="divR">
-            <h3>Online Member</h3>
+            <h1 style="color:#d1cc6e;">Online Members</h1>
             <div class="divShow" id="divOnLine"></div>
         </div>
     </div>
     <div class="divBot">
         <table cellpadding="0" cellspacing="0">
             <tr><td colspan="2" id="divFace" class="pb"></td></tr><tr><td>
-            <textarea id="txtContent" cols="64" rows="3" class="txt"></textarea></td><td class="pl">
-            <input id="Button1" type="button" value="Send" class="btn"/>
+            <textarea id="txtContent" placeholder="Type your message here..."  cols="64" rows="3" class="txt"></textarea></td><td class="pl">
+            <button id="Button1" class="btn">Send</button>
+            <button id="Button2" class="btn">Exit</button>
+            <%--<input id="Button1" type="button" value="Send" class="btn"/>
             <input id="Button2" type="button" value="Exit" class="btn"/>
-            <input id="Button4" style="display:none" type="button" value="Hide" class="btn"/>
+            <input id="Button4" style="display:none" type="button" value="Hide" class="btn"/>--%>
 
         </td></tr><tr><td colspan="2" class="pt">Content Cannot Be Empty</td></tr></table>
     </div>

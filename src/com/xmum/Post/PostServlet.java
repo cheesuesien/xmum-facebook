@@ -97,6 +97,7 @@ public class PostServlet extends HttpServlet {
                         images = null;
                     }
 
+
                     PostDAO.closeConn();
 
                     postBeans[i] = new PostBean(author, ps.getString("message"), images, ps.getTimestamp("timestamp").toLocalDateTime(), "admin", likes, dislikes, postid);

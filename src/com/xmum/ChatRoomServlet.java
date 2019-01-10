@@ -1,7 +1,6 @@
 package com.xmum;
 
 
-
 import com.xmum.User.UserBean;
 
 import javax.servlet.ServletException;
@@ -12,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -25,13 +26,16 @@ public class ChatRoomServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     List<String> OnLineUserList = new ArrayList<String>();
     static List<String> strSendConentList=new ArrayList<String>();
+    private UserBean user;
+    private String groupnickname;
+    private String profilePic;
 
     public void service(HttpServletRequest request, HttpServletResponse response)throws ServletException,IOException{
         //get user action , name, pass, content
         System.out.println("service activated");
-        String idmember = request.getParameter("id");
-        //int groupid = Integer.parseInt(request.getParameter("groupid"));
-        String groupnickname = ((UserBean) request.getSession().getAttribute("user")).getNickname();
+        user = (UserBean) request.getSession().getAttribute("user");
+        groupnickname = user.getNickname();
+        profilePic = user.getProfilePic();
         String strAction = request.getParameter("action");
         String strContent = request.getParameter("content");
         HttpSession session = request.getSession();
@@ -59,7 +63,7 @@ public class ChatRoomServlet extends HttpServlet {
 
         }else if("SendContent".equals(strAction)){
             System.out.println("SendContent triggered");
-            Boolean res2=AddSendContent(strContent,session);
+            Boolean res2=AddSendContent(strContent,session, request);
             String result="";
             if(res2){
                 System.out.println("printing result1");
@@ -87,7 +91,8 @@ public class ChatRoomServlet extends HttpServlet {
             {
                 OnLineUserList = new ArrayList<String>();// in use is empty , init the arraylist
             }
-            OnLineUserList.add(nickname);//add use to the arrayList
+            String str = "<p style='color:#d1cc6e'>" + nickname + "</p>";
+            OnLineUserList.add(str);//add use to the arrayList
             //session.setAttribute("LOGINUSER",id);//session to set user info
             flag = "ok";
 
@@ -123,23 +128,32 @@ public class ChatRoomServlet extends HttpServlet {
         }else{
             Iterator<String> it=OnLineUserList.iterator();
             while(it.hasNext()){
-                result += it.next() + "</br>";
+                result += it.next();
             }
         }
         return result;
     }
 
     //send message
-    public Boolean AddSendContent(String strContent,HttpSession session){
+    public Boolean AddSendContent(String strContent, HttpSession session, HttpServletRequest request){
         //String user=(String) session.getAttribute("LOGINUSER,nickname");
-        String user=((UserBean) session.getAttribute("user")).getNickname();
+        //String user=((UserBean) session.getAttribute("user")).getNickname();
 
 
         //String name = session.getAttribute("LOGINUSER").toString();
-        if(null==user){
+        if(null==groupnickname){
             return false;
         }
-        String strSendConent = user + " at " + new java.util.Date(System.currentTimeMillis()) + " said: " + strContent;
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
+
+        /*String strSendConent = groupnickname + " at " + new java.util.Date(System.currentTimeMillis()) + " said: " + strContent;*/
+        String strSendConent = "<div style='display:flex'><img style='height:50px; width:50px; border-radius:50%;' src='" + request.getContextPath() + "/img/" + profilePic + "' />" +
+                "<div class='speechbox' style='background-color: white; min-width: 100px; display:flex; flex-direction:column; justify-content:center;'>" +
+                "<div style='display:flex; justify-content:space-between;'>" +
+                    "<span style='font-weight:900; color: #d1cc6e; margin-bottom:5px; margin-right:10px;'>" + groupnickname + "</span>" +
+                    "<span style='color: #a0a0a0'>" + LocalTime.now().format(dtf) + "</span>" +
+                "</div>" +
+                "<span>" + strContent + "</span></div></div>";
         if (strSendConentList.size() == 0)
         {
             strSendConentList = new ArrayList<String>();
@@ -152,7 +166,7 @@ public class ChatRoomServlet extends HttpServlet {
         if(null==session.getAttribute("user")){
             return false;
         }
-        String name = ((UserBean)session.getAttribute("user")).getNickname();
+        String name = "<p style='color:#d1cc6e'>" + groupnickname + "</p>";
         if(OnLineUserList.size()!=0){
             for(int i=0;i<OnLineUserList.size();i++) {
                 if(name.equals(OnLineUserList.get(i))) {

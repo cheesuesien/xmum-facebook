@@ -6,17 +6,31 @@ h3
 {
     margin:0px
 }
+.speechbox {
+    margin-left: 20px;
+    background: white;
+    padding: 10px 15px;
+    font-weight: normal;
+    position: relative;
+    border-radius: 10px;
+}
+.speechbox:before {
+    content: "";
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid white;
+    border-top: 10px solid white;
+    border-bottom: 10px solid transparent;
+    left: -10px;
+    top: 6px;
+}
 .divShow
 {
     border:solid 1px #ccc;
-    height:300px;
+    height:70%;
     padding:5px;
     font-size:12px;
     overflow-y:scroll
-}
-#divMain
-{
-    border:solid 5px #ccc
 }
 #divMain .divtop
 {
@@ -75,55 +89,30 @@ h3
 }
 .btn
 {
-    border:#666 1px solid;
-    padding:2px;
-    width:135px;
-    height:54px;
-    font-size:16px;
-    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffff, EndColorStr=#ECE9D8)
-}
-/*------------------------------------------------------------------
-[ Button ]*/
-.container-contact100-form-btn {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 10px;
-}
-
-.contact100-form-btn {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
+    display: inline-block;
     min-width: 150px;
     height: 62px;
     background-color: transparent;
     border-radius: 31px;
 
-    font-family: Ubuntu-Bold;
     font-size: 16px;
-    color:gray();
+    color: #fff;
     line-height: 1.2;
     text-transform: uppercase;
-
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
     transition: all 0.4s;
     position: relative;
     z-index: 1;
-}
+    border:none;
+    margin:0 10px;
 
-.contact100-form-btn::before {
+    /*border:#666 1px solid;
+    padding:2px;
+    width:135px;
+    height:54px;
+    font-size:16px;
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffff, EndColorStr=#ECE9D8)*/
+}
+.btn::before {
     content: "";
     display: block;
     position: absolute;
@@ -138,7 +127,8 @@ h3
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
     border-radius: 31px;
-    background-color:whitesmoke;
+    border: 1px solid #dbcf69;
+    /*background-color: #827ffe;*/
     pointer-events: none;
 
     -webkit-transition: all 0.4s;
@@ -147,9 +137,13 @@ h3
     transition: all 0.4s;
 }
 
-.contact100-form-btn:hover:before {
-    background-color: lightgrey;
+.btn:hover:before {
+    /*background-color: #403866;*/
+    background-color: #dbcf69;
+    color: black;
     width: calc(100% + 20px);
 }
 
-
+.btn:focus{
+    outline:none;
+}
