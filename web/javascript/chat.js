@@ -3,7 +3,7 @@ function UserEnter(){
     console.log("UserEnter triggered");
     $.ajax({
         type:"POST",
-        url:"chat",  //项目web.xml 内配置了 servlet
+        url:"chat",  //Project web.xml sets servlet
         data:"action=Enter&d="+new Date(),
         success:function(msg){
             if(msg == "ok"){
@@ -50,14 +50,7 @@ $(function(){
 });
 
 
-//face icons
-function InitFace() {
-    var strHTML = "";
-    for (var i = 1; i <= 2; i++) {
-        strHTML += "![](Face/" + i + ".gif )";
-    }
-    $("#divFace").html(strHTML);
-}
+
 $(function() {
 
     InitFace();
@@ -68,16 +61,12 @@ $(function() {
 
     })
 });
-
-
-
 //face icons
 function InitFace() {
-    var strHTML = "";
-    for (var i = 1; i <= 2; i++) {
-        strHTML += "![](Face/" + i + ".gif )";
-    }
-    $("#divFace").html(strHTML);
+    var emoji = document.querySelector("#emoji");
+    emoji.innerText = String.fromCharCode(0x1F354);
+
+    $("#divFace").html();
 }
 //get message content
 // data is the message content data
@@ -124,7 +113,7 @@ function SendContent(content) {
                 $("#txtContent").val("");
             } else {
                 GetMessageList();
-                alert("请先登录!");
+                alert("Login first!");
                 //window.location.href="http://localhost:8082/LandingPage_war_exploded/pages/Chatroom.jsp";
 
             }

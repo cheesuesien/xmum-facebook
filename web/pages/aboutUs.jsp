@@ -52,11 +52,13 @@ Released   : 20131009
             </div>
             <div >
                 <h2>Tom Zhou</h2>
-
+                <a href="https://www.instagram.com/greentomchou/">
                     <img width="240px" height="240px" src="../img/Tom.jpg" alt="" />
+                </a>
+
 
                 <p>I am so damn awesome.</p>
-                <%--<a href="#" class="bigbtn">About more</a>--%>
+
             </div>
         </div>
         <div class="tbox2">

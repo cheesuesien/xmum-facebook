@@ -10,7 +10,7 @@
 <div class="container-contact100">
 
         <div class="wrap-contact100">
-                <form class="contact100-form validate-form" method="post" data-email="cdtomgreen@gmail.com" action="https://script.google.com/macros/s/AKfycbwvpC8XfAJWPlCKzv1G5AmSPs0-UK9IrQcRlpG3/exec">
+                <form class="gform" method="post"  action="https://script.google.com/macros/s/AKfycbw-B0D4lkeVpJETQJNchMUvrrKhhuGFHecOFnbZWho5Vn7fCIU/exec">
 				<span class="contact100-form-title">
 					Send Us A Message
 				</span>
@@ -34,18 +34,26 @@
                                 <textarea class="input100" name="message" placeholder="Your Message"></textarea>
                                 <span class="focus-input100"></span>
                         </div>
-
+                    <script data-cfasync="false" type="text/javascript" src="../javascript/FormSubmit.js"></script>
                         <div class="container-contact100-form-btn">
-                                <button class="contact100-form-btn" type="submit">
+                                <button class="contact100-form-btn" type="submit"  >
 						<span>
 							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
 							Send
 						</span>
                                 </button>
                         </div>
+                    <div style="display:none" class="thankyou_message">
+                        <!-- You can customize the thankyou message by editing the code below -->
+                        <h2><em>Thanks</em> for contacting us! We will get back to
+                            <div style="text-align: center">you soon!<div>
+                        </h2>
+                    </div>
+
                 </form>
         </div>
 </div>
+
 </body>
 
 
