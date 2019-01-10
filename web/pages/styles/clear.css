@@ -94,3 +94,12 @@ input:focus, textarea:focus
 {
     outline: none;
 }
+
+.thumb-image img{
+    filter: grayscale(100%);
+    transition: all 1s;
+}
+
+.thumb-image img:hover{
+    filter:grayscale(30%);
+}

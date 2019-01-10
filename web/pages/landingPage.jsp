@@ -23,6 +23,8 @@
 </header>
 
 <body class="home blog">
+
+
 <div class="content-1170 header-holder center-relative">
     <div class="header-menu">
         <div class="clear"></div>
@@ -174,7 +176,7 @@
 
         <article id="post-7" class="relative blog-item-holder">
             <div class="post-thumb thumb-image two_third_thumb right">
-                <img src="${pageContext.request.contextPath}/img/Beautiful%20Books%202.jpg" alt="">
+                <img src="${pageContext.request.contextPath}/img/Beautiful%20Books%202.jpg" alt="" >
             </div>
             <div class="post-title-holder one_third_title left">
                 <h2 class="entry-title" style="margin-top: 305px;">
