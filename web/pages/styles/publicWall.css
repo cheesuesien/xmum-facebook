@@ -98,6 +98,7 @@ li{
 
 .main{
     float: left;
+    margin: 0 10%;
     margin-top:130px;
     height: 300px;
     width: 80%;

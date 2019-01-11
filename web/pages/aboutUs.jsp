@@ -4,6 +4,12 @@
 
 <%@ include file="../components/navBar.jsp" %>
 
+<%
+    if (session.getAttribute("user") == null) {
+        response.sendRedirect(request.getContextPath() + "/pages/landingPage.jsp");
+    }
+%>
+
 <div id="page-wrapper">
     <div id="featured" class="container">
         <div class="title">
@@ -17,9 +23,7 @@
             </div>
             <div >
                 <h2>Tom Zhou</h2>
-
                     <img width="240px" height="240px" src="../img/Tom.jpg" alt="" class="image"/>
-
                 <p class="description">I am so damn awesome.</p>
             </div>
         </div>
@@ -32,7 +36,7 @@
             <div>
                 <h2>Teh Li Han</h2>
                 <img width="240px" height="240px" src="../img/Lihan.jpg" alt="" class="image"/>
-                <p class="description">I am from ACGN </p>
+                <p class="description">I am from outer space! </p>
             </div>
         </div>
     </div>

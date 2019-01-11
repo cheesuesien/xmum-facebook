@@ -18,7 +18,7 @@
 
 <!--Type user status here -->
     <div id="status-input" >
-        <form id="postForm" method="post" action="${pageContext.request.contextPath}/post" enctype="multipart/form-data">
+        <form id="postForm" method="post" action="${pageContext.request.contextPath}/post" enctype="multipart/form-data" onsubmit="return validate()">
             <input id="uploadType" type="hidden" name="uploadType" value="postNoPic"/>
             <div style="padding-top: 10px;display:flex;height:100%;width: 90%;justify-content: space-evenly;align-items: center; margin: 0 auto;">
                 <div class="upload-image" style="height: 25px; display:flex;">
@@ -27,13 +27,22 @@
                     <input id="imageUpload" type="file" name="imageUpload"  style="display:none;margin:10px 25px;"/>
                 </div>
                 <div style="flex: 1 0 auto; margin-left: 20px;">
-                    <input type="text" name="postMessage" placeholder="What's on your mind?" maxlength="70" style="width: 100%;padding-left:10px;border-radius: 25px;"/>
+                    <input id="postMessage" type="text" name="postMessage" placeholder="What's on your mind?" maxlength="70" style="width: 100%;padding-left:10px;border-radius: 25px;"/>
                     <input type="submit" value="submit" hidden/>
                 </div>
             </div>
         </form>
     </div>
     <script>
+        function validate(){
+            const postMessage = document.getElementById("postMessage").value;
+            if (!postMessage)
+            {
+                alert("Don't leave any inputs blank");
+                return false;
+            } else
+                return true;
+        }
         const imageInput = document.getElementById('imageUpload');
         imageInput.addEventListener("change", printValue, false);
 
@@ -94,60 +103,56 @@
                 <div class="row">
                     <div class="outside x"> <%--**col-lg-4 col-md-6--%>
                         <div class="card h-100"> <%--**card h-100--%>
-                            <script>console.log("${loop.index}")</script>
-                            <script>console.log("${post.getImages()}")</script>
                             <c:choose>
                             <%--normal post with image--%>
                             <c:when test="${(post.getImages() != null) && (loop.index != 0)}">
-                                <script>console.log("style1!!!")</script>
-                                <div class="inside-content style-1"> <%--**single-post post-style-1--%>
-                                    <div class="post-image"> <%--**blog-image--%>
-                                        <img src="${pageContext.request.contextPath}/img/postimgs/${post.getImages()[0]}" alt="Post Image" style="height:100px; object-fit:cover;"/>
-                                    </div><%--POST-IMAGE--%>
+                            <div class="inside-content style-1"> <%--**single-post post-style-1--%>
+                                <div class="post-image"> <%--**blog-image--%>
+                                    <img src="${pageContext.request.contextPath}/img/postimgs/${post.getImages()[0]}" alt="Post Image" style="height:100px; object-fit:cover;"/>
+                                </div><%--POST-IMAGE--%>
                             </c:when>
                                     <%--pinned post with image--%>
                             <c:when test="${post.getImages() != null && (loop.index == 0)}">
-                                <script>console.log("style2!!!")</script>
-                                <div class="inside-content style-2" style="display:flex; justify-content:flex-start;"> <%--**single-post post-style-1--%>
-                                    <div class="post-image" style="height:100%; width:80%;"> <%--**blog-image--%>
-                                        <img src="${pageContext.request.contextPath}/img/postimgs/${post.getImages()[0]}" alt="Post Image" style="width:100%; height:100%; object-fit:cover;"/>
-                                    </div>
+                            <div class="inside-content style-2" style="display:flex; justify-content:flex-start;"> <%--**single-post post-style-1--%>
+                                <div class="post-image" style="height:100%; width:80%;"> <%--**blog-image--%>
+                                    <img src="${pageContext.request.contextPath}/img/postimgs/${post.getImages()[0]}" alt="Post Image" style="width:100%; height:100%; object-fit:cover;"/>
+                                </div>
                             </c:when>
                             <c:otherwise>
-                                <div class="inside-content style-2">
+                            <div class="inside-content style-2">
                             </c:otherwise>
                             </c:choose>
                                 <div style="width:100%;">
-                                <div class="avatar-area">
-                                    <%--PROFILE-PICTURE-(PFP)   **avatar--%>
-                                    <a class="pfp" href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}"><img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" alt="Profile Picture" style="height:100%; object-fit:cover;"/></a>
-                                    <div class="avatar-right-side">
-                                        <a class="username" href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}"><b>${post.getAuthor().getNickname()}</b></a>
-                                        <h6 class="date" href="#">${post.getFormattedDate()}</h6>
-                                    </div> <%--AVATAR-RIGHT-SIDE--%>
-                                </div><%--AVATAR-AREA--%>
-                                <div class="post-stuff"> <%--**blog-info--%>
-                                    <%--POST-CONTENT--%> <%--**title--%>
-                                    <h4 class="post-content">${post.getMessage()}</h4>
-                                    <ul class="post-votes"> <%--**post-footer--%>
-                                        <li>
-                                            <button value = "Like" id="like_${post.postid()}_${user.getId()}_${post.getUserlevel()}" class="like">
-                                                <i class="fa fa-thumbs-o-up fa-lg"></i>
-                                                <span id="likes_${post.postid()}_${user.getId()}_${post.getUserlevel()}">
-                                                    ${post.getLikes()}
-                                                </span>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button value = "Unlike" id="unlike_${post.postid()}_${user.getId()}_${post.getUserlevel()}" class="unlike">
-                                                <i class="fa fa-thumbs-o-down fa-lg"></i>
-                                                <span id="unlikes_${post.postid()}_${user.getId()}_${post.getUserlevel()}">
-                                                    ${post.getDislikes()}
-                                                </span>
-                                            </button>
-                                        </li>
-                                    </ul><%--POST-VOTES--%>
-                                </div><%--POST-STUFF--%>
+                                    <div class="avatar-area">
+                                        <%--PROFILE-PICTURE-(PFP)   **avatar--%>
+                                        <a class="pfp" href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}"><img src="${pageContext.request.contextPath}/img/${post.getAuthor().getProfilePic()}" alt="Profile Picture" style="height:100%; object-fit:cover;"/></a>
+                                        <div class="avatar-right-side">
+                                            <a class="username" href="${pageContext.request.contextPath}/timeline?id=${post.getAuthor().getId()}"><b>${post.getAuthor().getNickname()}</b></a>
+                                            <h6 class="date" href="#">${post.getFormattedDate()}</h6>
+                                        </div> <%--AVATAR-RIGHT-SIDE--%>
+                                    </div><%--AVATAR-AREA--%>
+                                    <div class="post-stuff"> <%--**blog-info--%>
+                                        <%--POST-CONTENT--%> <%--**title--%>
+                                        <h4 class="post-content">${post.getMessage()}</h4>
+                                        <ul class="post-votes"> <%--**post-footer--%>
+                                            <li>
+                                                <button value = "Like" id="like_${post.postid()}_${user.getId()}_${post.getUserlevel()}" class="like">
+                                                    <i class="fa fa-thumbs-o-up fa-lg"></i>
+                                                    <span id="likes_${post.postid()}_${user.getId()}_${post.getUserlevel()}">
+                                                        ${post.getLikes()}
+                                                    </span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button value = "Unlike" id="unlike_${post.postid()}_${user.getId()}_${post.getUserlevel()}" class="unlike">
+                                                    <i class="fa fa-thumbs-o-down fa-lg"></i>
+                                                    <span id="unlikes_${post.postid()}_${user.getId()}_${post.getUserlevel()}">
+                                                        ${post.getDislikes()}
+                                                    </span>
+                                                </button>
+                                            </li>
+                                        </ul><%--POST-VOTES--%>
+                                    </div><%--POST-STUFF--%>
                                 </div>
                             </div><%--INSIDE-CONTENT--%>
                         </div><%--INSIDE--%>

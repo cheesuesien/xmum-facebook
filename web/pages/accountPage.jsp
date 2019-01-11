@@ -5,6 +5,12 @@
 <%@ include file="../includes/header.jsp" %>
 <%@ include file="../components/navBar.jsp" %>
 
+<%
+    if (session.getAttribute("user") == null) {
+        response.sendRedirect(request.getContextPath() + "/pages/landingPage.jsp");
+    }
+%>
+
 <div id="main-body">
     <div style="/*background-image:radial-gradient(#ffe066, #af950c);background-color: #dbcf69;*/border-bottom:1px solid #dbcf69; margin: 0 auto; width: 60%; padding:20px;">
         <img class="profile" src="${pageContext.request.contextPath}/img/${stalkUser.getProfilePic()}" alt="Avatar" />

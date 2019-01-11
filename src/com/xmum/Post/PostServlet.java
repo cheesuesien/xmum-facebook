@@ -24,7 +24,6 @@ import java.time.LocalDateTime;
 public class PostServlet extends HttpServlet {
     // no request parameters needed
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        System.out.println("PostServlet: doGet activated!");
         ResultSet rs = PostDAO.getPosts();
         int pinned_count = PostDAO.getPinnedTotal();
         ResultSet ps = PostDAO.getPinnedPost(pinned_count);
@@ -52,8 +51,6 @@ public class PostServlet extends HttpServlet {
                     userRs.next();
                     author = new UserBean(userRs.getString("id"), userRs.getString("nickname"),  userRs.getString("level"), userRs.getString("profilepic"));
 
-                    if (author == null)
-                        System.out.println("Author is null.");
                     userlevel = author.getLevel();
                     postid = rs.getInt("postid");
                     int likes = UpvoteDownvoteGetDataDAO.getlikedata(postid, userlevel);
@@ -63,8 +60,7 @@ public class PostServlet extends HttpServlet {
 
                     if (a != null){
                         images = (String[])a.getArray();
-                        System.out.println("got JAVA object array");
-                        System.out.println("images: OK");
+
                     }
                     else {
                         images = null;
@@ -79,8 +75,10 @@ public class PostServlet extends HttpServlet {
                     ps.next();
                     ResultSet adminRs = UserDAO.getUserMinimum("admin");
                     adminRs.next();
-                    author = new UserBean(adminRs.getString("id"), adminRs.getString("nickname"), adminRs.getString("profilepic"));
+                    author = new UserBean(adminRs.getString("id"), adminRs.getString("nickname"), adminRs.getString("level"), adminRs.getString("profilepic"));
                     userlevel = author.getLevel();
+                    System.out.println("**********************");
+                    System.out.println(userlevel);
                     postid = ps.getInt("postid");
 
                     int likes = UpvoteDownvoteGetDataDAO.getlikedata(postid, userlevel);
@@ -90,13 +88,11 @@ public class PostServlet extends HttpServlet {
 
                     if (a != null){
                         images = (String[])a.getArray();
-                        System.out.println("got JAVA object array");
-                        System.out.println("images: OK");
+
                     }
                     else {
                         images = null;
                     }
-
 
                     PostDAO.closeConn();
 
@@ -105,8 +101,7 @@ public class PostServlet extends HttpServlet {
 
 
             }catch(Exception e){
-//                System.out.println("PostServlet: problem initialising postBean array");
-//                System.out.println(e);
+
                 e.printStackTrace();
             }
         }
@@ -122,24 +117,15 @@ public class PostServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        System.out.println("dopost in postservlet activated");
-
         String message = request.getParameter("postMessage");
-        System.out.println(message);
 
         UserBean user = (UserBean)(request.getSession(false).getAttribute("user"));
-        System.out.println(user);
         String userlevel = user.getLevel();
         PostBean post = new PostBean(user, message, LocalDateTime.now(), userlevel, 0,0);
-
-        System.out.println("PostServlet: create postBean successful");
-
-        System.out.println(request.getParameter("uploadType"));
 
 
         // post contains images
         if (request.getParameter("uploadType").equals("postPic")){
-            System.out.println("got pics");
             request.getRequestDispatcher("/uploadImage").include(request,response);
             String[] picNames = (String[])request.getAttribute("picName");
             post.setImages(picNames);

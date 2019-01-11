@@ -12,9 +12,13 @@ import java.io.IOException;
 public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id").toLowerCase();
+        id = id.replaceAll("[\'\"]", "");
         String nickname = request.getParameter("nickname");
+        nickname = nickname.replaceAll("[\'\"]", "");
         String password = request.getParameter("password");
+        password = password.replaceAll("[\'\"]", "");
         String password2 = request.getParameter("password2");
+        password2 = password2.replaceAll("[\'\"]", "");
         String register_result;
         RequestDispatcher rd = request.getRequestDispatcher("/pages/landingPage.jsp");
 

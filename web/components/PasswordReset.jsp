@@ -56,13 +56,13 @@
                     <input class="InputBlock" type = "text" id="id" name = "id"/>
                 </div>
                 <div style="padding-top: 9px">
-                    <input class="InputBlock" type = "password" id="password" name = "password"/>
+                    <input class="InputBlock" type = "password" minlength="6" id="password" name = "password"/>
                 </div>
                 <div style="padding-top: 9px">
-                    <input class="InputBlock" type = "password" id="newpassword" name = "newpassword"/>
+                    <input class="InputBlock" type = "password" minlength="6" id="newpassword" name = "newpassword"/>
                 </div>
                 <div style="padding-top: 9px">
-                    <input class="InputBlock" type = "password" id="newpassword2" name = "newpassword2"/>
+                    <input class="InputBlock" type = "password" minlength="6" id="newpassword2" name = "newpassword2"/>
                 </div>
             </div>
             <div>

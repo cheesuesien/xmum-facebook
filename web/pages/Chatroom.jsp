@@ -3,15 +3,16 @@
 
 <%@ include file="../includes/header.jsp" %>
 
-<html>
-<head>
-    <title>Chat Room</title>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/javascript/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/javascript/chat.js"></script>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/pages/styles/chatRoom.css"/>
+<%
+    if (session.getAttribute("user") == null) {
+        response.sendRedirect(request.getContextPath() + "/pages/landingPage.jsp");
+    }
+%>
 
-</head>
-<body>
+<script type="text/javascript" src="${pageContext.request.contextPath}/javascript/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/javascript/chat.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/pages/styles/chatRoom.css"/>
+
 <div id="divMain">
     <div class="divtop">
         <div class="divL">

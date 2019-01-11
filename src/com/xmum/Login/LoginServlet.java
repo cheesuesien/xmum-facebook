@@ -3,7 +3,6 @@ package com.xmum.Login;
 import com.xmum.Profile.ProfileBean;
 import com.xmum.User.UserBean;
 import com.xmum.User.UserDAO;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +18,9 @@ import java.time.LocalDate;
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id").toLowerCase();
+        id = id.replaceAll("[\'\"]", "");
         String password = request.getParameter("password");
+        password = password.replaceAll("[\'\"]", "");
         System.out.println("LoginServlet: got id and password params");
         String submit_result;
         RequestDispatcher rd = request.getRequestDispatcher("pages/landingPage.jsp");
