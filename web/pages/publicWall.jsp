@@ -38,9 +38,14 @@
             const postMessage = document.getElementById("postMessage").value;
             if (!postMessage)
             {
-                alert("Don't leave any inputs blank");
+                alert("Don't leave any inputs blank.");
                 return false;
-            } else
+            }
+            if(postMessage.length>70){
+                alert("Status text is too long.");
+                return false;
+            }
+            else
                 return true;
         }
         const imageInput = document.getElementById('imageUpload');

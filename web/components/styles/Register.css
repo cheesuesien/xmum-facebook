@@ -17,7 +17,7 @@
 }
 
 .line{
-    font-size: 1.2em;
+    font-size: 15px;
     margin-top: 5px;
     margin-bottom: 10px;
     text-align: right;
@@ -26,7 +26,7 @@
 
 .InputBlock{
     background-color: #565656;
-    height: 25px;
+    height: 20px;
     color: #d1cc6e;
     border: 1px #d1cc6e solid;
 }
